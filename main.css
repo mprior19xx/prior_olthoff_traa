@@ -1,0 +1,244 @@
+@charset "utf-8";
+/*CSS document*/
+
+.hidden
+{
+	display: none;
+}
+
+#container{
+	width: 960px;
+	margin: 0 auto;
+}
+
+#mainHeader{
+	display: flex;
+	margin: 0 auto;
+	margin-bottom:30px;
+	background-color: #666;
+}
+
+#headerImage{
+	width:100%;
+	height:160px;
+	background-color: #333;
+}
+
+#headerLogo{
+	width:200px;
+	height:200px;
+	background-color: red;
+}
+
+#headNav{
+	width: 100%;
+	height:40px;
+	background-color: white;
+}
+
+#headNav ul{
+	display:flex;
+	flex-direction: row;
+}
+
+#headNav ul li a{
+	padding-left:20px;
+	padding-right:20px;
+}
+
+#nextMeeting{
+	height: 50px;
+	background-color: green;
+	margin-bottom:30px;
+}
+
+#heroMain{
+	display:flex;
+	margin-bottom:30px;
+}
+
+#heroImage{
+	width:960;
+	height:350px;
+	background-color: #333;
+}
+
+#heroText{
+	width:600px;
+	height:190px;
+	border-radius:10px;
+	background-color: #666;
+}
+
+#aboutMain{
+	margin: 0 auto;
+	height:930px;
+	margin-bottom:30px;
+}
+
+#aboutMain h2{
+	margin: 0 auto;
+	width:960px;
+	height:50px;
+	margin-bottom:15px;
+	color: white;
+	background-color: green;
+}
+
+#aboutImage{
+	width:300px;
+	height:320px;
+	margin-left:30px;
+	background-color: #333;
+}
+
+#memberList{
+	margin: 0 auto;
+	margin-bottom:30px;
+}
+
+#memberList h2{
+	margin:0 auto;
+	width:930px;
+	height:50px;
+	margin-bottom:30px;
+	color:white;
+	background-color: gold;
+}
+
+#membershipMain{
+	display:flex;
+	margin:0 auto;
+	width:930px;
+	height:180px;
+	margin-bottom:30px;
+	background-color: green;
+}
+
+#eventsMain{
+	margin: 0 auto;
+	width:930px;
+	margin-bottom:30px;
+}
+
+#eventsMain h2{
+	width:930px;
+	height:50px;
+	margin-bottom:30px;
+	background-color:green;
+}
+
+#slideshow{
+	width:930px;
+	height:500px;
+	background-color:#333;
+}
+
+#linksMain{
+	margin: 0 auto;
+	width:930px;
+	height:480px;
+	margin-bottom:30px;
+}
+
+#linksMain h2{
+	height:50px;
+	background-color: green;
+	margin-bottom:30px;
+}
+
+#scrollBox{
+	width:930px;
+	height:400px;
+	background-color: #666;
+}
+
+#fundraisingMain{
+	margin: 0 auto;
+	width:960px;
+	margin-bottom:30px;
+}
+
+#fundraisingMain h2{
+	margin:0 auto;
+	width:930px;
+	height:50px;
+	margin-bottom:30px;
+	background-color: green;
+}
+
+#fundraisingText{
+	margin:0 auto;
+	width:930px;
+	height:255px;
+}
+
+#fundraisingText p{
+	text-align: center;
+}
+
+#fundraisingImage{
+	background-color:#333;
+}
+
+#fundraisingImage img{
+	width:300px;
+	height:200px;
+	padding:15px;
+	background-color:#333;
+}
+
+#contact{
+	height:580px;
+}
+
+#contactMain{
+	display:inline;
+	height:530px;
+}
+
+#contactMain h2{
+	width:960px;
+	height:50px;
+	margin-bottom:10px;
+	background-color: green;
+}
+
+#contactFrom{
+	float: left;
+	width:525px;
+	height:530px;
+	background-color: #666;
+}
+
+#mapArea{
+	float: right;
+	width:350px;
+	
+	background-color:#333;
+}
+
+#mainFooter{
+	display: flex;
+	margin: 0 auto;
+	width:960px;
+	height:85px;
+	background-color: green;
+}
+
+#footNav{
+	margin:0 auto;
+	width: 100%;
+	height:40px;
+	background-color: white;
+}
+
+#footNav ul{
+	display:flex;
+	flex-direction: row;
+	margin: 0 auto;
+}
+
+#footNav ul li a{
+	justify-content: space-between;
+}
