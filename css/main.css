@@ -83,6 +83,13 @@ a
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	color: #5d6f34;
 	text-decoration: none;
+	transition: all .15s linear;
+}
+
+/*Styles links on hover*/
+a:hover
+{
+	color: #9bbd4f;
 }
 
 /*Styles all buttons the same*/
@@ -96,6 +103,21 @@ button, #submit
 	text-align: center;
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 20px;
+	cursor: pointer;
+	transition: all 0.1s linear;
+}
+
+/*Styles buttons on hover*/
+button:hover, #submit:hover
+{
+	box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
+}
+
+/*Styles buttons on click*/
+button:active, #submit:active
+{
+	background-color: #ba964c;
+	box-shadow: none;
 }
 
 /*SPECIFIC RULES*/
@@ -149,6 +171,7 @@ button, #submit
 {
 	margin-top: 9px;
 	padding-right: 40px;
+	height: 40px;
 }
 
 /*Styles the nav links*/
@@ -157,6 +180,35 @@ button, #submit
 	color: #FFF;
 	font-size: 20px;
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+}
+
+/*Creates fade in animation for main nav bottom border*/
+@keyframes navFadeIn 
+{
+  from {
+    border-bottom: solid 8px rgba(216,174, 88, 0)
+  }
+
+  to {
+    border-bottom: solid 8px rgba(216,174, 88, 1)
+  }
+}
+
+/*Styles main nav links on hover*/
+#mainNav ul li a:hover
+{
+	border-bottom: solid 8px #d8ae58;
+	padding-bottom: .5px;
+	-webkit-animation-duration: .35s;
+	-webkit-animation-name: navFadeIn; 
+	animation-duration: .35s;
+	animation-name: navFadeIn; 
+}
+
+/*Styles main nav links on click*/
+#mainNav ul li a:active
+{
+	color: #CCC;
 }
 
 /*Positions the logo*/
@@ -205,6 +257,17 @@ button, #submit
 	justify-content: center;
 }
 
+@keyframes heroFadeIn
+{
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 /*Positions and styles hero text*/
 #heroText
 {
@@ -220,6 +283,8 @@ button, #submit
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	animation-duration: 1.5s;
+	animation-name: heroFadeIn;
 }
 
 /*Styles hero header*/
@@ -661,7 +726,7 @@ button, #submit
 #footerNav ul li a
 {
 	color: #FFF;
-	margin-left: 35px;
+	padding-left: 35px;
 	padding-right: 35px;
 	border-right: solid 1px #FFF;
 }
@@ -670,6 +735,24 @@ button, #submit
 #footerNav li:last-child a
 {
 	border-right: none;
+}
+
+/*Lowers footer links' opacity when hovering on the footer*/
+#mainFooter:hover > #footerNav li a, #mainFooter:hover > #facebook a
+{
+	color: rgba(255,255,255,0.6);
+}
+
+/*Increases footer nav link's opacity when hovering over it*/
+#mainFooter:hover > #footerNav li a:hover, #mainFooter:hover > #facebook a:hover
+{
+	color: rgba(255,255,255,1);
+}
+
+/*Increases facebook link's opacity when hovering over it or the icon*/
+#facebook a:hover ~ #facebookLink
+{
+	color: rgba(255,255,255,1);
 }
 
 /*Makes Facebook logo and text display in a row and positions them*/
