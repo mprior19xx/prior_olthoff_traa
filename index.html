@@ -204,22 +204,24 @@
 			<section id="eventsSection">
 				<h2>Events</h2>
 
-				<div id="slideshow">
-					<div id="slideshowImage">
-						<img src="images/events_pic1_trout_release.jpg" alt="Image from Event">
-					</div> <!-- end slideshowImage -->
+				<div class="slideCon">
+				  <ul id="slides">
+				    <li class="slide showing"></li>
+				    <li class="slide"></li>
+				    <li class="slide"></li>
+				  </ul>
+					
+					<div class="buttons">
+    			
+    					<button class="controls" id="prev"></button>
 
-					<div id="slideDesc">
-						<!-- Left arrow -->
-						<img class="arrow" src="images/left_arrow.svg" alt="Left Arrow" width="30">
-
-						<!-- Description -->
-						<p>This spring's hatch of rainbow trout was incredibly successful with low mortality resulting in a phenomenal total of over 40,000 fry ready for release day on Saturday June 21, 2014.<a href="trout_release_june_21_2014.html">See more...</a></p>
-
-						<!-- Right arrow -->
-						<img class="arrow" src="images/right_arrow.svg" alt="Right Arrow" width="30">
-					</div> <!-- end slideDesc -->
-				</div> <!-- End slideshow -->
+    					<button class="controls" id="next"></button>
+  					</div>
+  					<div id="eventDesc">
+  						<p>This spring's hatch of rainbow trout was incredibly successful with low mortality resulting in a phenomenal total of over 40,000 fry ready for release day on Saturday June 21, 2014.<a href="trout_release_june_21_2014.html">See more...</a></p>
+  					</div>
+				</div>
+				
 			</section> <!-- end eventsSection -->
 
 
@@ -230,7 +232,7 @@
 
 				<div id="scrollBox">
 					<ul>
-						<li class="listTitle">Conservation</li>
+						<li class="listTitle">Conservation Efforts</li>
 
 						<li><a href="https://caroliniancanada.ca/">Carolinian Canada</a> - Carolinian Canada’s diverse network advances a strategic ‘Big Picture’ vision for healthy landscapes and a green future in Canada’s deep south.</li>
 
@@ -368,17 +370,17 @@
 
 						<div class="fundraiser">
 							<img src="images/fundraising_pic1_hatchery.jpg" alt="Trout Hatchery Image">
-							<button class="fundraiserButton">Trout Hatchery</button>
+							<button class="fundraiserButton"><a href="fundraising_trout.html">Trout Hatchery</a></button>
 						</div> <!-- end fundraiser -->
 
 						<div class="fundraiser">
 							<img src="images/fundraising_pic2_monitoring.jpg" alt="Salmonid Monitoring Image">
-							<button class="fundraiserButton">Salmonid Monitoring</button>
+							<button class="fundraiserButton"><a href="fundraising_salmonoid_monitoring.html">Salmonid Monitoring</a></button>
 						</div> <!-- end fundraiser -->
 
 						<div class="fundraiser">
 							<img src="images/fundraising_pic3_creek.jpg" alt="Komoka Creek Image">
-							<button class="fundraiserButton">Komoka Creek</button>
+							<button class="fundraiserButton"><a href="fundraising_komoka_creek.html">Komoka Creek</button>
 						</div> <!-- end fundraiser -->
 					</section> <!-- end allFundraisers -->
 				</div> <!-- End fundraisingWithBG -->
