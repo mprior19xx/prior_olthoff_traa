@@ -23,7 +23,7 @@
 
 @font-face {
 	font-family: 'libre_franklin-italic';
-    src: url('../fonts/libre_franklin-italic-webfont.woff2') format('woff2'),
+    src: url('../fonts/librefranklin-italic-webfont.woff2') format('woff2'),
          url('../fonts/librefranklin-italic-webfont.woff') format('woff');
 }
 
@@ -829,7 +829,7 @@ button:active, #submit:active
 #footerNav ul
 {
 	display: flex;
-	flex-direction: inline;
+	flex-direction: row;
 	justify-content: center;
 	padding-top: 15px;
 }
@@ -900,7 +900,13 @@ button:active, #submit:active
 	margin:15px
 }
 
-#slideshow
+#troutDesc
+{
+	width: 930px;
+	margin: 0 auto;
+}
+
+#troutDesc p
 {
 	width: 930px;
 	margin: 0 auto;
@@ -949,3 +955,144 @@ button:active, #submit:active
 	box-shadow: 5px;
 }
 
+
+
+/*STICKY BUTTON RULES*/
+
+/*Sets values of sticky menu and hides it until the button is pressed*/
+#menu
+{
+	height: 35px;
+	width: 885px;
+	background-color: #FFF;
+	position: fixed;
+	bottom: 10px;
+	z-index: 25;
+	border-top: 2px solid #333;
+	border-bottom: 2px solid #333;
+	-webkit-transform-origin: right;
+	-ms-transform-origin: right;
+	transform-origin: right;
+	-webkit-transform: scaleX(0);
+	-ms-transform: scaleX(0);
+	transform: scaleX(0);
+	transition: .5s;
+	opacity: 0;
+}
+
+/*Sets size of sticky nav and displays them side by side*/
+#menu ul
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 820px;
+	margin-left: 20px;
+	margin-top: 5px;
+}
+
+/*Styles the sticky nav links*/
+#menu ul li a
+{
+	color: #333;
+	font-size: 20px;
+	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+}
+
+/*Changes the sticky nav links' colour on hover*/
+#menu ul li a:hover
+{
+	color: #999;
+}
+
+/*Displays menu when button is clicked*/
+#menu.openMenu
+{
+	-webkit-transform: scaleX(1);
+	-ms-transform: scaleX(1);
+	transform: scaleX(1);
+	opacity: 1;
+}
+
+/*Styles the sticky buttons*/
+.stickyButton
+{
+	width: 35px;
+	height: 35px;
+	background-color: #fff;
+	border-radius: 50%;
+	border: 2px solid #333;
+	position: fixed;
+	bottom: 10px;
+	z-index: 25;
+	transition: all 0.25s linear;
+}
+
+/*Styles the sticky buttons*/
+.stickyButton:hover, #backToTop:hover
+{
+	color: #999;
+	border: 2px solid #999;
+	cursor: pointer;
+}
+
+
+/*Positions the menu button*/
+#menuButton
+{
+	margin-left: 865px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+/*Adds space to top of menu button's lines*/
+#lines
+{
+	margin-top: 5px;
+}
+
+/*Styles the menu button's lines*/
+#line1, #line2, #line3
+{
+	width: 24px;
+	height: 0px;
+	border-top: 1.5px solid #333;
+	margin: 5px;
+	transition: all 0.25s linear;
+}
+
+/*Changes the menu button's lines' colour on hover*/
+.stickyButton:hover > #lines > #line1, .stickyButton:hover > #lines > #line2, .stickyButton:hover > #lines > #line3
+{
+	border-top: 1.5px solid #999;
+}
+
+/*Animates line1 when menu is opened*/
+#line1.openMenu
+{
+	transform: rotate(-45deg) translate(-5px, 5px);
+}
+
+/*Hides line2 when menu is opened*/
+#line2.openMenu
+{
+	opacity: 0;
+}
+
+/*Animates line3 when menu is opened*/
+#line3.openMenu
+{
+	transform: rotate(45deg) translate(-5px, -5px);
+}
+
+/*Styles back to top button*/
+#backToTop
+{
+	height: 32px;
+	margin-left: 910px;
+	color: #333;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 3px;
+}
