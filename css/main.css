@@ -461,6 +461,11 @@ button:active, .fundraiser a:active, #submit:active
 	line-height: 28px;
 }
 
+#memberSignUp{
+	display:none;
+}
+
+
 /*Sizes and positions member join button*/
 #memberJoin
 {
@@ -889,15 +894,11 @@ button:active, .fundraiser a:active, #submit:active
 /*TROUT RELEASE JUNE 21, 2014 RULES*/
 
 /**/
+
+
 #troutRelease
 {
 	margin-top: 30px;
-}
-
-#slideCon, #troutDesc
-{
-	width: 930px;
-	margin: 0 auto;
 }
 
 #troutDesc
@@ -907,9 +908,9 @@ button:active, .fundraiser a:active, #submit:active
 
 #troutDesc p
 {
-	margin-bottom: 22px;
+	width: 930px;
+	margin: 0 auto;
 }
-
 
 
 /*FUNDRAISING PAGE RULES*/
