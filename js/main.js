@@ -9,7 +9,7 @@ for(var i=0; i<controls.length; i++){
 
 var slides = document.querySelectorAll('#slides .slide');
 var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,4000);
+var slideInterval = setInterval(nextSlide,10000);
 
 // next slide
 function nextSlide(){
@@ -39,7 +39,7 @@ function pauseSlideshow(){
 
 function playSlideshow(){
     playing = true;
-    slideInterval = setInterval(nextSlide,2000);
+    slideInterval = setInterval(nextSlide,10000);
 }
 
 
