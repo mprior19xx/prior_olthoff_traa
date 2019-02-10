@@ -93,7 +93,7 @@ a:hover
 }
 
 /*Styles all buttons the same*/
-button, #submit
+button, .fundraiser a, #submit
 {
 	height: 30px;
 	background-color: #d8ae58;
@@ -108,13 +108,13 @@ button, #submit
 }
 
 /*Styles buttons on hover*/
-button:hover, #submit:hover
+button:hover, .fundraiser a:hover, #submit:hover
 {
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
 }
 
 /*Styles buttons on click*/
-button:active, #submit:active
+button:active, .fundraiser a:active, #submit:active
 {
 	background-color: #ba964c;
 	box-shadow: none;
@@ -486,10 +486,10 @@ button:active, #submit:active
 /* SLIDE SHOW TRANSFORMATIONS */
 #slides{
     position: relative;
-    width:960px;
+    width:930px;
     height: 500px;
     padding: 0px;
-    margin: 0px;
+    margin: 0 auto;
     list-style-type: none;
 }
 
@@ -681,15 +681,21 @@ button:active, #submit:active
 }
 
 /*Adds space between button and picture and adds padding*/
-.fundraiser button
+.fundraiser a
 {
+	display: inline-block;
+	color: #FFF;
 	margin-top: 10px;
 	padding: 0 10px 0 10px;
 }
 
-.fundraiser a{
-	color:white;
+/*Vertically centers text in fundraiser buttons*/
+.fundraiserButtonText
+{
+	display: block;
+	padding-top: 4px;
 }
+
 /*Sets width of merchandise text*/
 #merchandiseText
 {
@@ -888,7 +894,7 @@ button:active, #submit:active
 	margin-top: 30px;
 }
 
-#slideshow
+#slideCon, #troutDesc
 {
 	width: 930px;
 	margin: 0 auto;
@@ -896,8 +902,7 @@ button:active, #submit:active
 
 #troutDesc
 {
-	width: 930px;
-	margin: 0 auto;
+	margin-top: 15px;
 }
 
 #troutDesc p
@@ -940,13 +945,11 @@ button:active, #submit:active
 .doubleImg{
 	width:375px;
 	height:300px;
-	box-shadow: 5px;
 }
 
 .singleImg{
 	width:500px;
 	height:500px;
-	box-shadow: 5px;
 }
 
 
@@ -957,7 +960,7 @@ button:active, #submit:active
 #menu
 {
 	height: 35px;
-	width: 885px;
+	width: 880px;
 	background-color: #FFF;
 	position: fixed;
 	bottom: 10px;
@@ -1034,7 +1037,7 @@ button:active, #submit:active
 /*Positions the menu button*/
 #menuButton
 {
-	margin-left: 865px;
+	margin-left: 860px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
@@ -1084,7 +1087,7 @@ button:active, #submit:active
 #backToTop
 {
 	height: 32px;
-	margin-left: 910px;
+	margin-left: 906px;
 	color: #333;
 	font-size: 25px;
 	text-align: center;
