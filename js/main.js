@@ -84,7 +84,7 @@
 
 
 
-    // Show statistics variable
+    // Show statistics variables
     var statisticsButton = document.querySelector("#statisticsLink");
     var statistics = document.querySelector("#statistics");
     var expandTriangle = document.querySelector("#expandTriangle");
