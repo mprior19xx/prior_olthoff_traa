@@ -941,6 +941,7 @@ button:active, .fundraiser a:active, #submit:active
 
 #troutDesc
 {
+	padding:10px;
 	margin-top: 15px;
 }
 
@@ -950,6 +951,9 @@ button:active, .fundraiser a:active, #submit:active
 	margin: 0 auto;
 }
 
+#troutDesc ul li span{
+	text-align: center;
+}
 
 /*FUNDRAISING PAGE RULES*/
 .fundraisingMain{
