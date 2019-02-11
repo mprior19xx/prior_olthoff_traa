@@ -374,12 +374,50 @@ button:active, .fundraiser a:active, #submit:active
 	-webkit-transform: rotate(-90deg);
 	-ms-transform: rotate(-90deg);
 	transform: rotate(-90deg);
+	transition: all 0.25s linear;
+}
+
+/*Rotates expand triangle when statistics link is clicked*/
+#expandTriangle.openStatistics
+{
+	-webkit-transform: rotate(0deg);
+	-ms-transform: rotate(0deg);
+	transform: rotate(0deg);
 }
 
 /*Styles the see statistics link*/
 #statisticsLink
 {
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+	cursor: pointer;
+}
+
+/*Formats the statistics graphs and hides them until the statistics link is clicked*/
+#statistics
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 22px;
+	margin-right: 10px;
+	height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: all 0.5s ease;
+}
+
+/*Displays the graphs when the statistics link is clicked*/
+#statistics.openStatistics
+{
+	height: 620px;
+	opacity: 1;
+}
+
+/*Adds space above graphs*/
+#statistics img
+{
+	margin-top: 10px;
 }
 
 /*Displays member groups in a row*/
@@ -967,14 +1005,11 @@ button:active, .fundraiser a:active, #submit:active
 	z-index: 25;
 	border-top: 2px solid #333;
 	border-bottom: 2px solid #333;
-	-webkit-transform-origin: right;
-	-ms-transform-origin: right;
-	transform-origin: right;
-	-webkit-transform: scaleX(0);
-	-ms-transform: scaleX(0);
-	transform: scaleX(0);
-	transition: .5s;
+	margin-left: 880px;
+	overflow: hidden;
+	width: 0;
 	opacity: 0;
+	transition: all .5s ease;
 }
 
 /*Sets size of sticky nav and displays them side by side*/
@@ -1005,9 +1040,8 @@ button:active, .fundraiser a:active, #submit:active
 /*Displays menu when button is clicked*/
 #menu.openMenu
 {
-	-webkit-transform: scaleX(1);
-	-ms-transform: scaleX(1);
-	transform: scaleX(1);
+	width:880px;
+	margin-left: 0;
 	opacity: 1;
 }
 
