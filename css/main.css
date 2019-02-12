@@ -93,7 +93,7 @@ a:hover
 }
 
 /*Styles all buttons the same*/
-button, .fundraiser a, #submit
+button, .fundraiser a, .submit
 {
 	height: 30px;
 	background-color: #d8ae58;
@@ -108,13 +108,13 @@ button, .fundraiser a, #submit
 }
 
 /*Styles buttons on hover*/
-button:hover, .fundraiser a:hover, #submit:hover
+button:hover, .fundraiser a:hover, .submit:hover
 {
 	box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
 }
 
 /*Styles buttons on click*/
-button:active, .fundraiser a:active, #submit:active
+button:active, .fundraiser a:active, .submit:active
 {
 	background-color: #ba964c;
 	box-shadow: none;
@@ -147,6 +147,7 @@ button:active, .fundraiser a:active, #submit:active
 	display: block;
 }
 
+/*Styles and positions nav bar*/
 #mainNav
 {
 	width: 100%;
@@ -514,11 +515,6 @@ button:active, .fundraiser a:active, #submit:active
 	line-height: 28px;
 }
 
-#memberSignUp{
-	display:none;
-}
-
-
 /*Sizes and positions member join button*/
 #memberJoin
 {
@@ -526,16 +522,123 @@ button:active, .fundraiser a:active, #submit:active
 	margin-top: 5px;
 }
 
-/*Spaces out merchandise content*/
-#merchandiseCon
+/*Creates popup background*/
+#membershipPopup 
+{
+  display: none; /* Hidden by default */
+  position: fixed; /* Stays in place */
+  z-index: 4; /* Modal is placed on top of the page */
+  padding-top: 100px; /* Creates padding on top of modal */
+  left: 0; /* Starts background in top left corner */
+  top: 0;
+  width: 100%; /* Background takes up full width */
+  height: 100%; /* Background takes up full height */
+  background-color: rgb(0,0,0); /* Fallback color if browser doesn't support alpha */
+  background-color: rgba(0,0,0,0.4); /* Creates background with opacity*/
+}
+
+/*Membership popup fade animation*/
+@-webkit-keyframes popupFade {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+@keyframes popupFade {
+  from {opacity: 0} 
+  to {opacity: 1}
+}
+
+/*Displays membership popup*/
+#membershipPopup.openPopup
+{
+	display: block;
+	-webkit-animation-duration: 0.5s;
+	-webkit-animation-name: popupFade;
+	animation-duration: 0.5s;
+	animation-name: popupFade;
+}
+
+/*Creates popup content box*/
+#popupCon 
+{
+  background-color: white; /* White background */
+  margin: 3% auto; /* 5% from the top and centered */
+  padding: 15px; /* Pads text from the border */
+  width: 470px; /* Sets width of the content box */
+  color: #666;
+}
+
+/*Creates x button for membership popup*/
+#xButton
+{
+	float: right;
+	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
+	font-size: 30px;
+	margin: 13px 10px 0 0;
+	cursor: pointer;
+}
+
+/*Adds hover and click effect to x button*/
+#xButton:hover, #xbutton:active
+{
+	color: #FFF;
+}
+
+/*Styles and positions membership popup title*/
+#popupCon p
+{
+	width: 450px;
+	height: 30px;
+	background-color: #9bbd4f;
+	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 30px;
+	margin: 0 auto;
+	margin-bottom: 15px;
+	padding: 13px 10px 7px 10px;
+}
+
+/*Styles the membership form labels*/
+#popupCon label
+{
+	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+	font-size: 20px;
+	display: block;
+	margin-top: 15px;
+}
+
+/*Styles and positions the membership form inputs*/
+#membershipFirstName, #membershipLastName, #membershipEmail
+{
+	display: block;
+	margin-top: 5px;
+	padding: 10px;
+	width: 450px;
+	height: 20px;
+	border: 1px solid #666;
+	border-radius: 2px;
+	color: #666;
+	font-size: 16px;
+}
+
+/*Positions the payment types*/
+#paymentType
 {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 930px;
-	margin: 0 auto;
-	margin-bottom: 40px;
+	height: 50px;
+	margin-top: -10px;
+	margin-bottom: -35px;
 }
+
+/*Reduces space between label and radio button*/
+.paymentLabel
+{
+	margin-left: -25px;
+}
+
+
 
 /* SLIDESHOW RULES */
 
@@ -585,6 +688,7 @@ button:active, .fundraiser a:active, #submit:active
 	opacity: 0.6;
 }
 
+/*Positions and adds backgorund to display number*/
 .slideNumber
 {
 	position: absolute;
@@ -596,6 +700,7 @@ button:active, .fundraiser a:active, #submit:active
 	border-radius: 5px;
 }
 
+/*Changes colour of display number*/
 .slideNumber p
 {
 	color: #FFF;
@@ -775,6 +880,17 @@ button:active, .fundraiser a:active, #submit:active
 	padding-top: 4px;
 }
 
+/*Spaces out merchandise content*/
+#merchandiseCon
+{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 930px;
+	margin: 0 auto;
+	margin-bottom: 40px;
+}
+
 /*Sets width of merchandise text*/
 #merchandiseText
 {
@@ -815,7 +931,6 @@ button:active, .fundraiser a:active, #submit:active
 {
 	width: 520px;
 	border-right: solid 1px #CCC;
-	padding-top: 25px;
 }
 
 /*Styles the contact form labels*/
@@ -823,8 +938,13 @@ button:active, .fundraiser a:active, #submit:active
 {
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 20px;
-	margin-top: -22px;
+	margin-top: 20px;
 	display: block;
+}
+
+#contactForm label:first-of-type
+{
+	margin-top: 0;
 }
 
 /*Styles the input fields*/
@@ -844,15 +964,15 @@ button:active, .fundraiser a:active, #submit:active
 /*Makes the message input field larger*/
 #message
 {
-	height: 140px;
+	height: 150px;
 }
 
 /*Styles and positions submit button*/
-#submit
+.submit
 {
 	display: block;
 	width: 170px;
-	margin-top: -20px;
+	margin-top: 20px;
 }
 
 /*Styles map area*/
@@ -1018,6 +1138,7 @@ button:active, .fundraiser a:active, #submit:active
 {
 	width: 930px;
 	margin: 0 auto;
+	margin-bottom: 22px;
 }
 
 #troutDesc ul li span{
@@ -1200,27 +1321,4 @@ button:active, .fundraiser a:active, #submit:active
 	font-size: 25px;
 	text-align: center;
 	padding-top: 3px;
-}
-
-/*membership sign up page rules*/
-#membershipSignUp{
-	margin:0 auto;
-	padding:15px;
-}
-
-#membershipSignUp h2{
-	margin-top:15px;
-}
-
-#membershipBlurb{
-	margin-bottom:15px;
-	text-align: center;
-}
-
-#signUpForm{
-	text-align:center;
-}
-
-#signUpForm input{
-	margin: 0 auto;
 }
