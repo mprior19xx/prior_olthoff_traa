@@ -183,6 +183,17 @@ button:active, .fundraiser a:active, #submit:active
 }
 
 /*Creates fade in animation for main nav bottom border*/
+@-webkit-keyframes navFadeIn 
+{
+  from {
+    border-bottom: solid 8px rgba(216,174, 88, 0)
+  }
+
+  to {
+    border-bottom: solid 8px rgba(216,174, 88, 1)
+  }
+}
+
 @keyframes navFadeIn 
 {
   from {
@@ -257,15 +268,17 @@ button:active, .fundraiser a:active, #submit:active
 	justify-content: center;
 }
 
+/*Animation for hero overlay fade in*/
+@-webkit-keyframes heroFadeIn
+{
+	from {opacity: 0;}
+	to {opacity: 1;}
+}
+
 @keyframes heroFadeIn
 {
-  from {
-    opacity: 0;
-  }
-
-  to {
-    opacity: 1;
-  }
+	from {opacity: 0;}
+	to {opacity: 1;}
 }
 
 /*Positions and styles hero text*/
@@ -283,6 +296,8 @@ button:active, .fundraiser a:active, #submit:active
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	-webkit-animation-duration: 1.5s;
+	-webkit-animation-name: heroFadeIn;
 	animation-duration: 1.5s;
 	animation-name: heroFadeIn;
 }
@@ -522,110 +537,131 @@ button:active, .fundraiser a:active, #submit:active
 	margin-bottom: 40px;
 }
 
+/* SLIDESHOW RULES */
+
+/*Sets slideshow size and position*/
+#slideshow
+{
+	width: 930px;
+	height: 500px;
+	position: relative;
+	margin: 0 auto;
+	background-color: #333;
+	text-align: center;
+}
+
+/*Positions arrows and creates background*/
+#arrows
+{
+	width: 930px;
+	height: 80px;
+	background-color: rgb(51,51,51);
+	background-color: rgba(51,51,51,0.8);
+	position: absolute;
+	bottom: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding-top: 30px;
+}
+
+/*Changes opacity of arrows and changes cursor to pointer*/
+#arrows a
+{
+	cursor: pointer;
+	opacity: 0.8;
+	transition: all 0.1s linear;
+}
+
+/*Changes opacity of arrows on hover*/
+#arrows a:hover
+{
+	opacity: 1;
+}
+
+/*Changes opacity of arrows on click*/
+#arrows a:active
+{
+	opacity: 0.6;
+}
+
+.slideNumber
+{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 5px;
+	background-color: rgb(51,51,51);
+	background-color: rgba(51,51,51,0.8);
+	border-radius: 5px;
+}
+
+.slideNumber p
+{
+	color: #FFF;
+}
+
+/*Positions the event description*/
+.eventDesc
+{
+	width: 800px;
+	height: 110px;
+	position: absolute;
+	bottom: 0;
+	color: #FFF;
+	z-index: 1;
+	margin-left: 65px;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+/*Formats event description title*/
+.eventDescTitle
+{
+	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+/*Adds space before see more*/
+.seeMore
+{
+	margin-left: 25px;
+	color: #9bbd4f;
+}
+
+/*Initially hides all slides*/
+.slides
+{
+	display: none;
+}
+
+/* Fades slideshow pictures*/
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1s;
+  animation-name: fade;
+  animation-duration: 1s;
+}
+
+/*Fading animation for slideshow images*/
+@-webkit-keyframes fade {
+  from {opacity: .7} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .7} 
+  to {opacity: 1}
+}
+
+/*Adds space below events section*/
 #eventsSection{
 	margin-bottom: 30px;
 }
 
-/* SLIDE SHOW TRANSFORMATIONS */
-#slides{
-    position: relative;
-    width:930px;
-    height: 500px;
-    padding: 0px;
-    margin: 0 auto;
-    list-style-type: none;
-}
-
-.slide{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 1;
-    /*OPACITY TRANSFORMATIONS*/
-    -webkit-transition: opacity 1s;
-    -moz-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-}
-
-/*BRINGING CURRENT SLIDE TO TOP*/
-.showing{
-    opacity: 1;
-    z-index: 2;
-}
-
-
-/* SLIDESHOW RULES */
-.slideCon{
-  position: relative;
-}
-
-/*IMAGE STYLE*/
-.slide{
-    font-size: 40px;
-    padding: 40px;
-    box-sizing: border-box;
-    background: #333;
-    color: #fff;
-  background-size: cover;
-}
-
-/*LOADING SLIDE SHOW IMAGES*/
-.slide:nth-of-type(1){
-  background-image: url("../images/events_pic1_trout_release.jpg");
-}
-
-.slide:nth-of-type(2){
-  background-image: url("../images/events_pic2_barbecue.jpg");
-}
-
-/*CONTROLS STYLE*/
-.controls{
-  border: none;
-  padding: 20px 0px;
-  font-size: 20px;
-  cursor: pointer;
-  /*border: 2px solid #fff;*/
-  margin:5px;
-    width: 70px;
-}
-
-/*BUTTONS STYLE*/
-#prev{
-    background: url(../images/left_arrow_with_bg.svg) center no-repeat;
-}
-
-#next{
-    background: url(../images/right_arrow_with_bg.svg) center no-repeat;
-    margin-left:800px;
-}
-
-.buttons{
-  position: absolute;
-  bottom: 50%;
-  width:960px;
-  z-index: 10;
-  font-size: 0px;
-}
-
-/*EVENT DESCTIPTION BOX*/
-#eventDesc{
-	position:absolute;
-	bottom:15px;
-	margin: 0px 15px 0px 15px;
-	padding-top:40px;
-    width:930px;
-    height:100px;
-    background-color:rgba(46, 49, 49, 0.6);
-    z-index:20;
-}
-
-#eventDesc p{
-	color: white;
-	text-align:center;
-	font-size:18px;
-}
 
 
 /*Links and Newsletters section rules*/
@@ -939,9 +975,42 @@ button:active, .fundraiser a:active, #submit:active
 	margin-top: 30px;
 }
 
+#arrowsWithBG
+{
+	width: 910px;
+	margin-left: 10px;
+	position: absolute;
+	top: 250px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*Changes opacity of arrows and changes cursor to pointer*/
+#arrowsWithBG a
+{
+	cursor: pointer;
+	opacity: 0.8;
+	transition: all 0.1s linear;
+}
+
+/*Changes opacity of arrows on hover*/
+#arrowsWithBG a:hover
+{
+	opacity: 1;
+}
+
+/*Changes opacity of arrows on click*/
+#arrowsWithBG a:active
+{
+	opacity: 0.6;
+}
+
 #troutDesc
 {
-	padding:10px;
+	width: 930px;
+	margin: 0 auto;
+	padding-left: 10px;
 	margin-top: 15px;
 }
 
@@ -1007,7 +1076,7 @@ button:active, .fundraiser a:active, #submit:active
 	background-color: #FFF;
 	position: fixed;
 	bottom: 10px;
-	z-index: 25;
+	z-index: 2;
 	border-top: 2px solid #333;
 	border-bottom: 2px solid #333;
 	margin-left: 880px;
@@ -1060,7 +1129,7 @@ button:active, .fundraiser a:active, #submit:active
 	border: 2px solid #333;
 	position: fixed;
 	bottom: 10px;
-	z-index: 25;
+	z-index: 2;
 	transition: all 0.25s linear;
 }
 
