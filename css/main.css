@@ -1201,3 +1201,26 @@ button:active, .fundraiser a:active, #submit:active
 	text-align: center;
 	padding-top: 3px;
 }
+
+/*membership sign up page rules*/
+#membershipSignUp{
+	margin:0 auto;
+	padding:15px;
+}
+
+#membershipSignUp h2{
+	margin-top:15px;
+}
+
+#membershipBlurb{
+	margin-bottom:15px;
+	text-align: center;
+}
+
+#signUpForm{
+	text-align:center;
+}
+
+#signUpForm input{
+	margin: 0 auto;
+}
