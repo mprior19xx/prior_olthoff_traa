@@ -199,9 +199,43 @@
 						<div id="membershipRight">
 							<p>Your membership adds another voice to our efforts in protecting and enhancing aquatic habitats in London and other surrounding areas! We would love for you to join!</p>
 
-							<a href="membership_signup.html"><button id="memberJoin">Become a Member Now!</button></a>
+							<button id="memberJoin">Become a Member Now!</button>
 						</div> <!-- end membershipRight -->
 					</div> <!-- End membershipCon -->
+
+					<!-- Membership Popup -->
+					<div id="membershipPopup">
+						<form id="popupCon">
+							<a id="xButton">X</a>
+
+							<!-- Membersip popup heading -->
+							<p>Membership Sign Up</p>
+
+							<!-- First Name -->
+							<label for="membershipFirstName">First Name:</label>
+							<input id="membershipFirstName" type="text" required>
+							
+							<!-- Last Name -->
+							<label for="membershipLastName">Last Name:</label>
+							<input id="membershipLastName" type="text" required>
+
+							<!-- Email -->
+							<label for="membershipEmail">Email:</label>
+							<input id="membershipEmail" type="Email" required>
+
+							<!-- Payment Type -->
+							<label>Payment Type:</label><br>
+							<div id="paymentType">
+		  						<input type="radio" name="vehicle" value="Visa"> <span class="paymentLabel">Visa</span>
+		  						<input type="radio" name="vehicle" value="MasterCard"> <span class="paymentLabel">MasterCard</span>
+		  						<input type="radio" name="vehicle" value="PayPal"> <span class="paymentLabel">PayPal</span>
+		  						<input type="radio" name="vehicle" value="Interact Online"> <span class="paymentLabel">Interact Online</span>
+	  						</div> <!-- End paymentType -->
+			
+							<!-- Submit Button -->
+							<input class="submit" type="submit" value="Submit">
+						</form> <!-- End popupCon -->
+					</div> <!-- End membershipPopup -->
 				</section> <!-- end membership -->
 			</section> <!-- End aboutUsSection -->
 
@@ -439,25 +473,21 @@
 						<!-- First Name -->
 						<label for="firstName">First Name:</label>
 						<input id="firstName" type="text" required>
-						<br><br>
 						
 						<!-- Last Name -->
 						<label for="lastName">Last Name:</label>
 						<input id="lastName" type="text" required>
-						<br><br>
 
 						<!-- Email -->
 						<label for="email">Email:</label>
 						<input id="email" type="Email" required>
-						<br><br>
 
 						<!-- Message -->
 						<label for="message">Message:</label>
 						<textarea id="message" cols="50" rows="14" required></textarea>
-						<br><br>
 
 						<!-- Submit Button -->
-						<input id="submit" type="submit" value="Submit">
+						<input class="submit" type="submit" value="Submit">
 					</section> <!-- end contactForm -->
 
 					<section id="mapArea">
@@ -542,7 +572,8 @@
 
 		<!-- Script link -->
 		<script src="js/main.js"></script>
-		<script src="js/statistics.js"></script>
+		<script src="js/homepage.js"></script>
+		<script src="js/slideshow.js"></script>
 	</body> <!-- End body -->
 
 </html>
