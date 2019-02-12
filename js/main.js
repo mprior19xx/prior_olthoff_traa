@@ -1,61 +1,51 @@
 (() => {
-    console.log("Javascript is linked up");
-
     // SLIDESHOW RULES
 
-    var controls = document.querySelectorAll('.controls');
-    for(var i=0; i<controls.length; i++){
-        controls[i].style.display = 'inline-block';
+    // Slideshow variables
+    var slideIndex = 1;
+    var slides = document.getElementsByClassName("slides");
+    var prevArrow = document.querySelector("#prevSlide");
+    var nextArrow = document.querySelector("#nextSlide");
+
+    // Next/previous controls
+
+    // Changes slideshow to previous slide
+    function prevSlide() {
+        showSlides(slideIndex -= 1)
     }
 
-    var slides = document.querySelectorAll('#slides .slide');
-    var currentSlide = 0;
-    var slideInterval = setInterval(nextSlide,4000);
-
-    // next slide
-    function nextSlide(){
-        goToSlide(currentSlide+1);
+    // Changes slideshow to next slide
+    function nextSlide() {
+        showSlides(slideIndex += 1)
     }
 
-    // previous slide
-    function previousSlide(){
-        goToSlide(currentSlide-1);
+    // Shows the current slide
+    function showSlides(n) {
+      var i;
+
+        // If on the last slide and clicking next, set slide to the first slide
+        if (n > slides.length) {slideIndex = 1} 
+
+        // If on the first slide and clicking previous, set slide to the last slide
+        if (n < 1) {slideIndex = slides.length}
+
+        // Hides any showing slides
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; 
+        }
+
+        // Displays proper slide
+        slides[slideIndex-1].style.display = "block"; 
     }
 
-    // slide showing
-    function goToSlide(n){
-        slides[currentSlide].className = 'slide';
-        currentSlide = (n+slides.length)%slides.length;
-        slides[currentSlide].className = 'slide showing';
-    }
-
-    // auto play
-    var playing = true;
-    var pauseButton = document.getElementById('eventDesc');
-
-    function pauseSlideshow(){
-        playing = false;
-        clearInterval(slideInterval);
-    }
-
-    function playSlideshow(){
-        playing = true;
-        slideInterval = setInterval(nextSlide,2000);
-    }
+    //Call functions for displaying the slides
+    showSlides(slideIndex);
+    prevArrow.addEventListener("click", prevSlide);
+    nextArrow.addEventListener("click", nextSlide);
 
 
-    // previous and next buttons
-    var next = document.getElementById('next');
-    var previous = document.getElementById('previous');
 
-    next.onclick = function(){
-        nextSlide();
-    };
-    // previous.onclick = function(){
-    //     previousSlide();
-    // };
-
-
+    // STICKY MENU RULES
 
     // Menu button variables
     var menu = document.querySelector("#menu");
@@ -80,22 +70,4 @@
 
     // Toggle menu event listener, listens for user click
     menuButton.addEventListener("click", toggleMenu);
-
-
-
-
-    // Show statistics variable
-    var statisticsButton = document.querySelector("#statisticsLink");
-    var statistics = document.querySelector("#statistics");
-    var expandTriangle = document.querySelector("#expandTriangle");
-
-    // Toggle statistics function
-    function displayStatistics() {
-        console.log(statistics);
-        statistics.classList.toggle("openStatistics");
-        expandTriangle.classList.toggle("openStatistics");
-    }
-
-    //Toggle statistics event listener, listens for user click
-    statisticsButton.addEventListener("click", displayStatistics);
 })();

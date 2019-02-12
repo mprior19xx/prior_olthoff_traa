@@ -211,24 +211,40 @@
 			<section id="eventsSection">
 				<h2>Events</h2>
 
-				<div class="slideCon">
-				  <ul id="slides">
-				    <li class="slide showing"></li>
-				    <li class="slide"></li>
-				    <li class="slide"></li>
-				  </ul>
+				<!-- Slideshow -->
+				<div id="slideshow">
 					
-					<div class="buttons">
-    			
-    					<button class="controls" id="prev"></button>
+					<!-- Slide 1: Trout Release June 21, 2014 -->
+					<div id="slide1" class="slides">
+						<img class="fade" src="images/events_pic1_trout_release.jpg" alt="Releasing Trout" width="930" height="500">
 
-    					<button class="controls" id="next"></button>
-  					</div>
-  					<div id="eventDesc">
-  						<p>This spring's hatch of rainbow trout was incredibly successful with low mortality resulting in a phenomenal total of over 40,000 fry ready for release day on Saturday June 21, 2014.<a href="trout_release_june_21_2014.html">See more...</a></p>
-  					</div>
-				</div>
-				
+						<div class="slideNumber"><p>1 of 2</p></div>
+
+						<div class="eventDesc">
+							<p class="eventDescTitle">Rainbow Trout Release - June 21, 2014</p>
+
+	  						<p>This spring's hatch of rainbow trout was incredibly successful with low mortality resulting in a phenomenal total of over 40,000 fry ready for release day on Saturday June 21, 2014.<a class="seeMore" href="trout_release_june_21_2014.html">See more...</a></p>
+  						</div> <!-- End eventDesc -->
+					</div> <!-- End slide1 -->
+
+					<!-- Slide 2: Angling Sports Barbeque -->
+					<div id="slide2" class="slides">
+						<img class="fade" src="images/events_pic2_barbecue.jpg" alt="Angling Sports Barbeque" width="930" height="500">
+
+						<div class="slideNumber"><p>2 of 2</p></div>
+
+						<div class="eventDesc">
+							<p class="eventDescTitle">Angling Sports Barbecue - Saturday, May 7, 2016</p>
+
+	  						<p>There was hotdogs, burgers and lots of fun going on at this informal get-together. Paul Noble put his barbequing skills to the test supplying a steady stream of hungry customers.<a class="seeMore" href="#eventsSection">See more...</a></p>
+  						</div> <!-- End eventDesc -->
+					</div> <!-- End slide2 -->
+					
+					<div id="arrows">
+						<a id="prevSlide"><img src="images/left_arrow.svg" alt="Previous Slide Arrow" width="50" height="50"></a>
+						<a id="nextSlide"><img src="images/right_arrow.svg" alt="Next Slide Arrow" width="50" height="50"></a>
+  					</div> <!-- End arrows -->
+				</div> <!-- End slideshow -->
 			</section> <!-- end eventsSection -->
 
 
@@ -526,6 +542,7 @@
 
 		<!-- Script link -->
 		<script src="js/main.js"></script>
+		<script src="js/statistics.js"></script>
 	</body> <!-- End body -->
 
 </html>
