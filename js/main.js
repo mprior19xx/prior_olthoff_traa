@@ -98,4 +98,8 @@
 
     //Toggle statistics event listener, listens for user click
     statisticsButton.addEventListener("click", displayStatistics);
+
 })();
+
+
+
