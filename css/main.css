@@ -52,29 +52,28 @@ body
 /*Styles all of the H2s*/
 h2
 {
-	width: 910px;
+	width: 100%;
 	height: 30px;
 	background-color: #9bbd4f;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 30px;
+	font-size: 16px;
 	margin: 0 auto;
 	margin-bottom: 15px;
-	padding: 13px 10px 7px 10px;
+	padding: 13px 0px 7px 0px;
 }
 
 /*Styles all of the H4s*/
 h4
 {
-	width: 910px;
-	height: 20px;
+	width: 100%;
+	height: 40px;
 	background-color: #d8ae58;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 25px;
+	font-size: 14px;
 	margin:0 auto;
 	margin-bottom: 15px;
-	padding: 10px;
 }
 
 /*Styles all of the links dark green and medium font weight*/
@@ -125,7 +124,8 @@ button:active, .fundraiser a:active, .submit:active
 /*Sets container size and position*/
 #container
 {
-	width: 960px;
+	min-width:320px;
+	max-width:520px;
 	margin: 0 auto;
 	background-color: #FFF;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
@@ -138,6 +138,7 @@ button:active, .fundraiser a:active, .submit:active
 /*Makes header position relative so logo can sit on top of header image and nav*/
 #mainHeader
 {
+	height: 60px;
 	position: relative;
 }
 
@@ -148,16 +149,6 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 /*Styles and positions nav bar*/
-#mainNav
-{
-	width: 100%;
-	height: 40px;
-	background: #5d6f34; /* Old browsers */
-	background: -moz-linear-gradient(top, #9bbd4f 0%, #5d6f34 100%); /* FF3.6-15 */
-	background: -webkit-linear-gradient(top, #9bbd4f 0%,#5d6f34 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(to bottom, #9bbd4f 0%,#5d6f34 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bbd4f', endColorstr='#5d6f34',GradientType=0 ); /* IE6-9 */
-}
 
 /*Displays nav links in a row and pushes them to the right so they aren't beneath the logo*/
 #mainNav ul
@@ -179,7 +170,7 @@ button:active, .fundraiser a:active, .submit:active
 #mainNav ul li a
 {
 	color: #FFF;
-	font-size: 20px;
+	font-size: 14px;
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 }
 
@@ -244,8 +235,8 @@ button:active, .fundraiser a:active, .submit:active
 /*Styles meetings background*/
 #nextMeeting
 {
-	width: 960px;
-	height: 50px;
+	width: 100%;
+	height: 45px;
 	background-color: #5d6f34;
 }
 
@@ -256,7 +247,7 @@ button:active, .fundraiser a:active, .submit:active
 	color: #FFF;
 	text-align: center;
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
-	font-size: 18px;
+	font-size: 16px;
 }
 
 /*Positions hero and makes it flex so the text can be centered*/
@@ -288,8 +279,7 @@ button:active, .fundraiser a:active, .submit:active
 	position: absolute;
 	text-align: center;
 	top: 80px;
-	width: 600px;
-	height: 190px;
+	width: 50%;
 	padding: 5px;
 	background-color: rgb(255,255,255); /*Fallback for older browsers*/
 	background-color: rgba(255,255,255,0.8);
@@ -307,7 +297,7 @@ button:active, .fundraiser a:active, .submit:active
 #heroHeader
 {
 	font-family: 'libre_franklin-bold', Helvetica, sans-serif;
-	font-size: 30px;
+	font-size: 24px;
 	color: #5d6f34;
 	background: none;
 	margin: 0;
@@ -318,8 +308,8 @@ button:active, .fundraiser a:active, .submit:active
 #heroText p
 {
 	font-family: 'libre_franklin-italic', Helvetica, sans-serif;
-	font-size: 24px;
-	line-height: 40px;
+	font-size: 18px;
+	line-height: 25px;
 	margin-top: 5px;
 }
 
@@ -330,7 +320,7 @@ button:active, .fundraiser a:active, .submit:active
 /*Adds space above about us*/
 #aboutUsSection
 {
-	margin-top: 30px;
+	margin-top: 300px;
 }
 
 /*Spaces out top portion of information*/
@@ -381,6 +371,11 @@ button:active, .fundraiser a:active, .submit:active
 #aboutCopy2 p
 {
 	margin-bottom: 22px;
+}
+
+#aboutImage{
+	display:flex;
+	justify-content: center;
 }
 
 /*Positions expand triangle next to statistics link*/
@@ -442,7 +437,7 @@ button:active, .fundraiser a:active, .submit:active
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 930px;
+	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 30px;
 }
@@ -450,27 +445,32 @@ button:active, .fundraiser a:active, .submit:active
 /*Centers member group names and makes their containers the same size*/
 .posAndNames
 {
-	width: 174px;
+	width: 90%;
 	text-align: center;
 }
 
+.posAndNames p{
+	margin-left: 10px;
+}
 /*Makes member group names semibold*/
 .makeSemibold
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 }
 
+
 /*Adds space to bottom of volunteers*/
 #volunteers
 {
+	width:100%;
 	margin-bottom: 40px;
 }
 
 /*Styles and spaces out membership*/
 #membership
 {
-	width: 960px;
-	height: 180px;
+	width: 100%;
+	height: 245px;
 	background-color: #5d6f34;
 	margin-bottom: 40px;
 	display: flex;
@@ -482,23 +482,19 @@ button:active, .fundraiser a:active, .submit:active
 /*Vertically centers membership content*/
 #membershipCon
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	display: block;
 }
 
 /*Styles and positions membership title*/
 #membershipLeft
 {
 	font-family: 'libre_franklin-bold', Helvetica, sans-serif;
-	font-size: 45px;
-	line-height: 55px;
-	width: 390px;
+	font-size: 34px;
+	line-height: 40px;
+	width: 100%;
 	text-align: center;
-	margin-right: 20px;
-	display: flex;
-	flex-direction: column;
 	justify-content: center;
+	margin-top:10px;
 }
 
 /*Makes "membership" green in title*/
@@ -510,16 +506,17 @@ button:active, .fundraiser a:active, .submit:active
 /*Positions and formats membership right content*/
 #membershipRight
 {
-	width: 505px;
-	font-size: 19px;
-	line-height: 28px;
+	width: 100%;
+	text-align: center;
+	font-size: 16px;
+	line-height: 20px;
 }
 
 /*Sizes and positions member join button*/
 #memberJoin
 {
-	width: 505px;
-	margin-top: 5px;
+	width: 80%;
+	margin-bottom:45px;
 }
 
 /*Creates popup background*/
@@ -645,8 +642,8 @@ button:active, .fundraiser a:active, .submit:active
 /*Sets slideshow size and position*/
 #slideshow
 {
-	width: 930px;
-	height: 500px;
+	width: 320px;
+	height: 200px;
 	position: relative;
 	margin: 0 auto;
 	background-color: #333;
@@ -656,16 +653,16 @@ button:active, .fundraiser a:active, .submit:active
 /*Positions arrows and creates background*/
 #arrows
 {
-	width: 930px;
-	height: 80px;
+	width: 100%;
+	height: 40px;
 	background-color: rgb(51,51,51);
 	background-color: rgba(51,51,51,0.8);
 	position: absolute;
-	bottom: 0;
+	bottom: 65px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	padding-top: 30px;
+	padding-top: 5px;
 }
 
 /*Changes opacity of arrows and changes cursor to pointer*/
@@ -709,13 +706,13 @@ button:active, .fundraiser a:active, .submit:active
 /*Positions the event description*/
 .eventDesc
 {
-	width: 800px;
-	height: 110px;
+	width: 100%;
+	height: 175px;
 	position: absolute;
 	bottom: 0;
 	color: #FFF;
 	z-index: 1;
-	margin-left: 65px;
+	margin-left: 5px;
 	text-align: center;
 	display: flex;
 	flex-direction: column;
@@ -774,11 +771,11 @@ button:active, .fundraiser a:active, .submit:active
 /*Formats the scroll box*/
 #scrollBox
 {
-	height: 400px;
+	width:100%;
+	height: 450px;
 	overflow: auto;
-	width: 910px;
 	border: solid 1px #333;
-	padding: 10px 10px 0 10px;
+	padding: 10px 0px 0 0px;
 	margin: 0 auto;
 	margin-bottom: 40px;
 }
@@ -831,23 +828,23 @@ button:active, .fundraiser a:active, .submit:active
 /*Sets size, position, and style of fundraisers section*/
 #fundraisingWithBG
 {
-	width: 960px;
-	height: 435px;
+	width: 100%;
+	height: 975px;
 	background-color: #5d6f34;
-	display: flex;
-	flex-direction: column;
+	display: block;
+	justify-content: center;
 	color: #FFF;
-	padding-top: 15px;
-	margin-bottom: 40px;
+	padding-top: 5px;
+	margin-bottom: 20px;
 }
 
 /*Styles the fundraising text*/
 #fundraisingText
 {
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
-	font-size: 20px;
+	font-size: 14px;
 	line-height: 28px;
-	width: 920px;
+	width: 100%;
 	padding: 0 10px 0 10px;
 	margin: 0 auto;
 }
@@ -855,10 +852,7 @@ button:active, .fundraiser a:active, .submit:active
 /*Displays fundraisers side by side and aligns them center*/
 #allFundraisers
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	width: 930px;
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 15px;
 	text-align: center;
@@ -886,7 +880,7 @@ button:active, .fundraiser a:active, .submit:active
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 930px;
+	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 40px;
 }
@@ -894,42 +888,42 @@ button:active, .fundraiser a:active, .submit:active
 /*Sets width of merchandise text*/
 #merchandiseText
 {
-	width: 520px;
+	width: 100%;
 }
 
 /*Sets size of merchandise text and spaces it out*/
 #merchandiseText p
 {
-	font-size: 18px;
+	font-size: 14px;
 	line-height: 25px;
 	margin-bottom: 22px;
+	text-align: center;
 }
 
-
+.merchBuy{
+	display: flex;
+	justify-content: center;
+	margin-bottom:10px;
+}
 
 /*Contact section rules*/
 
 /*Sizes and centers contact section*/
 #contactSection
 {
-	width: 930px;
+	width: 100%;
 	margin: 0 auto;
 }
 
-/*Displays content side by side and adds spacing*/
 #contactCon
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding-left: 10px;
-	margin-bottom: 15px;
+	display: block;
 }
 
 /*Formats contact form*/
 #contactForm
 {
-	width: 520px;
+	width: 100%;
 	border-right: solid 1px #CCC;
 }
 
@@ -937,8 +931,9 @@ button:active, .fundraiser a:active, .submit:active
 #contactForm label
 {
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
-	font-size: 20px;
+	font-size: 16px;
 	margin-top: 20px;
+	margin-left: 40px;
 	display: block;
 }
 
@@ -952,8 +947,9 @@ button:active, .fundraiser a:active, .submit:active
 {
 	display: block;
 	margin-top: 5px;
+	margin: 0 auto;
 	padding: 10px;
-	width: 450px;
+	width: 80%;
 	height: 20px;
 	border: 1px solid #666;
 	border-radius: 2px;
@@ -971,7 +967,8 @@ button:active, .fundraiser a:active, .submit:active
 .submit
 {
 	display: block;
-	width: 170px;
+	width: 85%;
+	margin: 0 auto;
 	margin-top: 20px;
 }
 
@@ -979,12 +976,14 @@ button:active, .fundraiser a:active, .submit:active
 #mapArea
 {
 	background-color: #5d6f34;
-	width: 320px;
-	height: 485px;
+	width: 100%;
+	margin-top:10px;
+	height: 580px;
 	color: #FFF;
 	font-size: 18px;
 	line-height: 25px;
-	padding: 15px;
+	display: flex;
+	flex-direction: column;
 }
 
 /*Styles map area header*/
@@ -992,7 +991,14 @@ button:active, .fundraiser a:active, .submit:active
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	font-size: 25px;
+	padding-top: 10px;
 	margin-bottom: 5px;
+	margin-left: 10px;
+}
+
+#infoCon{
+	width:100%;
+	display: block;
 }
 
 /*Styles map area subtitles*/
@@ -1000,14 +1006,22 @@ button:active, .fundraiser a:active, .submit:active
 {
 	color: #d8ae58;
 	line-height: 30px;
+	margin-left: 10px;
 }
+
+#mapArea ul li
+{
+	list-style: none;
+	margin-left: 10px;
+}
+
 
 /*Adds space above the map*/
 #mapArea iframe
 {
-	margin-top: 10px;
+	display: flex;
+	margin: 0 auto;
 }
-
 
 
 /*Footer section rules*/
@@ -1015,8 +1029,9 @@ button:active, .fundraiser a:active, .submit:active
 /*Styles footer background*/
 #mainFooter
 {
-	width: 960px;
-	height: 85px;
+	width: 100%;
+	height: 75px;
+	padding-top: 20px;
 	background: #5d6f34; /* Old browsers */
 	background: -moz-linear-gradient(top, #5d6f34 0%, #9bbd4f 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, #5d6f34 0%,#9bbd4f 100%); /* Chrome10-25,Safari5.1-6 */
@@ -1025,55 +1040,12 @@ button:active, .fundraiser a:active, .submit:active
 	text-align: center;
 }
 
-/*Makes footer nav display in a row and positions it*/
-#footerNav ul
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	padding-top: 15px;
-}
-
-/*Styles footer nav links*/
-#footerNav ul li a
-{
-	color: #FFF;
-	padding-left: 35px;
-	padding-right: 35px;
-	border-right: solid 1px #FFF;
-}
-
-/*Removes border-right from last footer nav link*/
-#footerNav li:last-child a
-{
-	border-right: none;
-}
-
-/*Lowers footer links' opacity when hovering on the footer*/
-#mainFooter:hover > #footerNav li a, #mainFooter:hover > #facebook a
-{
-	color: rgba(255,255,255,0.6);
-}
-
-/*Increases footer nav link's opacity when hovering over it*/
-#mainFooter:hover > #footerNav li a:hover, #mainFooter:hover > #facebook a:hover
-{
-	color: rgba(255,255,255,1);
-}
-
-/*Increases facebook link's opacity when hovering over it or the icon*/
-#facebook a:hover ~ #facebookLink
-{
-	color: rgba(255,255,255,1);
-}
-
 /*Makes Facebook logo and text display in a row and positions them*/
 #facebook
 {
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
-	margin-top: 15px;
 }
 
 /*Styles the Facebook text*/
@@ -1082,6 +1054,45 @@ button:active, .fundraiser a:active, .submit:active
 	margin-left: 5px;
 	color: #FFF;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1097,10 +1108,10 @@ button:active, .fundraiser a:active, .submit:active
 
 #arrowsWithBG
 {
-	width: 910px;
+	width: 100%;
 	margin-left: 10px;
 	position: absolute;
-	top: 250px;
+	bottom: 0;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -1114,12 +1125,6 @@ button:active, .fundraiser a:active, .submit:active
 	transition: all 0.1s linear;
 }
 
-/*Changes opacity of arrows on hover*/
-#arrowsWithBG a:hover
-{
-	opacity: 1;
-}
-
 /*Changes opacity of arrows on click*/
 #arrowsWithBG a:active
 {
@@ -1128,15 +1133,14 @@ button:active, .fundraiser a:active, .submit:active
 
 #troutDesc
 {
-	width: 930px;
+	width: 95%;
 	margin: 0 auto;
-	padding-left: 10px;
 	margin-top: 15px;
 }
 
 #troutDesc p
 {
-	width: 930px;
+	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 22px;
 }
@@ -1144,6 +1148,15 @@ button:active, .fundraiser a:active, .submit:active
 #troutDesc ul li span{
 	text-align: center;
 }
+
+
+
+
+
+
+
+
+
 
 /*FUNDRAISING PAGE RULES*/
 .fundraisingMain{
@@ -1153,11 +1166,11 @@ button:active, .fundraiser a:active, .submit:active
 
 .fundraisingScrollBox
 {
-	height: 700px;
+	height: 100%;
 	overflow: auto;
-	width: 910px;
+	width: 100%;
 	border: solid 1px #333;
-	padding: 10px 10px 0 10px;
+	padding: 10px 0px 0 0px;
 	margin-top:15px;
 	margin: 0 auto;
 	margin-bottom: 30px;
@@ -1195,6 +1208,13 @@ button:active, .fundraiser a:active, .submit:active
 	border: 1px solid #666;
 	margin: 0 auto;
 }
+
+
+
+
+
+
+
 
 
 
