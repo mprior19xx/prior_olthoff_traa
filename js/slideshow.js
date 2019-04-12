@@ -2,10 +2,28 @@
     // SLIDESHOW RULES
 
     // Slideshow variables
-    var slideIndex = 1;
-    var slides = document.getElementsByClassName("slides");
-    var prevArrow = document.querySelector("#prevSlide");
-    var nextArrow = document.querySelector("#nextSlide");
+    var slideIndex = 0,
+        prevArrow = document.querySelector(".prevSlide"),
+        nextArrow = document.querySelector(".nextSlide"),
+        slidePic = document.querySelector(".slideshowImg"),
+        slideNum = document.querySelector(".slideNumber"),
+        slideDesc = document.querySelector(".eventDesc"),
+        pageSlide = document.querySelector(".slideshow");
+
+    // Slices pageSlide to determine which slideshow to display
+    pageSlide = pageSlide.id.slice(0, -9);
+
+    // Slideshows and their contents
+    const slideshows = [
+        // Homepage slideshow
+        [
+            // Slide 1
+            [`<img class="fade" src="images/events_pic1_trout_release.jpg" alt="Releasing Trout">`, `<p>1 of 2</p>`, `<p class="eventDescTitle">Rainbow Trout Release - June 21, 2014</p> <p>This spring's hatch of rainbow trout was incredibly successful with low mortality resulting in a phenomenal total of over 40,000 fry ready for release day on Saturday June 21, 2014.<a class="seeMore" href="trout_release_june_21_2014.html">See more...</a></p>`],
+
+            // Slide 2
+            [`<img class="fade" src="images/events_pic2_barbecue.jpg" alt="Angling Sports Barbeque">`, `<p>2 of 2</p>`, `<p class="eventDescTitle">Angling Sports Barbecue - Saturday, May 7, 2016</p> <p>There was hotdogs, burgers and lots of fun going on at this informal get-together. Paul Noble put his barbequing skills to the test supplying a steady stream of hungry customers.<a class="seeMore" href="#eventsSection">See more...</a></p>`]
+        ] // End Homepage slideshow
+    ];
 
     // Next/previous controls
 
@@ -21,21 +39,16 @@
 
     // Shows the current slide
     function showSlides(n) {
-      var i;
-
         // If on the last slide and clicking next, set slide to the first slide
-        if (n > slides.length) {slideIndex = 1} 
+        if (n > slideshows[pageSlide].length) {slideIndex = 0;};
 
         // If on the first slide and clicking previous, set slide to the last slide
-        if (n < 1) {slideIndex = slides.length}
-
-        // Hides any showing slides
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none"; 
-        }
+        if (n < 0) {slideIndex = slideshows[pageSlide].length - 1;};
 
         // Displays proper slide
-        slides[slideIndex-1].style.display = "block"; 
+        slidePic.innerHTML = slideshows[pageSlide][slideIndex][0];
+        slideNum.innerHTML = slideshows[pageSlide][slideIndex][1];
+        slideDesc.innerHTML = slideshows[pageSlide][slideIndex][2];
     }
 
     //Call functions for displaying the slides
