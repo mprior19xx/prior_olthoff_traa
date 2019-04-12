@@ -6,7 +6,10 @@
 	display: none;
 }
 
-/*PAGE-WIDE RULES*/
+#aboutImgBig
+{
+	display:none;
+}
 
 /*Fontface settings*/
 @font-face {
@@ -39,41 +42,48 @@
          url('../fonts/librefranklin-regular-webfont.woff') format('woff');
 }
 
+img, video{
+	max-width:100%;
+	max-height:100%;
+}
+
+/*PAGE Rules*/
 /*Sets default font settings*/
 body
 {
+	display:flex;
+	margin:0 auto;
 	font-family: 'libre_franklin-regular', Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	color: #666;
-	line-height: 22px;
+	line-height: 20px;
 	background-color: #EFEFEF;
 }
 
 /*Styles all of the H2s*/
 h2
 {
-	width: 100%;
-	height: 30px;
+	max-width: 100%;
+	height: 25px;
 	background-color: #9bbd4f;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 16px;
-	margin: 0 auto;
+	font-size: 18px;
 	margin-bottom: 15px;
-	padding: 13px 0px 7px 0px;
+	padding: 5px 0px 0px 10px;
 }
 
 /*Styles all of the H4s*/
 h4
 {
-	width: 100%;
-	height: 40px;
+	max-width: 100%;
+	height: 22px;
 	background-color: #d8ae58;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 14px;
-	margin:0 auto;
-	margin-bottom: 15px;
+	font-size: 16px;
+	padding-top:3px;
+	padding-left:10px;
 }
 
 /*Styles all of the links dark green and medium font weight*/
@@ -85,15 +95,8 @@ a
 	transition: all .15s linear;
 }
 
-/*Styles links on hover*/
-a:hover
-{
-	color: #9bbd4f;
-}
-
 /*Styles all buttons the same*/
-button, .fundraiser a, .submit
-{
+button, .fundraiser a, .submit, .merchBuy a{
 	height: 30px;
 	background-color: #d8ae58;
 	color: #FFF;
@@ -106,12 +109,6 @@ button, .fundraiser a, .submit
 	transition: all 0.1s linear;
 }
 
-/*Styles buttons on hover*/
-button:hover, .fundraiser a:hover, .submit:hover
-{
-	box-shadow: 0px 1px 5px rgba(0,0,0,0.4);
-}
-
 /*Styles buttons on click*/
 button:active, .fundraiser a:active, .submit:active
 {
@@ -119,218 +116,133 @@ button:active, .fundraiser a:active, .submit:active
 	box-shadow: none;
 }
 
-/*SPECIFIC RULES*/
-
-/*Sets container size and position*/
+/*sets the page width - this changes by screen*/
 #container
 {
-	min-width:320px;
-	max-width:520px;
+	min-width:325px;
+	max-width:600px;
 	margin: 0 auto;
 	background-color: #FFF;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
 }
 
+/*MOBILE RULES*/
+/**/
 
+/*hides main header*/
+#mainNav
+{
+	display:none;
+}
 
-/*Header rules*/
-
+/*HEADER SECTION RULES*/
+/**/
 /*Makes header position relative so logo can sit on top of header image and nav*/
 #mainHeader
 {
-	height: 60px;
-	position: relative;
+	display:flex;
+	flex-direction:row;
 }
 
 /*Removes space between image and other elements*/
 #mainHeader img
 {
-	display: block;
 }
 
-/*Styles and positions nav bar*/
-
-/*Displays nav links in a row and pushes them to the right so they aren't beneath the logo*/
-#mainNav ul
+#big_logo
 {
-	display: flex;
-	flex-direction: row;
-	margin-left: 240px;
-}
-
-/*Spaces the nav links*/
-#mainNav ul li
-{
-	margin-top: 9px;
-	padding-right: 40px;
-	height: 40px;
-}
-
-/*Styles the nav links*/
-#mainNav ul li a
-{
-	color: #FFF;
-	font-size: 14px;
-	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
-}
-
-/*Creates fade in animation for main nav bottom border*/
-@-webkit-keyframes navFadeIn 
-{
-  from {
-    border-bottom: solid 8px rgba(216,174, 88, 0)
-  }
-
-  to {
-    border-bottom: solid 8px rgba(216,174, 88, 1)
-  }
-}
-
-@keyframes navFadeIn 
-{
-  from {
-    border-bottom: solid 8px rgba(216,174, 88, 0)
-  }
-
-  to {
-    border-bottom: solid 8px rgba(216,174, 88, 1)
-  }
-}
-
-/*Styles main nav links on hover*/
-#mainNav ul li a:hover
-{
-	border-bottom: solid 8px #d8ae58;
-	padding-bottom: .5px;
-	-webkit-animation-duration: .35s;
-	-webkit-animation-name: navFadeIn; 
-	animation-duration: .35s;
-	animation-name: navFadeIn; 
-}
-
-/*Styles main nav links on click*/
-#mainNav ul li a:active
-{
-	color: #CCC;
+	display:none;
 }
 
 /*Positions the logo*/
 #traa_logo
 {
-	position: absolute;
-	top: 15px;
-	left: 15px;
+	margin-top:10px;
+	margin-left:10px;
 }
 
-
-
-/*Home section rules*/
-
-/*Adds space to top of home section*/
+#headerTextCon
+{
+	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+	font-size: 26px;
+	line-height:40px;
+	margin-top:15px;
+	margin-left:10px;
+}
+/**/
+/*HOME SECTION RULES*/
+/**/
 #homeSection
 {
-	margin-top: 30px;
+	margin-top:15px;
 }
 
 /*Styles meetings background*/
 #nextMeeting
 {
 	width: 100%;
-	height: 45px;
 	background-color: #5d6f34;
 }
 
 /*Styles and positions meeting text*/
 #meetingHeader
 {
-	padding-top: 17px;
 	color: #FFF;
 	text-align: center;
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
+	padding: 5px 5px 5px 5px;
 }
-
-/*Positions hero and makes it flex so the text can be centered*/
+/**/
+/*HERO SECTION RULES*/
 #hero
 {
-	margin-top: 30px;
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-/*Animation for hero overlay fade in*/
-@-webkit-keyframes heroFadeIn
-{
-	from {opacity: 0;}
-	to {opacity: 1;}
-}
-
-@keyframes heroFadeIn
-{
-	from {opacity: 0;}
-	to {opacity: 1;}
+	display:flex;
+	flex-direction: column;
+	text-align: center;
 }
 
 /*Positions and styles hero text*/
 #heroText
 {
-	position: absolute;
-	text-align: center;
-	top: 80px;
-	width: 50%;
-	padding: 5px;
-	background-color: rgb(255,255,255); /*Fallback for older browsers*/
-	background-color: rgba(255,255,255,0.8);
-	border-radius: 10px;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	-webkit-animation-duration: 1.5s;
-	-webkit-animation-name: heroFadeIn;
-	animation-duration: 1.5s;
-	animation-name: heroFadeIn;
+	width: 100%;
+	padding-top: 15px;
+	
 }
 
 /*Styles hero header*/
 #heroHeader
 {
+	width: 100%;
 	font-family: 'libre_franklin-bold', Helvetica, sans-serif;
-	font-size: 24px;
+	font-size: 18px;
+	line-height: 20px;
 	color: #5d6f34;
 	background: none;
-	margin: 0;
-	padding: 0;
 }
 
 /*Styles hero text*/
 #heroText p
 {
-	font-family: 'libre_franklin-italic', Helvetica, sans-serif;
-	font-size: 18px;
+	width:100%;
+	font-family: 'libre_franklin-italic',Helvetica, sans-serif;
+	font-size: 14px;
 	line-height: 25px;
 	margin-top: 5px;
 }
 
-
-
-/*About Us section rules*/
-
+/**/
+/*ABOUT US SECTION RULES*/
 /*Adds space above about us*/
 #aboutUsSection
 {
-	margin-top: 300px;
+	margin-top: 30px;
 }
 
-/*Spaces out top portion of information*/
-#aboutInfoTop
+#aboutInfo
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	padding: 0 15px 0 25px;
-	margin-bottom: 22px;
+	width:90%;
+	margin: 0 auto;
 }
 
 /*Makes the first line in copy1 medium font weight*/
@@ -350,8 +262,8 @@ button:active, .fundraiser a:active, .submit:active
 /*Spaces out the list items*/
 #aboutCopy1 ul li
 {
-	line-height: 22px;
-	margin-bottom: 4px;
+	line-height: 26px;
+	margin-bottom: 10px;
 }
 
 /*Removes margin-bottom from last list item*/
@@ -360,24 +272,36 @@ button:active, .fundraiser a:active, .submit:active
 	margin-bottom: 0;
 }
 
+/*hides Large about image*/
+#aboutImg
+{
+	display:none;
+}
+
+#aboutImage
+{
+	display: flex;
+	justify-content: center;
+	margin-top: 10px;
+}
+
 /*Spaces out bottom portion of information*/
 #aboutInfoBottom
 {
-	padding: 0 15px 0 25px;
 	margin-bottom: 22px;
 }
 
 /*Adds space after paragraphs in copy2*/
 #aboutCopy2 p
 {
+	padding-left: 10px;
+	padding-right:5px;
+	margin-top:15px;
 	margin-bottom: 22px;
 }
-
-#aboutImage{
-	display:flex;
-	justify-content: center;
-}
-
+/**/
+/*STATISTICS DROP DOWN RULES*/
+/**/
 /*Positions expand triangle next to statistics link*/
 #expandTriangle
 {
@@ -421,48 +345,53 @@ button:active, .fundraiser a:active, .submit:active
 /*Displays the graphs when the statistics link is clicked*/
 #statistics.openStatistics
 {
-	height: 620px;
+	height: 100%;
 	opacity: 1;
 }
 
 /*Adds space above graphs*/
 #statistics img
 {
+	width:300px;
+	height:250px;
 	margin-top: 10px;
 }
 
-/*Displays member groups in a row*/
-.memberCon
+/**/
+/*MEMBERSHIP SECTION RULES*/
+#membership
 {
-	display: flex;
+	display:flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 100%;
-	margin: 0 auto;
+}
+
+.posAndNames{
+	flex: 1 1 150px;
+	text-align:center;
+}
+
+.memberCon
+{
+	display:flex;
+	flex-direction: row;
+	flex-wrap: wrap;
 	margin-bottom: 30px;
 }
 
-/*Centers member group names and makes their containers the same size*/
-.posAndNames
-{
-	width: 90%;
-	text-align: center;
-}
 
-.posAndNames p{
-	margin-left: 10px;
-}
 /*Makes member group names semibold*/
 .makeSemibold
 {
+	margin-top:10px;
+	margin-bottom: 10px;
+	font-size: 16px;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 }
-
 
 /*Adds space to bottom of volunteers*/
 #volunteers
 {
-	width:100%;
 	margin-bottom: 40px;
 }
 
@@ -470,11 +399,10 @@ button:active, .fundraiser a:active, .submit:active
 #membership
 {
 	width: 100%;
-	height: 245px;
+	height: 250px;
 	background-color: #5d6f34;
 	margin-bottom: 40px;
-	display: flex;
-	flex-direction: column;
+	display: block;
 	justify-content: center;
 	color: #FFF;
 }
@@ -488,35 +416,39 @@ button:active, .fundraiser a:active, .submit:active
 /*Styles and positions membership title*/
 #membershipLeft
 {
+
 	font-family: 'libre_franklin-bold', Helvetica, sans-serif;
 	font-size: 34px;
-	line-height: 40px;
+	line-height: 44px;
 	width: 100%;
 	text-align: center;
-	justify-content: center;
-	margin-top:10px;
 }
 
 /*Makes "membership" green in title*/
 #makeGreen
 {
+	padding-top:10px;
+	display:block;
 	color: #9abb53;
 }
 
 /*Positions and formats membership right content*/
 #membershipRight
 {
-	width: 100%;
+	display:block;
+	margin:0 auto;
+	width: 90%;
 	text-align: center;
 	font-size: 16px;
 	line-height: 20px;
+	margin-top:10px;
 }
 
 /*Sizes and positions member join button*/
 #memberJoin
 {
 	width: 80%;
-	margin-bottom:45px;
+	margin-top:10px;
 }
 
 /*Creates popup background*/
@@ -634,18 +566,13 @@ button:active, .fundraiser a:active, .submit:active
 {
 	margin-left: -25px;
 }
-
-
-
-/* SLIDESHOW RULES */
-
+/**/
+/* EVENT SLIDESHOW SECTION RULES */
 /*Sets slideshow size and position*/
 #slideshow
 {
-	width: 320px;
-	height: 200px;
-	position: relative;
-	margin: 0 auto;
+	width:100%;
+	height:200px;
 	background-color: #333;
 	text-align: center;
 }
@@ -654,11 +581,8 @@ button:active, .fundraiser a:active, .submit:active
 #arrows
 {
 	width: 100%;
-	height: 40px;
 	background-color: rgb(51,51,51);
 	background-color: rgba(51,51,51,0.8);
-	position: absolute;
-	bottom: 65px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -671,12 +595,6 @@ button:active, .fundraiser a:active, .submit:active
 	cursor: pointer;
 	opacity: 0.8;
 	transition: all 0.1s linear;
-}
-
-/*Changes opacity of arrows on hover*/
-#arrows a:hover
-{
-	opacity: 1;
 }
 
 /*Changes opacity of arrows on click*/
@@ -763,25 +681,23 @@ button:active, .fundraiser a:active, .submit:active
 #eventsSection{
 	margin-bottom: 30px;
 }
-
-
-
-/*Links and Newsletters section rules*/
-
+/**/
+/*LINKS AND NEWSLETTERS SECTION RULES*/
 /*Formats the scroll box*/
 #scrollBox
 {
-	width:100%;
-	height: 450px;
+	max-width:100%;
+	height: 400px;
 	overflow: auto;
 	border: solid 1px #333;
-	padding: 10px 0px 0 0px;
+	padding: 10px 10px 0px 10px;
 	margin: 0 auto;
 	margin-bottom: 40px;
+	margin-top: 40px;
 }
 
 /*Adds space between list items*/
-#scrollBox ul li
+#scrollBox ul li,
 {
 	margin-bottom: 20px;
 }
@@ -792,6 +708,7 @@ button:active, .fundraiser a:active, .submit:active
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	font-size: 24px;
 	padding-top: 30px;
+	margin-bottom:10px;
 }
 
 /*Removes space above first list title*/
@@ -812,30 +729,26 @@ button:active, .fundraiser a:active, .submit:active
 {
 	display: flex;
 	flex-direction: row;
+	margin-left:60px;
 	margin-top: -20px;
 }
 
 /*Adds space between newsletter links*/
 .newsletter
 {
-	margin-right: 10px;
+	margin-right:10px;
 }
-
-
-
-/*Fundraising section rules*/
-
+/**/
+/*FUNDRAISING SECTION RULES*/
 /*Sets size, position, and style of fundraisers section*/
 #fundraisingWithBG
 {
-	width: 100%;
-	height: 975px;
+	max-width: 100%;
 	background-color: #5d6f34;
-	display: block;
-	justify-content: center;
 	color: #FFF;
-	padding-top: 5px;
+	padding-top: 20px;
 	margin-bottom: 20px;
+	display:block;
 }
 
 /*Styles the fundraising text*/
@@ -844,7 +757,7 @@ button:active, .fundraiser a:active, .submit:active
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 28px;
-	width: 100%;
+	max-width: 100%;
 	padding: 0 10px 0 10px;
 	margin: 0 auto;
 }
@@ -852,10 +765,14 @@ button:active, .fundraiser a:active, .submit:active
 /*Displays fundraisers side by side and aligns them center*/
 #allFundraisers
 {
-	width: 100%;
+	max-width: 320px;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
 	margin: 0 auto;
 	margin-top: 15px;
-	text-align: center;
+	margin-bottom: 15px;
 }
 
 /*Adds space between button and picture and adds padding*/
@@ -865,6 +782,7 @@ button:active, .fundraiser a:active, .submit:active
 	color: #FFF;
 	margin-top: 10px;
 	padding: 0 10px 0 10px;
+	margin-bottom: 10px;
 }
 
 /*Vertically centers text in fundraiser buttons*/
@@ -877,9 +795,6 @@ button:active, .fundraiser a:active, .submit:active
 /*Spaces out merchandise content*/
 #merchandiseCon
 {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
 	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 40px;
@@ -888,7 +803,10 @@ button:active, .fundraiser a:active, .submit:active
 /*Sets width of merchandise text*/
 #merchandiseText
 {
-	width: 100%;
+	max-width:100%;
+	padding-top:15px;
+	margin:0 auto;
+
 }
 
 /*Sets size of merchandise text and spaces it out*/
@@ -896,18 +814,40 @@ button:active, .fundraiser a:active, .submit:active
 {
 	font-size: 14px;
 	line-height: 25px;
-	margin-bottom: 22px;
+	margin-bottom:5px;
 	text-align: center;
 }
 
 .merchBuy{
-	display: flex;
+	max-width: 320px;
+	display:flex;
+	flex-direction: column;
 	justify-content: center;
-	margin-bottom:10px;
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
 }
 
-/*Contact section rules*/
+/*Adds space between button and picture and adds padding*/
+.merchBuy a
+{
+	width:180px;
+	display: block;
+	margin:0 auto;
+	color: #FFF;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
 
+.buyMerchBtn
+{
+	display: block;
+	padding-top: 4px;
+}
+/**/
+/*CONTACT AND MAP SECTION RULES*/
 /*Sizes and centers contact section*/
 #contactSection
 {
@@ -924,16 +864,15 @@ button:active, .fundraiser a:active, .submit:active
 #contactForm
 {
 	width: 100%;
-	border-right: solid 1px #CCC;
 }
 
 /*Styles the contact form labels*/
 #contactForm label
 {
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
-	font-size: 16px;
+	font-size: 14px;
 	margin-top: 20px;
-	margin-left: 40px;
+	margin-left: 30px;
 	display: block;
 }
 
@@ -948,12 +887,8 @@ button:active, .fundraiser a:active, .submit:active
 	display: block;
 	margin-top: 5px;
 	margin: 0 auto;
-	padding: 10px;
-	width: 80%;
+	width: 90%;
 	height: 20px;
-	border: 1px solid #666;
-	border-radius: 2px;
-	color: #666;
 	font-size: 16px;
 }
 
@@ -967,38 +902,31 @@ button:active, .fundraiser a:active, .submit:active
 .submit
 {
 	display: block;
-	width: 85%;
+	width: 90%;
 	margin: 0 auto;
 	margin-top: 20px;
+	margin-bottom:20px;
 }
 
 /*Styles map area*/
 #mapArea
 {
 	background-color: #5d6f34;
-	width: 100%;
-	margin-top:10px;
-	height: 580px;
+	height: 550px;
 	color: #FFF;
-	font-size: 18px;
+	margin-top:10px;
+	font-size: 14px;
 	line-height: 25px;
-	display: flex;
-	flex-direction: column;
 }
 
 /*Styles map area header*/
 #mapArea h3
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-	font-size: 25px;
+	font-size: 18px;
 	padding-top: 10px;
 	margin-bottom: 5px;
-	margin-left: 10px;
-}
-
-#infoCon{
-	width:100%;
-	display: block;
+	margin-left:10px;
 }
 
 /*Styles map area subtitles*/
@@ -1006,15 +934,20 @@ button:active, .fundraiser a:active, .submit:active
 {
 	color: #d8ae58;
 	line-height: 30px;
-	margin-left: 10px;
+	margin-left:10px;
 }
 
 #mapArea ul li
 {
 	list-style: none;
-	margin-left: 10px;
+	margin-left:10px;
 }
 
+#map{
+	display: flex;
+	margin: 0 auto;
+	margin-top:40px;
+}
 
 /*Adds space above the map*/
 #mapArea iframe
@@ -1023,154 +956,60 @@ button:active, .fundraiser a:active, .submit:active
 	margin: 0 auto;
 }
 
+/*FOOTER SECTION RULES*/
+#footerNav
+{display:none;}
 
-/*Footer section rules*/
-
-/*Styles footer background*/
-#mainFooter
-{
-	width: 100%;
-	height: 75px;
-	padding-top: 20px;
+#mainFooter{
 	background: #5d6f34; /* Old browsers */
 	background: -moz-linear-gradient(top, #5d6f34 0%, #9bbd4f 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, #5d6f34 0%,#9bbd4f 100%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, #5d6f34 0%,#9bbd4f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#5d6f34', endColorstr='#9bbd4f',GradientType=0 ); /* IE6-9 */
-	text-align: center;
+	height:60px;
 }
 
-/*Makes Facebook logo and text display in a row and positions them*/
+#mainFooter a
+{
+	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
+	color: #FFF;
+	font-size: 14px;
+}
+
+#backToTop
+{
+	display:flex;
+	justify-content: center;
+	margin-bottom:5px;
+	padding-top:10px;
+}
+
 #facebook
 {
-	display: flex;
-	flex-direction: row;
+	display:flex;
 	justify-content: center;
 }
 
-/*Styles the Facebook text*/
-#facebook a
-{
-	margin-left: 5px;
-	color: #FFF;
+#facebook a{
+	margin-left:5px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*TROUT RELEASE JUNE 21, 2014 RULES*/
 
 /**/
-
-
-#troutRelease
-{
-	margin-top: 30px;
-}
-
-#arrowsWithBG
-{
-	width: 100%;
-	margin-left: 10px;
-	position: absolute;
-	bottom: 0;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-/*Changes opacity of arrows and changes cursor to pointer*/
-#arrowsWithBG a
-{
-	cursor: pointer;
-	opacity: 0.8;
-	transition: all 0.1s linear;
-}
-
-/*Changes opacity of arrows on click*/
-#arrowsWithBG a:active
-{
-	opacity: 0.6;
-}
-
-#troutDesc
-{
-	width: 95%;
-	margin: 0 auto;
-	margin-top: 15px;
-}
-
-#troutDesc p
-{
-	width: 100%;
-	margin: 0 auto;
-	margin-bottom: 22px;
-}
-
-#troutDesc ul li span{
-	text-align: center;
-}
-
-
-
-
-
-
-
-
-
-
+/**/
+/**/
 /*FUNDRAISING PAGE RULES*/
 .fundraisingMain{
-	margin-top:30px;
-
+	margin-top:10px;
 }
+
 
 .fundraisingScrollBox
 {
-	height: 100%;
+	height: 700px;
 	overflow: auto;
-	width: 100%;
 	border: solid 1px #333;
-	padding: 10px 0px 0 0px;
+	padding: 10px 10px 0 10px;
 	margin-top:15px;
 	margin: 0 auto;
 	margin-bottom: 30px;
@@ -1197,159 +1036,580 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 .doubleImg{
-	width:375px;
-	height:300px;
+	width:45%;
+	height:150px;
 	border: 1px solid #666;
 }
 
 .singleImg{
-	width:500px;
-	height:500px;
+	width:100%;
+	height:350px;
 	border: 1px solid #666;
 	margin: 0 auto;
 }
 
+/**/
+/**/
+/**/
+/*EVENTS PAGE RULES*/
+/**/
 
 
-
-
-
-
-
-
-
-/*STICKY BUTTON RULES*/
-
-/*Sets values of sticky menu and hides it until the button is pressed*/
-#menu
+#troutRelease
 {
-	height: 35px;
-	width: 880px;
-	background-color: #FFF;
-	position: fixed;
-	bottom: 10px;
-	z-index: 2;
-	border-top: 2px solid #333;
-	border-bottom: 2px solid #333;
-	margin-left: 880px;
-	overflow: hidden;
-	width: 0;
-	opacity: 0;
-	transition: all .5s ease;
+	margin-top: 30px;
 }
 
-/*Sets size of sticky nav and displays them side by side*/
-#menu ul
+#arrowsWithBG
 {
+	margin-left: 10px;
+	position: absolute;
+	top: 250px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	width: 820px;
-	margin-left: 20px;
-	margin-top: 5px;
 }
 
-/*Styles the sticky nav links*/
-#menu ul li a
+/*Changes opacity of arrows and changes cursor to pointer*/
+#arrowsWithBG a
 {
-	color: #333;
-	font-size: 20px;
-	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+	cursor: pointer;
+	opacity: 0.8;
+	transition: all 0.1s linear;
 }
 
-/*Changes the sticky nav links' colour on hover*/
-#menu ul li a:hover
+/*Changes opacity of arrows on hover*/
+#arrowsWithBG a:hover
 {
-	color: #999;
-}
-
-/*Displays menu when button is clicked*/
-#menu.openMenu
-{
-	width:880px;
-	margin-left: 0;
 	opacity: 1;
 }
 
-/*Styles the sticky buttons*/
-.stickyButton
+/*Changes opacity of arrows on click*/
+#arrowsWithBG a:active
 {
-	width: 35px;
-	height: 35px;
-	background-color: #fff;
-	border-radius: 50%;
-	border: 2px solid #333;
-	position: fixed;
-	bottom: 10px;
-	z-index: 2;
-	transition: all 0.25s linear;
+	opacity: 0.6;
 }
 
-/*Styles the sticky buttons*/
-.stickyButton:hover, #backToTop:hover
+#troutDesc
 {
-	color: #999;
-	border: 2px solid #999;
-	cursor: pointer;
-}
-
-
-/*Positions the menu button*/
-#menuButton
-{
-	margin-left: 860px;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-}
-
-/*Adds space to top of menu button's lines*/
-#lines
-{
-	margin-top: 5px;
-}
-
-/*Styles the menu button's lines*/
-#line1, #line2, #line3
-{
-	width: 24px;
-	height: 0px;
-	border-top: 1.5px solid #333;
-	margin: 5px;
-	transition: all 0.25s linear;
-}
-
-/*Changes the menu button's lines' colour on hover*/
-.stickyButton:hover > #lines > #line1, .stickyButton:hover > #lines > #line2, .stickyButton:hover > #lines > #line3
-{
-	border-top: 1.5px solid #999;
-}
-
-/*Animates line1 when menu is opened*/
-#line1.openMenu
-{
-	transform: rotate(-45deg) translate(-5px, 5px);
-}
-
-/*Hides line2 when menu is opened*/
-#line2.openMenu
-{
-	opacity: 0;
-}
-
-/*Animates line3 when menu is opened*/
-#line3.openMenu
-{
-	transform: rotate(45deg) translate(-5px, -5px);
-}
-
-/*Styles back to top button*/
-#backToTop
-{
-	height: 32px;
-	margin-left: 906px;
-	color: #333;
-	font-size: 25px;
 	text-align: center;
-	padding-top: 3px;
+	margin: 15px 5px 10px 5px;
 }
+
+#troutDesc p
+{
+	margin: 0 auto;
+	margin-bottom: 15px;
+}
+
+#troutDesc ul li span{
+	text-align: center;
+}
+
+
+
+
+
+/*TABLET MEDIA QUERY*/
+@media screen and (min-width: 600px) {
+		/*PAGE Rules*/
+	/*Sets default font settings*/
+	body
+	{
+		font-family: 'libre_franklin-regular', Helvetica, sans-serif;
+		font-size: 16px;
+		color: #666;
+		line-height: 20px;
+		background-color: blue;
+	}
+
+	/*Styles all of the H2s*/
+	h2
+	{
+		max-width: 100%;
+		height: 35px;
+		background-color: #9bbd4f;
+		font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
+		color: #FFF;
+		font-size: 20px;
+		margin-bottom: 15px;
+		padding: 15px 0px 0px 10px;
+	}
+
+	/*Styles all of the H4s*/
+	h4
+	{
+		max-width: 100%;
+		height: 35px;
+		background-color: #d8ae58;
+		font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
+		color: #FFF;
+		font-size: 18px;
+		padding-top:15px;
+		padding-left:10px;
+	}
+
+	/*sets the page width - this changes by screen*/
+	#container
+	{
+		max-width:920px;
+	}
+	/**/
+	/*Header rules*/
+	/*Makes header position relative so logo can sit on top of header image and nav*/
+	#mainHeader
+	{
+		position: relative;
+	}
+
+	/*Hides mobile logo*/
+	#traa_logo
+	{
+		display:none;
+	}
+
+	#big_logo
+	{
+		display:block;
+		padding:10px;
+	}
+
+	#headerTextCon
+	{
+		display:none;
+	}
+	/**/
+	/*NAVIGATION RULES AND TRANSITIONS*/
+		/*Styles and positions nav bar*/
+	#mainNav
+	{
+		display: block;
+		width: 100%;
+		height: 40px;
+		background: #5d6f34; /* Old browsers */
+	background: -webkit-linear-gradient(#9bbd4f 0%, #5d6f34 100%);
+	background: -o-linear-gradient(#9bbd4f 0%, #5d6f34 100%);
+	background: linear-gradient(#9bbd4f 0%, #5d6f34 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bbd4f', endColorstr='#5d6f34',GradientType=0 ); /* IE6-9 */
+	}
+
+	/*Displays nav links in a row and pushes them to the right so they aren't beneath the logo*/
+	#mainNav ul
+	{
+		display: flex;
+		flex-direction: row;
+		margin-left:35px;
+	}
+
+	/*Spaces the nav links*/
+	#mainNav ul li
+	{
+		margin-top: 9px;
+		padding-right: 15px;
+		height: 40px;
+	}
+
+	/*Styles the nav links*/
+	#mainNav ul li a
+	{
+		color: #FFF;
+		font-size: 20px;
+		font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+	}
+
+	/*Creates fade in animation for main nav bottom border*/
+	@-webkit-keyframes navFadeIn 
+	{
+	  from {
+	    border-bottom: solid 8px rgba(216,174, 88, 0)
+	  }
+
+	  to {
+	    border-bottom: solid 8px rgba(216,174, 88, 1)
+	  }
+	}
+
+	@keyframes navFadeIn 
+	{
+	  from {
+	    border-bottom: solid 8px rgba(216,174, 88, 0)
+	  }
+
+	  to {
+	    border-bottom: solid 8px rgba(216,174, 88, 1)
+	  }
+	}
+
+	/*Styles main nav links on hover*/
+	#mainNav ul li a:hover
+	{
+		border-bottom: solid 8px #d8ae58;
+		padding-bottom: .5px;
+		-webkit-animation-duration: .35s;
+		-webkit-animation-name: navFadeIn; 
+		animation-duration: .35s;
+		animation-name: navFadeIn; 
+	}
+
+	/*Styles main nav links on click*/
+	#mainNav ul li a:active
+	{
+		color: #CCC;
+	}
+	/**/
+	/*HOME RULES*/
+	/*Styles meetings background*/
+	#nextMeeting
+	{
+		padding-top:17px;
+		height: 50px;
+		background-color: #5d6f34;
+		
+		margin-bottom:30px;
+	}
+
+	/*Styles and positions meeting text*/
+	#meetingHeader
+	{
+		font-size: 20px;
+	}
+
+	/*Styles hero header*/
+	#heroHeader
+	{
+		font-size: 30px;
+	}
+
+	/*Styles hero text*/
+	#heroText p
+	{
+		width:90%;
+		display:flex;
+		margin: 0 auto;
+		font-size: 24px;
+		margin-bottom: 30px;
+	}
+
+	/**/
+	/*MEMBERSHIP RULES*/
+	/*Styles and spaces out membership*/
+	#membership
+	{
+		background-color: #5d6f34;
+		margin-bottom: 40px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: #FFF;
+	}
+
+	/*Vertically centers membership content*/
+	#membershipCon
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+	}
+
+	/*Styles and positions membership title*/
+	#membershipLeft
+	{
+		font-family: 'libre_franklin-bold', Helvetica, sans-serif;
+		font-size: 48px;
+		line-height: 55px;
+		margin-right: 25px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	#makeGreen
+	{
+		margin-bottom: 25px;
+	}
+
+	#membershipRight
+	{
+		margin-right:30px;
+	}	
+
+	/*Sizes and positions member join button*/
+	#memberJoin
+	{
+		height:50px;
+		margin-top: 15px;
+	}
+	/**/
+	/*FUNDRAISING RULES*/
+	/*Sets size, position, and style of fundraisers section*/
+	#fundraisingWithBG
+	{
+		display: flex;
+		flex-direction: column;
+	}
+	
+	#allFundraisers
+	{
+		max-width: 100%;
+		display:flex;
+		flex-direction:row;
+		margin: 0 auto;
+	}
+	
+	/*Vertically centers text in fundraiser buttons*/
+	.fundraiserButtonText
+	{
+		display: block;
+		padding-top: 4px;
+	}
+
+	/*Adds space between button and picture and adds padding*/
+	.fundraiser a
+	{
+		display: inline-block;
+		color: #FFF;
+		margin-top: 10px;
+		padding: 0 10px 0 10px;
+		font-size:18px;
+	}
+
+	/**/
+	/*MERCHANDISE RULES*/
+	/*Sets size of merchandise text and spaces it out*/
+	#merchandiseText
+	{
+		margin: 0 0 0 10px;
+	}
+
+	#merchandiseText p
+	{
+		font-size: 16px;
+		text-align:left;
+		padding-right:5px;
+	}
+	
+	#merchBuyCon
+	{
+		display:flex;
+		flex-direction: row;
+	}
+
+	.merchBuy
+	{
+		max-width:100%;
+		margin-top: 15px;
+	}
+
+	.merchBuy a
+	{
+		width:130px;
+		display:block;
+		margin: 0 auto;
+		margin-top:20px;
+	}
+
+	/**/
+	/*CONTACT RULES*/
+	/*Displays content side by side and adds spacing*/
+	#contactCon
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding:10px;
+	}
+
+	/*Formats contact form*/
+	#contactForm
+	{
+		width:50%;
+		padding-right:15px;
+	}
+
+	/*Styles the contact form labels*/
+	#contactForm label
+	{
+		font-size: 16px;
+		margin-top: 20px;
+		margin-bottom:10px;
+		display: block;
+	}
+
+	#firstName, #lastName, #email, #message
+	{
+		margin-bottom:20px;
+	}
+
+	/*Makes the message input field larger*/
+	#message
+	{
+		height: 250px;
+	}
+
+	/*Styles map area*/
+	#mapArea
+	{
+		width:50%;
+		font-size: 18px;
+		line-height: 25px;
+	}
+
+	/*Styles map area header*/
+	#mapArea h3
+	{
+		font-size: 25px;
+		margin-bottom: 5px;
+	}
+
+	/*Styles map area subtitles*/
+	#mapArea p
+	{
+		color: #d8ae58;
+		line-height: 30px;
+	}
+
+	/*Adds space above the map*/
+	#mapArea iframe
+	{
+		margin-top: 0px;
+		padding-left:5px;
+		padding-right:5px;
+	}
+
+
+
+
+	/*DESKTOP MEDIA QUERY*/
+	@media screen and (min-width: 920px){
+	
+		body
+		{
+			background-color: red;
+		}
+
+		#container
+		{
+			max-width:1200px;
+		}
+		/**/
+		/*ABOUT US RULES*/
+		#aboutImgMobile
+		{
+			display:none;
+		}
+	
+		/*Spaces out top portion of information*/
+		#aboutInfoTop
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 22px;
+		}
+
+		#aboutImg
+		{
+			display:block;
+		}
+		/**/
+		/*STATISTICS RULES*/
+		#statistics img
+		{
+			width:400px;
+			height:300px;
+		}
+		/**/
+		/*EVENTS RULES*/
+		
+
+		/*FUNDRAISER RULES*/
+		/*Adds space between button and picture and adds padding*/
+		.fundraiser a
+		{
+			display: inline-block;
+			color: #FFF;
+			margin-top: 10px;
+			padding: 0 10px 0 10px;
+			font-size:20px;
+		}
+		/**/
+		/*MEMBERSHIP RULES*/
+
+		/**/
+		/*CONTACT RULES*/
+		#contactForm
+		{
+			border-right: solid 1px #CCC;
+		}
+
+		#mapArea
+		{
+			width:45%;
+		}
+		/**/
+		/*FOOTER RULES*/
+		#backToTop
+		{
+			display:none;
+		}
+
+		#mainFooter
+		{
+			height:80px;
+		}
+		
+		#footerNav
+		{
+			display:flex;
+			justify-content: center;
+		}
+
+			/*Makes footer nav display in a row and positions it*/
+		#footerNav ul
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin-top:15px;
+			margin-bottom: 15px;
+		}
+
+		/*Styles footer nav links*/
+		#footerNav ul li a
+		{
+			color: #FFF;
+			padding-left: 35px;
+			padding-right: 35px;
+			border-right: solid 1px #FFF;
+		}
+
+		/*Removes border-right from last footer nav link*/
+		#footerNav li:last-child a
+		{
+			border-right: none;
+		}
+
+		/*Lowers footer links' opacity when hovering on the footer*/
+		#mainFooter:hover > #footerNav li a, #mainFooter:hover > #facebook a
+		{
+			color: rgba(255,255,255,0.6);
+		}
+
+		/*Increases footer nav link's opacity when hovering over it*/
+		#mainFooter:hover > #footerNav li a:hover, #mainFooter:hover > #facebook a:hover
+		{
+			color: rgba(255,255,255,1);
+		}
+
+		/*Increases facebook link's opacity when hovering over it or the icon*/
+		#facebook a:hover ~ #facebookLink
+		{
+			color: rgba(255,255,255,1);
+		}
+			
+		
+	} /*END DESKTOP MEDIA QUERY*/
+
+
+
+
+} /*END TABLET MEDIA QUERY*/

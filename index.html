@@ -4,6 +4,9 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Thames River Anglers Association</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
 		<link href="css/main.css" rel="stylesheet" type="text/css">
 	</head> <!-- end head -->
@@ -15,15 +18,29 @@
 
 			<!-- "HEADER SECTION" -->
 			<header id="mainHeader">
-				<!-- HEADER IMAGE -->
-
 				<!-- HEADER LOGO -->
-				<img src="images/logo_header_mobile.png" alt="Mobile - Header Logo - TRAA" id="traa_logo" width= "56px" height = "50px" >
+				<img src="images/logo_header_mobile.png" alt="Mobile - Header Logo - TRAA" id="traa_logo">
 
-				<!-- MAIN NAVIGATION -->
+				<!-- HEADER TEXT FOR MOBILE -->
+				<div id="headerTextCon">
+					<a href="#"><span id="headerText">anglers.org</span></a>
+				</div>
+
+				<!-- Main navigation -->
 				<nav id="mainNav">
 					<h2 class="hidden">Main Navigation</h2>
+
+					<ul>
+						<li> <a href="#">Home</a> </li>
+						<li> <a href="#aboutUsSection">About Us</a> </li>
+						<li> <a href="#eventsSection">Events</a> </li>
+						<li> <a href="#linksSection">Links</a> </li>
+						<li> <a href="#fundraisingSection">Fundraising</a> </li>
+						<li> <a href="#contactSection">Contact Us</a> </li>
+					</ul>
 				</nav> <!-- End mainNav -->
+
+				<img src="images/traa_logo.svg" alt="Mobile - Header Logo - TRAA" id="big_logo">
 			</header> <!-- end Header -->
 
 			<!-- HOME SECTION -->
@@ -37,21 +54,22 @@
 
 				<!-- Hero area -->
 				<div id="hero">
-					<img id="heroImage"alt="Mobile - Hero Image - School of Fish" width="300" height="170">
-
 					<div id="heroText">
 						<h3 id="heroHeader">DEDICATION TODAY FOR TOMORROW</h3>
 
 						<p>"For the enhancement, protection and promotion of a viable, multi-species fishery within the 
 						Thames River watershed."</p>
 					</div> <!-- end heroText -->
+					<video id="heroVideo"src="videos/traa_video_full.mp4" controls="true"></video>
 				</div> <!-- end hero -->
+
+
 			</section> <!-- end homeSection -->
 
 			<!-- "ABOUT US" section -->
 			<section id="aboutUsSection">
 				<h2>About Us</h2>
-
+				
 				<!-- Information area -->
 				<section id="aboutInfo">
 					<h3 class="hidden">Information</h3>
@@ -68,8 +86,16 @@
 								<li> Increase public awareness of the unique diversity of the Thames River Watershed, its challenges, its recreational opportunities and its vital importance to our community.</li>
 							</ul>
 						</div> <!-- end aboutCopy1 -->
-
+						<div id=aboutImageBig">
+						<img id="aboutImg"src="images/about_us_catching_fish.jpg" alt="About Us Image - Men Fishing with Net" width="320" height="305">
+					</div>
+					
 					</div> <!-- End aboutInfoTop -->
+
+					
+					<div id="aboutImage">
+						<img id="aboutImgMobile"src="images/about_us_img_mobile.png" alt="Mobile - About Us Image - Men Fishing with Net" width="300" height="287">
+					</div>
 
 					<div id="aboutInfoBottom">
 						<div id="aboutCopy2">
@@ -82,18 +108,15 @@
 							<p>The TRAA has a history of always having a core group of active members supported by those who just want to be part of the solution. Either way, every member of the TRAA is active in their advocacy for the health of the Thames River watershed and its inhbitants.</p>
 						</div> <!-- End aboutCopy2 -->
 						
-						<div id="aboutImage">
-							<img src="images/about_us_img_mobile.png" alt="Mobile - About Us Image - Men Fishing with Net" width="300px" height="286px">
-						</div>
 
 						<img src="images/expand_triangle.svg" alt="Expand Triangle" width="7" height="7" id="expandTriangle">
 						<a id="statisticsLink">Show Statistics</a>
 
 						<!-- Graphs -->
 						<div id="statistics">
-							<img src="images/data_viz_memberships.png" alt="Graph 1" width="400" height="300">
-							<img src="images/data_viz_trout_caught.png" alt="Graph 2" width="400" height="300">
-							<img src="images/data_viz_trout_info.png" alt="Graph 3" width="400" height="300">
+							<img src="images/data_viz_memberships.png" alt="Graph 1">
+							<img src="images/data_viz_trout_caught.png" alt="Graph 2">
+							<img src="images/data_viz_trout_info.png" alt="Graph 3">
 						</div>
 					</div> <!-- End aboutInfoBottom -->
 				</section> <!-- end aboutInfo -->
@@ -154,7 +177,6 @@
 									<p>-Jeremy Beaton</p>
 									<p>-Paul Holmes</p>
 									<p>-Randy Bailey</p>
-								
 							</div> <!-- End posAndNames -->
 
 							<div class="posAndNames">
@@ -183,7 +205,7 @@
 						<div id="membershipRight">
 							<p>Your membership adds another voice to our efforts in protecting and enhancing aquatic habitats in London and other surrounding areas! We would love for you to join!</p>
 
-							<button id="memberJoin">Become a Member Now!</button>
+							<button id="memberJoin">Become a Member!</button>
 						</div> <!-- end membershipRight -->
 					</div> <!-- End membershipCon -->
 
@@ -229,6 +251,7 @@
 
 				<!-- Slideshow -->
 				<div id="slideshow">
+
 					<div id="arrows">
 						<a id="prevSlide"><img src="images/left_arrow.svg" alt="Previous Slide Arrow" width="50" height="50"></a>
 						<a id="nextSlide"><img src="images/right_arrow.svg" alt="Next Slide Arrow" width="50" height="50"></a>
@@ -377,17 +400,17 @@
 						<h3 class="hidden">Fundraisers</h3>
 
 						<div class="fundraiser">
-							<img src="images/fundraising_pic1_mobile.png" alt="Trout Hatchery Image" width="300" height="200">
+							<img src="images/fundraising_pic1_mobile.png" alt="Trout Hatchery Image">
 							<a href="fundraising_trout_hatchery.html"><span class="fundraiserButtonText">Trout Hatchery</span></a>
 						</div> <!-- end fundraiser -->
 
 						<div class="fundraiser">
-							<img src="images/fundraising_pic2_mobile.png" alt="Salmonid Monitoring Image" width="300" height="200">
+							<img src="images/fundraising_pic2_mobile.png" alt="Salmonid Monitoring Image">
 							<a href="fundraising_salmonoid_monitoring.html"><span class="fundraiserButtonText">Salmonid Monitoring</span></a>
 						</div> <!-- end fundraiser -->
 
 						<div class="fundraiser">
-							<img src="images/fundraising_pic3_mobile.png" alt="Komoka Creek Image" width="300" height="200">
+							<img src="images/fundraising_pic3_mobile.png" alt="Komoka Creek Image">
 							<a href="fundraising_komoka_creek.html"><span class="fundraiserButtonText">Komoka Creek</span></a>
 						</div> <!-- end fundraiser -->
 					</section> <!-- end allFundraisers -->
@@ -405,19 +428,24 @@
 							<p>We now have some nice stickers featuring the TRAA logo that you can display on your vehicle, boat, lunchbox or wherever you like. These are $2 each but you get one for joining the TRAA as a member or renewing an existing TRAA membership.</p>
 
 							<p>Get your TRAA Gear at any TRAA event!</p>
+						</div> <!-- End merchandiseText -->
 
+						<div id="merchBuyCon">
 							<div class="merchBuy">
 								<img src="images/merch_1_mobile.png" alt="Merch 1 Mobile">
+								<a href="#"><span class="buyMerchBtn">Buy Now!</span></a>
 							</div>
 
 							<div class="merchBuy">
 								<img src="images/merch_2_mobile.png" alt="Merch 2 Mobile">
+								<a href="#"><span class="buyMerchBtn">Buy Now!</span></a>
 							</div>
 
 							<div class="merchBuy">
 								<img src="images/merch_3_mobile.png" alt="Merch 3 Mobile">
+								<a href="#"><span class="buyMerchBtn">Buy Now!</span></a>
 							</div>
-						</div> <!-- End merchandiseText -->
+						</div> <!-- end merchBuyCon -->
 					</div> <!-- End merchandiseCon -->
 				</section> <!-- end merchandise -->
 			</section> <!-- end fundraisingSection -->
@@ -475,7 +503,7 @@
 
 						<!-- Map -->
 						<div id="map">
-							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.5516694823505!2d-81.22157848479443!3d42.945577605916334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef3b01c9e9983%3A0x84558efdb9f3a3a1!2s790+Southdale+Rd+E%2C+London%2C+ON+N6E+1A8!5e0!3m2!1sen!2sca!4v1549430295254" width="320" height="184" style="border:0" allowfullscreen></iframe>
+							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2920.5516694823505!2d-81.22157848479443!3d42.945577605916334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882ef3b01c9e9983%3A0x84558efdb9f3a3a1!2s790+Southdale+Rd+E%2C+London%2C+ON+N6E+1A8!5e0!3m2!1sen!2sca!4v1549430295254" width="280" height="184" style="border:0" allowfullscreen></iframe>
 						</div>
 					</section> <!-- end mapArea -->
 				</div> <!-- End contactCon -->
@@ -483,7 +511,22 @@
 
 			<!-- "FOOTER" section -->
 			<footer id="mainFooter">
-				
+				<nav id="footerNav">
+					<h2 class="hidden">Footer Nav</h2>
+
+					<ul>
+						<li> <a href="#">Home</a> </li>
+						<li> <a href="#aboutUsSection">About Us</a> </li>
+						<li> <a href="#eventsSection">Events</a> </li>
+						<li> <a href="#linksSection">Links</a> </li>
+						<li> <a href="#fundraisingSection">Fundraising</a> </li>
+						<li> <a href="#contactSection">Contact Us</a> </li>
+					</ul>
+				</nav> <!-- End footerNav -->
+
+				<div id="backToTop">
+					<a><span id="topBtn">Back To Top</span></a>
+				</div>
 
 				<div id="facebook">
 					<a href="https://www.facebook.com/groups/4TRAA/about/"><img src="images/facebook_icon.svg" alt="Facebook Logo" width="20" height="20" id="facebookIcon"></a>
@@ -492,4 +535,9 @@
 			</footer> <!-- end mainFooter -->		
 
 		</div> <!-- end container -->
+
+		<!-- Script link -->
+		<script src="js/main.js"></script>
+		<script src="js/homepage.js"></script>
+		<script src="js/slideshow.js"></script>
 	</body> <!-- end body -->
