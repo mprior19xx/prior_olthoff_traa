@@ -142,11 +142,11 @@ button:active, .fundraiser a:active, .submit:active
 {
 	display:flex;
 	flex-direction:row;
-}
-
-/*Removes space between image and other elements*/
-#mainHeader img
-{
+	position: fixed;
+	background-color: #FFF;
+	width: 100%;
+	height: 60px;
+	z-index: 3;
 }
 
 #big_logo
@@ -157,8 +157,10 @@ button:active, .fundraiser a:active, .submit:active
 /*Positions the logo*/
 #traa_logo
 {
-	margin-top:10px;
+	margin-top:5px;
 	margin-left:10px;
+	width: 50px;
+	height: 50px;
 }
 
 #headerTextCon
@@ -166,7 +168,7 @@ button:active, .fundraiser a:active, .submit:active
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 26px;
 	line-height:40px;
-	margin-top:15px;
+	margin-top:10px;
 	margin-left:10px;
 }
 /**/
@@ -174,7 +176,7 @@ button:active, .fundraiser a:active, .submit:active
 /**/
 #homeSection
 {
-	margin-top:15px;
+	margin-top: 60px;
 }
 
 /*Styles meetings background*/
@@ -985,6 +987,7 @@ button:active, .fundraiser a:active, .submit:active
 #footerNav
 {display:none;}
 
+/*Positions and sizes footer*/
 #mainFooter{
 	background: #5d6f34; /* Old browsers */
 	background: -moz-linear-gradient(top, #5d6f34 0%, #9bbd4f 100%); /* FF3.6-15 */
@@ -994,6 +997,7 @@ button:active, .fundraiser a:active, .submit:active
 	height:60px;
 }
 
+/*Styles footer links*/
 #mainFooter a
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
@@ -1001,6 +1005,7 @@ button:active, .fundraiser a:active, .submit:active
 	font-size: 14px;
 }
 
+/*Styles and positions back to top*/
 #backToTop
 {
 	display:flex;
@@ -1009,12 +1014,20 @@ button:active, .fundraiser a:active, .submit:active
 	padding-top:10px;
 }
 
+/*Changes cursor on hover of back to top (for when it appears on desktop)*/
+#backToTop:hover
+{
+	cursor: pointer;
+}
+
+/*Positions Facebook link*/
 #facebook
 {
 	display:flex;
 	justify-content: center;
 }
 
+/*Adds space between Facebook link and logo*/
 #facebook a{
 	margin-left:5px;
 }
@@ -1024,34 +1037,36 @@ button:active, .fundraiser a:active, .submit:active
 /**/
 /**/
 /*FUNDRAISING PAGE RULES*/
-.fundraisingMain{
-	margin-top:10px;
+.fundraisingMain
+{
+	margin-top:60px;
+	max-width: 960px;
 }
 
-
-.fundraisingScrollBox
+/*Formats the content on the fundraising pages*/
+.fundraisingCon
 {
-	height: 700px;
-	overflow: auto;
-	border: solid 1px #333;
 	padding: 10px 10px 0 10px;
 	margin-top:15px;
 	margin: 0 auto;
 	margin-bottom: 30px;
+	min-height: 500px;
 }
 
 /*Adds space between list items*/
-.fundraisingScrollBox ul li
+.fundraisingCon ul li
 {
 	margin-bottom: 20px;
 	text-align: center;
 }
 
+/*Makes text bold*/
 .bolded{
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	margin-bottom: 10px;
 }
 
+/*Sets position of 2 pics*/
 .twoPics
 {
 	margin: 0 auto;
@@ -1060,12 +1075,14 @@ button:active, .fundraiser a:active, .submit:active
 	justify-content: space-evenly;
 }
 
+/*Sets size and border of double image*/
 .doubleImg{
 	width:45%;
 	height:150px;
 	border: 1px solid #666;
 }
 
+/*Sets size and border of single image*/
 .singleImg{
 	width:100%;
 	height:350px;
@@ -1082,7 +1099,7 @@ button:active, .fundraiser a:active, .submit:active
 
 #troutRelease
 {
-	margin-top: 30px;
+	margin-top: 60px;
 }
 
 #troutDesc
