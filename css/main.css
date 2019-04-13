@@ -97,7 +97,7 @@ a
 
 /*Styles all buttons the same*/
 button, .fundraiser a, .submit, .merchBuy a{
-	height: 30px;
+	height: 25px;
 	background-color: #d8ae58;
 	color: #FFF;
 	border: none;
@@ -142,11 +142,11 @@ button:active, .fundraiser a:active, .submit:active
 {
 	display:flex;
 	flex-direction:row;
-	position: fixed;
-	background-color: #FFF;
-	width: 100%;
-	height: 60px;
-	z-index: 3;
+}
+
+/*Removes space between image and other elements*/
+#mainHeader img
+{
 }
 
 #big_logo
@@ -157,10 +157,8 @@ button:active, .fundraiser a:active, .submit:active
 /*Positions the logo*/
 #traa_logo
 {
-	margin-top:5px;
+	margin-top:10px;
 	margin-left:10px;
-	width: 50px;
-	height: 50px;
 }
 
 #headerTextCon
@@ -168,7 +166,7 @@ button:active, .fundraiser a:active, .submit:active
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 26px;
 	line-height:40px;
-	margin-top:10px;
+	margin-top:15px;
 	margin-left:10px;
 }
 /**/
@@ -176,7 +174,7 @@ button:active, .fundraiser a:active, .submit:active
 /**/
 #homeSection
 {
-	margin-top: 60px;
+	margin-top:15px;
 }
 
 /*Styles meetings background*/
@@ -207,8 +205,8 @@ button:active, .fundraiser a:active, .submit:active
 /*Positions and styles hero text*/
 #heroText
 {
-	width: 100%;
-	padding-top: 15px;
+	max-width: 100%;
+	padding: 20px 20px 20px 20px;
 	
 }
 
@@ -451,6 +449,7 @@ button:active, .fundraiser a:active, .submit:active
 {
 	width: 80%;
 	margin-top:10px;
+	height:25px;
 }
 
 /*Creates popup background*/
@@ -495,7 +494,7 @@ button:active, .fundraiser a:active, .submit:active
   background-color: white; /* White background */
   margin: 3% auto; /* 5% from the top and centered */
   padding: 15px; /* Pads text from the border */
-  width: 470px; /* Sets width of the content box */
+  max-width:100%;
   color: #666;
 }
 
@@ -568,7 +567,6 @@ button:active, .fundraiser a:active, .submit:active
 {
 	margin-left: -25px;
 }
-
 /**/
 /* EVENT SLIDESHOW SECTION RULES */
 /*Sets slideshow size and position*/
@@ -663,7 +661,8 @@ button:active, .fundraiser a:active, .submit:active
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: #444;
+	background-color: rgb(51,51,51);
+	background-color: rgba(51,51,51,0.8);
 	padding: 10px 10px 10px 10px;
 	margin-bottom: 20px;
 	margin-top: -6px;
@@ -678,11 +677,17 @@ button:active, .fundraiser a:active, .submit:active
 	margin-bottom: 5px;
 }
 
-/*Changes See More colour and adds space to the left*/
+/*Adds space before see more*/
 .seeMore
 {
-	margin-left: 10px;
+	margin-left: 25px;
 	color: #9bbd4f;
+}
+
+/*Initially hides all slides*/
+.slides
+{
+	display: none;
 }
 
 /* Fades slideshow pictures*/
@@ -726,14 +731,17 @@ button:active, .fundraiser a:active, .submit:active
 /*Adds space between list items*/
 #scrollBox ul li,
 {
-	margin-bottom: 20px;
+	margin-bottom: 25px;
 }
+
+#scrollBox li{margin-bottom:10px;}
 
 /*Makes list titles larger, changes font weight, and adds space above*/
 .listTitle
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-	font-size: 24px;
+	font-size: 20px;
+	line-height:20px;
 	padding-top: 30px;
 	margin-bottom:10px;
 }
@@ -757,7 +765,7 @@ button:active, .fundraiser a:active, .submit:active
 	display: flex;
 	flex-direction: row;
 	margin-left:60px;
-	margin-top: -20px;
+	margin-top: -30px;
 }
 
 /*Adds space between newsletter links*/
@@ -809,14 +817,14 @@ button:active, .fundraiser a:active, .submit:active
 	color: #FFF;
 	margin-top: 10px;
 	padding: 0 10px 0 10px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 /*Vertically centers text in fundraiser buttons*/
 .fundraiserButtonText
 {
 	display: block;
-	padding-top: 4px;
+	padding-top:2px;
 }
 
 /*Spaces out merchandise content*/
@@ -833,6 +841,7 @@ button:active, .fundraiser a:active, .submit:active
 	max-width:100%;
 	padding-top:15px;
 	margin:0 auto;
+	padding:10px;
 
 }
 
@@ -842,7 +851,6 @@ button:active, .fundraiser a:active, .submit:active
 	font-size: 14px;
 	line-height: 25px;
 	margin-bottom:5px;
-	text-align: center;
 }
 
 .merchBuy{
@@ -871,7 +879,7 @@ button:active, .fundraiser a:active, .submit:active
 .buyMerchBtn
 {
 	display: block;
-	padding-top: 4px;
+	padding-top: 2px;
 }
 /**/
 /*CONTACT AND MAP SECTION RULES*/
@@ -899,7 +907,7 @@ button:active, .fundraiser a:active, .submit:active
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 14px;
 	margin-top: 20px;
-	margin-left: 30px;
+	margin-left: 20px;
 	display: block;
 }
 
@@ -987,7 +995,6 @@ button:active, .fundraiser a:active, .submit:active
 #footerNav
 {display:none;}
 
-/*Positions and sizes footer*/
 #mainFooter{
 	background: #5d6f34; /* Old browsers */
 	background: -moz-linear-gradient(top, #5d6f34 0%, #9bbd4f 100%); /* FF3.6-15 */
@@ -997,7 +1004,6 @@ button:active, .fundraiser a:active, .submit:active
 	height:60px;
 }
 
-/*Styles footer links*/
 #mainFooter a
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
@@ -1005,7 +1011,6 @@ button:active, .fundraiser a:active, .submit:active
 	font-size: 14px;
 }
 
-/*Styles and positions back to top*/
 #backToTop
 {
 	display:flex;
@@ -1014,20 +1019,12 @@ button:active, .fundraiser a:active, .submit:active
 	padding-top:10px;
 }
 
-/*Changes cursor on hover of back to top (for when it appears on desktop)*/
-#backToTop:hover
-{
-	cursor: pointer;
-}
-
-/*Positions Facebook link*/
 #facebook
 {
 	display:flex;
 	justify-content: center;
 }
 
-/*Adds space between Facebook link and logo*/
 #facebook a{
 	margin-left:5px;
 }
@@ -1037,36 +1034,34 @@ button:active, .fundraiser a:active, .submit:active
 /**/
 /**/
 /*FUNDRAISING PAGE RULES*/
-.fundraisingMain
-{
-	margin-top:60px;
-	max-width: 960px;
+.fundraisingMain{
+	margin-top:10px;
 }
 
-/*Formats the content on the fundraising pages*/
-.fundraisingCon
+
+.fundraisingScrollBox
 {
+	height: 700px;
+	overflow: auto;
+	border: solid 1px #333;
 	padding: 10px 10px 0 10px;
 	margin-top:15px;
 	margin: 0 auto;
 	margin-bottom: 30px;
-	min-height: 500px;
 }
 
 /*Adds space between list items*/
-.fundraisingCon ul li
+.fundraisingScrollBox ul li
 {
 	margin-bottom: 20px;
 	text-align: center;
 }
 
-/*Makes text bold*/
 .bolded{
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	margin-bottom: 10px;
 }
 
-/*Sets position of 2 pics*/
 .twoPics
 {
 	margin: 0 auto;
@@ -1075,14 +1070,12 @@ button:active, .fundraiser a:active, .submit:active
 	justify-content: space-evenly;
 }
 
-/*Sets size and border of double image*/
 .doubleImg{
 	width:45%;
 	height:150px;
 	border: 1px solid #666;
 }
 
-/*Sets size and border of single image*/
 .singleImg{
 	width:100%;
 	height:350px;
@@ -1099,7 +1092,37 @@ button:active, .fundraiser a:active, .submit:active
 
 #troutRelease
 {
-	margin-top: 60px;
+	margin-top: 30px;
+}
+
+#arrowsWithBG
+{
+	margin-left: 10px;
+	position: absolute;
+	top: 250px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+}
+
+/*Changes opacity of arrows and changes cursor to pointer*/
+#arrowsWithBG a
+{
+	cursor: pointer;
+	opacity: 0.8;
+	transition: all 0.1s linear;
+}
+
+/*Changes opacity of arrows on hover*/
+#arrowsWithBG a:hover
+{
+	opacity: 1;
+}
+
+/*Changes opacity of arrows on click*/
+#arrowsWithBG a:active
+{
+	opacity: 0.6;
 }
 
 #troutDesc
@@ -1119,20 +1142,12 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 
-@media screen and (min-width: 500px) {
-	/**/
-	/* EVENT SLIDESHOW SECTION RULES */
-	/*Positions arrows section*/
-	#arrows
-	{
-		top: 45%;
-	}
-}
+
 
 
 /*TABLET MEDIA QUERY*/
 @media screen and (min-width: 600px) {
-	/*PAGE Rules*/
+		/*PAGE Rules*/
 	/*Sets default font settings*/
 	body
 	{
@@ -1359,14 +1374,6 @@ button:active, .fundraiser a:active, .submit:active
 		margin-top: 15px;
 	}
 
-	/* EVENT SLIDESHOW SECTION RULES */
-	/*Sizes the arrows*/
-	.prevSlide, .nextSlide
-	{
-		width: 30px;
-		height: 30px;
-	}
-
 	/**/
 	/*FUNDRAISING RULES*/
 	/*Sets size, position, and style of fundraisers section*/
@@ -1503,147 +1510,142 @@ button:active, .fundraiser a:active, .submit:active
 		padding-left:5px;
 		padding-right:5px;
 	}
+
+
+
+
+	/*DESKTOP MEDIA QUERY*/
+	@media screen and (min-width: 920px){
+	
+		body
+		{
+			background-color: red;
+		}
+
+		#container
+		{
+			max-width:960px;
+		}
+		/**/
+		/*ABOUT US RULES*/
+		#aboutImgMobile
+		{
+			display:none;
+		}
+	
+		/*Spaces out top portion of information*/
+		#aboutInfoTop
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			margin-bottom: 22px;
+		}
+
+		#aboutImg
+		{
+			display:block;
+		}
+		/**/
+		/*STATISTICS RULES*/
+		#statistics img
+		{
+			width:400px;
+			height:300px;
+		}
+		/**/
+		/*EVENTS RULES*/
+		
+
+		/*FUNDRAISER RULES*/
+		/*Adds space between button and picture and adds padding*/
+		.fundraiser a
+		{
+			display: inline-block;
+			color: #FFF;
+			margin-top: 10px;
+			padding: 0 10px 0 10px;
+			font-size:20px;
+		}
+		/**/
+		/*MEMBERSHIP RULES*/
+
+		/**/
+		/*CONTACT RULES*/
+		#contactForm
+		{
+			border-right: solid 1px #CCC;
+		}
+
+		#mapArea
+		{
+			width:45%;
+		}
+		/**/
+		/*FOOTER RULES*/
+		#backToTop
+		{
+			display:none;
+		}
+
+		#mainFooter
+		{
+			height:80px;
+		}
+		
+		#footerNav
+		{
+			display:flex;
+			justify-content: center;
+		}
+
+			/*Makes footer nav display in a row and positions it*/
+		#footerNav ul
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			margin-top:15px;
+			margin-bottom: 15px;
+		}
+
+		/*Styles footer nav links*/
+		#footerNav ul li a
+		{
+			color: #FFF;
+			padding-left: 35px;
+			padding-right: 35px;
+			border-right: solid 1px #FFF;
+		}
+
+		/*Removes border-right from last footer nav link*/
+		#footerNav li:last-child a
+		{
+			border-right: none;
+		}
+
+		/*Lowers footer links' opacity when hovering on the footer*/
+		#mainFooter:hover > #footerNav li a, #mainFooter:hover > #facebook a
+		{
+			color: rgba(255,255,255,0.6);
+		}
+
+		/*Increases footer nav link's opacity when hovering over it*/
+		#mainFooter:hover > #footerNav li a:hover, #mainFooter:hover > #facebook a:hover
+		{
+			color: rgba(255,255,255,1);
+		}
+
+		/*Increases facebook link's opacity when hovering over it or the icon*/
+		#facebook a:hover ~ #facebookLink
+		{
+			color: rgba(255,255,255,1);
+		}
+			
+		
+	} /*END DESKTOP MEDIA QUERY*/
+
+
+
+
 } /*END TABLET MEDIA QUERY*/
-
-/*DESKTOP MEDIA QUERY*/
-@media screen and (min-width: 920px){
-
-	body
-	{
-		background-color: red;
-	}
-
-	/*Styles all of the links dark green and medium font weight*/
-	a:hover
-	{
-		color: #9bbd4f;
-	}
-
-	/*Changes size of the container*/
-	#container
-	{
-		max-width:960px;
-	}
-	/**/
-	/*ABOUT US RULES*/
-	#aboutImgMobile
-	{
-		display:none;
-	}
-
-	/*Spaces out top portion of information*/
-	#aboutInfoTop
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-bottom: 22px;
-	}
-
-	#aboutImg
-	{
-		display:block;
-	}
-	/**/
-	/*STATISTICS RULES*/
-	#statistics img
-	{
-		width:400px;
-		height:300px;
-	}
-	
-	/**/
-	/*EVENTS RULES*/
-	/* EVENT SLIDESHOW SECTION RULES */
-	/*Changes opacity of slideshow arrows on hover*/
-	#arrows a:hover
-	{
-		opacity: 1;
-	}
-	
-
-	/*FUNDRAISER RULES*/
-	/*Adds space between button and picture and adds padding*/
-	.fundraiser a
-	{
-		display: inline-block;
-		color: #FFF;
-		margin-top: 10px;
-		padding: 0 10px 0 10px;
-		font-size:20px;
-	}
-	/**/
-	/*MEMBERSHIP RULES*/
-
-	/**/
-	/*CONTACT RULES*/
-	#contactForm
-	{
-		border-right: solid 1px #CCC;
-	}
-
-	#mapArea
-	{
-		width:45%;
-	}
-	/**/
-	/*FOOTER RULES*/
-	#backToTop
-	{
-		display:none;
-	}
-
-	#mainFooter
-	{
-		height:80px;
-	}
-	
-	#footerNav
-	{
-		display:flex;
-		justify-content: center;
-	}
-
-		/*Makes footer nav display in a row and positions it*/
-	#footerNav ul
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		margin-top:15px;
-		margin-bottom: 15px;
-	}
-
-	/*Styles footer nav links*/
-	#footerNav ul li a
-	{
-		color: #FFF;
-		padding-left: 35px;
-		padding-right: 35px;
-		border-right: solid 1px #FFF;
-	}
-
-	/*Removes border-right from last footer nav link*/
-	#footerNav li:last-child a
-	{
-		border-right: none;
-	}
-
-	/*Lowers footer links' opacity when hovering on the footer*/
-	#mainFooter:hover > #footerNav li a, #mainFooter:hover > #facebook a
-	{
-		color: rgba(255,255,255,0.6);
-	}
-
-	/*Increases footer nav link's opacity when hovering over it*/
-	#mainFooter:hover > #footerNav li a:hover, #mainFooter:hover > #facebook a:hover
-	{
-		color: rgba(255,255,255,1);
-	}
-
-	/*Increases facebook link's opacity when hovering over it or the icon*/
-	#facebook a:hover ~ #facebookLink
-	{
-		color: rgba(255,255,255,1);
-	}
-} /*END DESKTOP MEDIA QUERY*/
