@@ -566,6 +566,7 @@ button:active, .fundraiser a:active, .submit:active
 {
 	margin-left: -25px;
 }
+
 /**/
 /* EVENT SLIDESHOW SECTION RULES */
 /*Sets slideshow size and position*/
@@ -660,8 +661,7 @@ button:active, .fundraiser a:active, .submit:active
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	background-color: rgb(51,51,51);
-	background-color: rgba(51,51,51,0.8);
+	background-color: #444;
 	padding: 10px 10px 10px 10px;
 	margin-bottom: 20px;
 	margin-top: -6px;
@@ -676,17 +676,11 @@ button:active, .fundraiser a:active, .submit:active
 	margin-bottom: 5px;
 }
 
-/*Adds space before see more*/
+/*Changes See More colour and adds space to the left*/
 .seeMore
 {
-	margin-left: 25px;
+	margin-left: 10px;
 	color: #9bbd4f;
-}
-
-/*Initially hides all slides*/
-.slides
-{
-	display: none;
 }
 
 /* Fades slideshow pictures*/
@@ -1091,36 +1085,6 @@ button:active, .fundraiser a:active, .submit:active
 	margin-top: 30px;
 }
 
-#arrowsWithBG
-{
-	margin-left: 10px;
-	position: absolute;
-	top: 250px;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-}
-
-/*Changes opacity of arrows and changes cursor to pointer*/
-#arrowsWithBG a
-{
-	cursor: pointer;
-	opacity: 0.8;
-	transition: all 0.1s linear;
-}
-
-/*Changes opacity of arrows on hover*/
-#arrowsWithBG a:hover
-{
-	opacity: 1;
-}
-
-/*Changes opacity of arrows on click*/
-#arrowsWithBG a:active
-{
-	opacity: 0.6;
-}
-
 #troutDesc
 {
 	text-align: center;
@@ -1138,12 +1102,20 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 
-
+@media screen and (min-width: 500px) {
+	/**/
+	/* EVENT SLIDESHOW SECTION RULES */
+	/*Positions arrows section*/
+	#arrows
+	{
+		top: 45%;
+	}
+}
 
 
 /*TABLET MEDIA QUERY*/
 @media screen and (min-width: 600px) {
-		/*PAGE Rules*/
+	/*PAGE Rules*/
 	/*Sets default font settings*/
 	body
 	{
@@ -1370,6 +1342,14 @@ button:active, .fundraiser a:active, .submit:active
 		margin-top: 15px;
 	}
 
+	/* EVENT SLIDESHOW SECTION RULES */
+	/*Sizes the arrows*/
+	.prevSlide, .nextSlide
+	{
+		width: 30px;
+		height: 30px;
+	}
+
 	/**/
 	/*FUNDRAISING RULES*/
 	/*Sets size, position, and style of fundraisers section*/
@@ -1506,142 +1486,147 @@ button:active, .fundraiser a:active, .submit:active
 		padding-left:5px;
 		padding-right:5px;
 	}
-
-
-
-
-	/*DESKTOP MEDIA QUERY*/
-	@media screen and (min-width: 920px){
-	
-		body
-		{
-			background-color: red;
-		}
-
-		#container
-		{
-			max-width:960px;
-		}
-		/**/
-		/*ABOUT US RULES*/
-		#aboutImgMobile
-		{
-			display:none;
-		}
-	
-		/*Spaces out top portion of information*/
-		#aboutInfoTop
-		{
-			display: flex;
-			flex-direction: row;
-			justify-content: space-between;
-			margin-bottom: 22px;
-		}
-
-		#aboutImg
-		{
-			display:block;
-		}
-		/**/
-		/*STATISTICS RULES*/
-		#statistics img
-		{
-			width:400px;
-			height:300px;
-		}
-		/**/
-		/*EVENTS RULES*/
-		
-
-		/*FUNDRAISER RULES*/
-		/*Adds space between button and picture and adds padding*/
-		.fundraiser a
-		{
-			display: inline-block;
-			color: #FFF;
-			margin-top: 10px;
-			padding: 0 10px 0 10px;
-			font-size:20px;
-		}
-		/**/
-		/*MEMBERSHIP RULES*/
-
-		/**/
-		/*CONTACT RULES*/
-		#contactForm
-		{
-			border-right: solid 1px #CCC;
-		}
-
-		#mapArea
-		{
-			width:45%;
-		}
-		/**/
-		/*FOOTER RULES*/
-		#backToTop
-		{
-			display:none;
-		}
-
-		#mainFooter
-		{
-			height:80px;
-		}
-		
-		#footerNav
-		{
-			display:flex;
-			justify-content: center;
-		}
-
-			/*Makes footer nav display in a row and positions it*/
-		#footerNav ul
-		{
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			margin-top:15px;
-			margin-bottom: 15px;
-		}
-
-		/*Styles footer nav links*/
-		#footerNav ul li a
-		{
-			color: #FFF;
-			padding-left: 35px;
-			padding-right: 35px;
-			border-right: solid 1px #FFF;
-		}
-
-		/*Removes border-right from last footer nav link*/
-		#footerNav li:last-child a
-		{
-			border-right: none;
-		}
-
-		/*Lowers footer links' opacity when hovering on the footer*/
-		#mainFooter:hover > #footerNav li a, #mainFooter:hover > #facebook a
-		{
-			color: rgba(255,255,255,0.6);
-		}
-
-		/*Increases footer nav link's opacity when hovering over it*/
-		#mainFooter:hover > #footerNav li a:hover, #mainFooter:hover > #facebook a:hover
-		{
-			color: rgba(255,255,255,1);
-		}
-
-		/*Increases facebook link's opacity when hovering over it or the icon*/
-		#facebook a:hover ~ #facebookLink
-		{
-			color: rgba(255,255,255,1);
-		}
-			
-		
-	} /*END DESKTOP MEDIA QUERY*/
-
-
-
-
 } /*END TABLET MEDIA QUERY*/
+
+/*DESKTOP MEDIA QUERY*/
+@media screen and (min-width: 920px){
+
+	body
+	{
+		background-color: red;
+	}
+
+	/*Styles all of the links dark green and medium font weight*/
+	a:hover
+	{
+		color: #9bbd4f;
+	}
+
+	/*Changes size of the container*/
+	#container
+	{
+		max-width:960px;
+	}
+	/**/
+	/*ABOUT US RULES*/
+	#aboutImgMobile
+	{
+		display:none;
+	}
+
+	/*Spaces out top portion of information*/
+	#aboutInfoTop
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-bottom: 22px;
+	}
+
+	#aboutImg
+	{
+		display:block;
+	}
+	/**/
+	/*STATISTICS RULES*/
+	#statistics img
+	{
+		width:400px;
+		height:300px;
+	}
+	
+	/**/
+	/*EVENTS RULES*/
+	/* EVENT SLIDESHOW SECTION RULES */
+	/*Changes opacity of slideshow arrows on hover*/
+	#arrows a:hover
+	{
+		opacity: 1;
+	}
+	
+
+	/*FUNDRAISER RULES*/
+	/*Adds space between button and picture and adds padding*/
+	.fundraiser a
+	{
+		display: inline-block;
+		color: #FFF;
+		margin-top: 10px;
+		padding: 0 10px 0 10px;
+		font-size:20px;
+	}
+	/**/
+	/*MEMBERSHIP RULES*/
+
+	/**/
+	/*CONTACT RULES*/
+	#contactForm
+	{
+		border-right: solid 1px #CCC;
+	}
+
+	#mapArea
+	{
+		width:45%;
+	}
+	/**/
+	/*FOOTER RULES*/
+	#backToTop
+	{
+		display:none;
+	}
+
+	#mainFooter
+	{
+		height:80px;
+	}
+	
+	#footerNav
+	{
+		display:flex;
+		justify-content: center;
+	}
+
+		/*Makes footer nav display in a row and positions it*/
+	#footerNav ul
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		margin-top:15px;
+		margin-bottom: 15px;
+	}
+
+	/*Styles footer nav links*/
+	#footerNav ul li a
+	{
+		color: #FFF;
+		padding-left: 35px;
+		padding-right: 35px;
+		border-right: solid 1px #FFF;
+	}
+
+	/*Removes border-right from last footer nav link*/
+	#footerNav li:last-child a
+	{
+		border-right: none;
+	}
+
+	/*Lowers footer links' opacity when hovering on the footer*/
+	#mainFooter:hover > #footerNav li a, #mainFooter:hover > #facebook a
+	{
+		color: rgba(255,255,255,0.6);
+	}
+
+	/*Increases footer nav link's opacity when hovering over it*/
+	#mainFooter:hover > #footerNav li a:hover, #mainFooter:hover > #facebook a:hover
+	{
+		color: rgba(255,255,255,1);
+	}
+
+	/*Increases facebook link's opacity when hovering over it or the icon*/
+	#facebook a:hover ~ #facebookLink
+	{
+		color: rgba(255,255,255,1);
+	}
+} /*END DESKTOP MEDIA QUERY*/
