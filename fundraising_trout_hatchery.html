@@ -4,46 +4,58 @@
 	<head>
 		<meta charset="utf-8">
 		<title>TRAA: Fundraising - Trout Hatchery</title>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenLite.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/plugins/ScrollToPlugin.min.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
 		<link href="css/reset.css" rel="stylesheet" type="text/css">
 		<link href="css/main.css" rel="stylesheet" type="text/css">
 	</head>
 
 	<body>
-		<div id="container">
+		<div id="containerSection">
 			<!-- Main Site Title -->
-			<h1 class="hidden">Thames River Anglers Association - Fundraising - Trout Hatchery</h1>
+			<h1 class="hidden">Thames River Anglers Association</h1>
 
 			<!-- "HEADER SECTION" -->
 			<header id="mainHeader">
-				<!-- HEADER LOGO -->
-				<a href="#"><img src="images/traa_logo.svg" alt="Mobile - Header Logo - TRAA" id="traa_logo"></a>
+				<div id="headerCon">
+					<!-- HEADER LOGO -->
+					<!-- MOBILE LOGO -->
+					<a href="#"><img src="images/traa_logo.svg" alt="Mobile - Header Logo - TRAA" id="traa_logo"></a>
 
-				<!-- Header image -->
-				<img src="images/header_thames_river.jpg" alt="Header Image - London Ontario" id="headerImage">
+					<!-- HEADER TEXT FOR MOBILE -->
+					<div id="headerTextCon">
+						<a href="#"><span id="headerText">anglers.org</span></a>
+					</div>
 
-				<!-- HEADER TEXT FOR MOBILE -->
-				<div id="headerTextCon">
-					<a href="#"><span id="headerText">anglers.org</span></a>
-				</div>
+					<!-- Menu button -->
+					<div id="menuButton">
+						<div id="lines">
+							<div id="line1"></div>
+							<div id="line2"></div>
+							<div id="line3"></div>
+						</div> <!-- End lines -->
+					</div> <!-- End menuButton -->
+				</div> <!-- End headerCon -->
 
 				<!-- Main navigation -->
 				<nav id="mainNav">
 					<h2 class="hidden">Main Navigation</h2>
 
 					<ul>
-						<li> <a href="#">Home</a> </li>
-						<li> <a href="#aboutUsSection">About Us</a> </li>
-						<li> <a href="#eventsSection">Events</a> </li>
-						<li> <a href="#linksSection">Links</a> </li>
-						<li> <a href="#fundraisingSection">Fundraising</a> </li>
-						<li> <a href="#contactSection">Contact Us</a> </li>
+						<li> <a href="index.html#container" id="containerBtn">Home</a> </li>
+						<li> <a href="index.html#aboutUsSection" id="aboutUsBtn">About Us</a> </li>
+						<li> <a href="index.html#eventsSection" id="eventsBtn">Events</a> </li>
+						<li> <a href="index.html#linksSection" id="linksBtn">Links</a> </li>
+						<li> <a href="index.html#fundraisingSection" id="fundraisingBtn">Fundraising</a> </li>
+						<li> <a href="index.html#contactSection" id="contactBtn">Contact Us</a> </li>
 					</ul>
 				</nav> <!-- End mainNav -->
 
+				<!-- Header image -->
+				<img src="images/header_thames_river.jpg" alt="Header Image - London Ontario" id="headerImage">
+				
+				<!-- Logo -->
 				<img src="images/traa_logo_circle.svg" alt="Header Logo - TRAA" id="big_logo" width="200" height="200">
 			</header> <!-- end Header -->
 

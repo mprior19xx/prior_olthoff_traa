@@ -113,7 +113,7 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 /*sets the page width - this changes by screen*/
-#container
+#containerSection
 {
 	min-width:325px;
 	max-width:600px;
@@ -129,7 +129,7 @@ button:active, .fundraiser a:active, .submit:active
 /*HEADER SECTION RULES*/
 /**/
 /*Makes header position relative so logo can sit on top of header image and nav*/
-#mainHeader
+#headerCon
 {
 	display:flex;
 	flex-direction:row;
@@ -171,26 +171,82 @@ button:active, .fundraiser a:active, .submit:active
 	margin-left:10px;
 }
 
-/*Positions nav*/
+/*Positions and styles nav*/
 #mainNav
 {
+	position: fixed;
+	top: -370px;
 	display: block;
+	background: #5d6f34;
+	width: 100%;
+	transition: 0.5s ease;
+	z-index: 2;
 }
 
-/*Styles nav links*/
-#mainNav a
+/*Colours nav links*/
+#mainNav ul li a
 {
 	color: #FFF;
+	display: block;
+	height:40px;
+	width: 100%;
+	color: #FFF;
+	text-align: center;
+	font-size: 14px;
+	padding-top: 20px;
+	border-bottom: 1px solid white;
 }
 
-/*Styles main nav*/
-#mainNav ul li 
+/*Shows nav when button is clicked*/
+#mainNav.openMenu
 {
-	display:block;
-	background: #5d6f34;
-	height:27px;
-	margin-bottom:3px;
-	padding:10px 150px 0 150px;
+	top: 60px;
+}
+
+/*Positions the menu button*/
+#menuButton
+{
+	margin-left: auto;
+	margin-right: 10px;
+	margin-top: 15px;
+}
+
+/*Adds space to top of menu button's lines*/
+#lines
+{
+	margin-top: 5px;
+}
+
+/*Styles the menu button's lines*/
+#line1, #line2, #line3
+{
+	width: 24px;
+	height: 0px;
+	border-top: 3px solid #5d6f34;
+	margin: 5px;
+	transition: all 0.25s linear;
+}
+
+/*Animates line1 when menu is opened*/
+#line1.openMenu
+{
+	-webkit-transform: rotate(-45deg) translate(-5px, 6px);
+	-ms-transform: rotate(-45deg) translate(-5px, 6px);
+	transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+/*Hides line2 when menu is opened*/
+#line2.openMenu
+{
+	opacity: 0;
+}
+
+/*Animates line3 when menu is opened*/
+#line3.openMenu
+{
+	-webkit-transform: rotate(45deg) translate(-5px, -6px);
+	-ms-transform: rotate(45deg) translate(-5px, -6px);
+	transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /**/
@@ -699,14 +755,14 @@ button:active, .fundraiser a:active, .submit:active
 {
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 16px;
-	margin-bottom: 5px;
+	margin-bottom: 10px;
 }
 
-/*Changes See More colour and adds space to the left*/
+/*Changes See More colour*/
 .seeMore
 {
-	margin-left: 10px;
 	color: #9bbd4f;
+	margin-top: 10px;
 }
 
 /* Fades slideshow pictures*/
@@ -1298,7 +1354,7 @@ button:active, .fundraiser a:active, .submit:active
 	}
 
 	/*sets the page width - this changes by screen*/
-	#container
+	#containerSection
 	{
 		max-width:920px;
 	}
@@ -1308,12 +1364,6 @@ button:active, .fundraiser a:active, .submit:active
 	#mainHeader
 	{
 		position: relative;
-	}
-
-	/*Hides mobile logo*/
-	#traa_logo
-	{
-		display:none;
 	}
 
 	/*Displays tablet/desktop logo*/
@@ -1328,10 +1378,10 @@ button:active, .fundraiser a:active, .submit:active
 		display:block;
 	}
 
-	/*Hides header text*/
-	#headerTextCon
+	/*Hides mobile header*/
+	#headerCon
 	{
-		display:none;
+		display: none;
 	}
 
 	/**/
@@ -1632,7 +1682,7 @@ button:active, .fundraiser a:active, .submit:active
 	}
 
 	/*Changes size of the container*/
-	#container
+	#containerSection
 	{
 		max-width:960px;
 	}
