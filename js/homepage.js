@@ -2,9 +2,9 @@
     // STATISTICS RULES
 
     // Show statistics variables
-    var statisticsButton = document.querySelector("#statisticsLink"),
-        statistics = document.querySelector("#statistics"),
-        expandTriangle = document.querySelector("#expandTriangle");
+    var statisticsButton = document.querySelector("#statisticsLink");
+    var statistics = document.querySelector("#statistics");
+    var expandTriangle = document.querySelector("#expandTriangle");
 
     // Toggle statistics function
     function displayStatistics() {
@@ -20,9 +20,9 @@
     // MEMBERSHIP POPUP RULES
 
     // Membership popup variables
-    var membershipButton = document.querySelector("#memberJoin"),
-        xButton = document.querySelector("#xButton"),
-        membershipPopup = document.querySelector("#membershipPopup");
+    var membershipButton = document.querySelector("#memberJoin");
+    var xButton = document.querySelector("#xButton");
+    var membershipPopup = document.querySelector("#membershipPopup");
 
     //Toggle membership popup function
     function displayPopup() {
