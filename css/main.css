@@ -925,7 +925,6 @@ button:active, .fundraiser a:active, .submit:active
 #merchandiseText
 {
 	max-width:100%;
-	padding: ;
 	margin:0 auto;
 	padding: 0 10px 0 10px;
 }
@@ -1049,6 +1048,7 @@ button:active, .fundraiser a:active, .submit:active
 	font-size: 16px;
 	line-height: 24px;
 	text-align: center;
+	padding-bottom: 20px;
 }
 
 /*Styles map area header*/
@@ -1080,16 +1080,23 @@ button:active, .fundraiser a:active, .submit:active
 #map
 {
 	display: flex;
+	height: 0;
+    padding-bottom: 60%;
+    overflow: hidden;
 	margin: 0 auto;
 	margin-top: 20px;
-	padding-bottom: 10px;
+	max-width: 90%;
+	position: relative;
 }
 
 /*Adds space above the map*/
-#mapArea iframe
+#map iframe
 {
-	display: flex;
-	margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 
 /*FOOTER SECTION RULES*/
@@ -1111,7 +1118,7 @@ button:active, .fundraiser a:active, .submit:active
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 /*Styles and positions back to top*/
@@ -1121,6 +1128,7 @@ button:active, .fundraiser a:active, .submit:active
 	justify-content: center;
 	margin-bottom:5px;
 	padding-top:10px;
+	font-size: 18px;
 }
 
 /*Changes cursor on hover of back to top (for when it appears on desktop)*/
