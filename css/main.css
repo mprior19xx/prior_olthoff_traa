@@ -421,12 +421,14 @@ button:active, .fundraiser a:active, .submit:active
 	overflow: hidden;
 	transition: 0.5s ease;
 	max-width: 930px;
+	margin-bottom: -35px;
 }
 
 /*Displays the graphs when the statistics link is clicked*/
 #statistics.openStatistics
 {
 	max-height: 1000px;
+	margin-bottom: 0px;
 }
 
 /*Adds space above graphs*/
@@ -800,7 +802,7 @@ button:active, .fundraiser a:active, .submit:active
 	padding: 10px 10px 0px 10px;
 	margin: 0 auto;
 	margin-bottom: 40px;
-	margin-top: 40px;
+/*	margin-top: 40px;*/
 }
 
 /*Adds space between list items*/
@@ -920,7 +922,6 @@ button:active, .fundraiser a:active, .submit:active
 #merchandiseText
 {
 	max-width:100%;
-	padding-top:15px;
 	margin:0 auto;
 
 }
@@ -990,7 +991,6 @@ button:active, .fundraiser a:active, .submit:active
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 14px;
 	margin-top: 20px;
-	margin-left: 30px;
 	display: block;
 }
 
@@ -1005,7 +1005,7 @@ button:active, .fundraiser a:active, .submit:active
 	display: block;
 	margin-top: 5px;
 	margin: 0 auto;
-	width: 90%;
+	width: 100%;
 	height: 20px;
 	font-size: 16px;
 }
@@ -1315,6 +1315,7 @@ button:active, .fundraiser a:active, .submit:active
 	{
 		max-width:920px;
 	}
+
 	/**/
 	/*Header rules*/
 	/*Makes header position relative so logo can sit on top of header image and nav*/
@@ -1327,6 +1328,11 @@ button:active, .fundraiser a:active, .submit:active
 	#big_logo
 	{
 		display:block;
+		position: absolute;
+		top: 15px;
+		left: 15px;
+		max-width: 150px;
+		max-height: 150px;
 	}
 
 	/*Displays header image*/
@@ -1343,9 +1349,10 @@ button:active, .fundraiser a:active, .submit:active
 
 	/**/
 	/*NAVIGATION RULES AND TRANSITIONS*/
-		/*Styles and positions nav bar*/
+	/*Styles and positions nav bar*/
 	#mainNav
 	{
+		position: static;
 		display: block;
 		max-width: 100%;
 		height: 40px;
@@ -1361,7 +1368,9 @@ button:active, .fundraiser a:active, .submit:active
 	{
 		display: flex;
 		flex-direction: row;
-		margin-left:35px;
+		margin-left: auto;
+		width: 406px;
+		margin-right: 15px;
 	}
 
 	/*Spaces the nav links*/
@@ -1372,12 +1381,20 @@ button:active, .fundraiser a:active, .submit:active
 		height: 40px;
 	}
 
+	#mainNav ul li:last-child
+	{
+		padding-right: 0;
+	}
+
 	/*Styles the nav links*/
 	#mainNav ul li a
 	{
+		border: none;
+		padding: 0;
 		color: #FFF;
-		font-size: 20px;
+		font-size: 14px;
 		font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+		height: 22px;
 	}
 
 	/*Creates fade in animation for main nav bottom border*/
@@ -1422,13 +1439,18 @@ button:active, .fundraiser a:active, .submit:active
 
 	/**/
 	/*HOME RULES*/
+	/*Removes space above home section*/
+	#homeSection
+	{
+		margin-top: 30px;
+	}
+
 	/*Styles meetings background*/
 	#nextMeeting
 	{
 		padding-top:17px;
 		height: 50px;
 		background-color: #5d6f34;
-		
 		margin-bottom:30px;
 	}
 
@@ -1442,6 +1464,7 @@ button:active, .fundraiser a:active, .submit:active
 	#heroHeader
 	{
 		font-size: 30px;
+		line-height: 40px;
 	}
 
 	/*Styles hero text*/
@@ -1452,6 +1475,23 @@ button:active, .fundraiser a:active, .submit:active
 		margin: 0 auto;
 		font-size: 24px;
 		margin-bottom: 30px;
+		line-height: 35px;
+	}
+
+	/*Adjusts space below statistics link*/
+	#statistics
+	{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: 22px;
+		margin-right: 10px;
+		max-height: 0px;
+		overflow: hidden;
+		transition: 0.5s ease;
+		max-width: 930px;
+		margin-bottom: -15px;
 	}
 
 	/**/
@@ -1649,15 +1689,89 @@ button:active, .fundraiser a:active, .submit:active
 	}
 
 
-	/*EXTRA EVENTS PAGE RULES*/
+	/*FUNDRAISING PAGE RULES*/
+	.fundraisingMain
+	{
+		margin-top:30px;
+	}
+
+	/*EVENTS PAGE RULES*/
+	/**/
+
+	/*Adds space for sticky header*/
+	#troutRelease
+	{
+		margin-top: 30px;
+	}
 
 } /*END TABLET MEDIA QUERY*/
 
+/*750PX BREAKPOINT*/
+@media screen and (min-width: 750px) {
+	/**/
+	/*HEADER RULES*/
+	/*Resizes logo*/
+	#big_logo
+	{
+		max-width: 175px;
+		max-height: 175px;
+	}
+
+	/*Changes width of nav*/
+	#mainNav ul
+	{
+		width: 504px;
+	}
+
+	/*Adds more space to the nav links*/
+	#mainNav ul li
+	{
+		padding-right: 25px;
+	}
+
+	/*Changes nav link font size*/
+	#mainNav ul li a
+	{
+		font-size: 16px;
+	}
+}
+
+/*830PX BREAKPOINT*/
+@media screen and (min-width: 830px) {
+	/**/
+	/*HEADER RULES*/
+	/*Resizes logo*/
+	#big_logo
+	{
+		max-width: 175px;
+		max-height: 175px;
+	}
+
+	/*Changes width of nav*/
+	#mainNav ul
+	{
+		width: 576px;
+	}
+
+	/*Adds more space to the nav links*/
+	#mainNav ul li
+	{
+		padding-right: 30px;
+	}
+
+	/*Changes nav link font size*/
+	#mainNav ul li a
+	{
+		font-size: 18px;
+	}
+}
 
 /*DESKTOP MEDIA QUERY*/
 @media screen and (min-width: 920px){
 
-	/*Styles all of the links dark green and medium font weight*/
+	/**/
+	/*PAGE RULES*/
+	/*Changes link colour on hover*/
 	a:hover
 	{
 		color: #9bbd4f;
@@ -1668,6 +1782,34 @@ button:active, .fundraiser a:active, .submit:active
 	{
 		max-width:960px;
 	}
+	
+	/**/
+	/*HEADER RULES*/
+	/*Resizes logo*/
+	#big_logo
+	{
+		max-width: 200px;
+		max-height: 200px;
+	}
+
+	/*Changes width of nav*/
+	#mainNav ul
+	{
+		width: 673px;
+	}
+
+	/*Adds more space to the nav links*/
+	#mainNav ul li
+	{
+		padding-right: 40px;
+	}
+
+	/*Changes nav link font size*/
+	#mainNav ul li a
+	{
+		font-size: 20px;
+	}
+
 	/**/
 	/*ABOUT US RULES*/
 
