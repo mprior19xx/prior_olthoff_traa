@@ -1046,7 +1046,7 @@ button:active, .fundraiser a:active, .submit:active
 	font-size: 16px;
 	line-height: 24px;
 	text-align: center;
-	padding-bottom: 20px;
+	padding: 10px 10px 20px 10px;
 }
 
 /*Styles map area header*/
@@ -1056,7 +1056,6 @@ button:active, .fundraiser a:active, .submit:active
 	font-size: 22px;
 	padding-top: 10px;
 	margin-bottom: 5px;
-	margin-left:10px;
 }
 
 /*Styles map area subtitles*/
@@ -1064,14 +1063,12 @@ button:active, .fundraiser a:active, .submit:active
 {
 	color: #d8ae58;
 	line-height: 30px;
-	margin-left:10px;
 }
 
 /*Styles and positions map area items*/
 #mapArea ul li
 {
 	list-style: none;
-	margin-left:10px;
 }
 
 /*Sets position of map*/
@@ -1083,17 +1080,17 @@ button:active, .fundraiser a:active, .submit:active
     overflow: hidden;
 	margin: 0 auto;
 	margin-top: 20px;
-	max-width: 95%;
+	max-width: 100%;
 	position: relative;
 }
 
 /*Adds space above the map*/
 #map iframe
 {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    height: 100% !important;
     top: 0;
-    left: 0;
+    left: -5px;
     position: absolute;
 }
 
@@ -1675,8 +1672,9 @@ button:active, .fundraiser a:active, .submit:active
 	/*Formats contact form*/
 	#contactForm
 	{
-		width:50%;
+		max-width:520px;
 		padding-right:15px;
+		padding-left: 0;
 	}
 
 	/*Styles the contact form labels*/
@@ -1688,9 +1686,11 @@ button:active, .fundraiser a:active, .submit:active
 		display: block;
 	}
 
+	/*Resizes and spaces input fields*/
 	#firstName, #lastName, #email, #message
 	{
-		margin-bottom:20px;
+		margin-bottom: 15px;
+		height: 30px;
 	}
 
 	/*Makes the message input field larger*/
@@ -1699,13 +1699,20 @@ button:active, .fundraiser a:active, .submit:active
 		height: 250px;
 	}
 
+	/*Removes margin bottom from submit button*/
+	.submit
+	{
+		margin-bottom: 0;
+	}
+
 	/*Styles map area*/
 	#mapArea
 	{
-		width:50%;
+		max-width:320px;
 		font-size: 18px;
 		line-height: 25px;
 		text-align: left;
+		padding-bottom: 0;
 	}
 
 	/*Styles map area header*/
@@ -1722,14 +1729,17 @@ button:active, .fundraiser a:active, .submit:active
 		line-height: 30px;
 	}
 
-	/*Adds space above the map*/
-	#mapArea iframe
+	#map
 	{
-		margin-top: 0px;
+		padding-bottom: 85%;
+	}
+
+	/*Adds space above the map*/
+	#map iframe
+	{
 		padding-left:5px;
 		padding-right:5px;
 	}
-
 
 } /*END TABLET MEDIA QUERY*/
 
