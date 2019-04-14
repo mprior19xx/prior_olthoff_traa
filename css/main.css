@@ -6,11 +6,6 @@
 	display: none;
 }
 
-#aboutImgBig
-{
-	display:none;
-}
-
 /*Fontface settings*/
 @font-face {
     font-family: 'libre_franklin-medium';
@@ -84,6 +79,7 @@ h4
 	font-size: 16px;
 	padding-top:3px;
 	padding-left:10px;
+	margin-bottom:10px;
 }
 
 /*Styles all of the links dark green and medium font weight*/
@@ -129,12 +125,6 @@ button:active, .fundraiser a:active, .submit:active
 /*MOBILE RULES*/
 /**/
 
-/*hides main header*/
-#mainNav
-{
-	display:none;
-}
-
 /*HEADER SECTION RULES*/
 /**/
 /*Makes header position relative so logo can sit on top of header image and nav*/
@@ -148,6 +138,9 @@ button:active, .fundraiser a:active, .submit:active
 	height: 60px;
 	z-index: 3;
 }
+
+#headerImage
+{display:none;}
 
 #big_logo
 {
@@ -171,6 +164,27 @@ button:active, .fundraiser a:active, .submit:active
 	margin-top:10px;
 	margin-left:10px;
 }
+
+/*hides main header*/
+#mainNav
+{
+	display: block;
+}
+
+#mainNav a
+{
+	color: #FFF;
+}
+
+#mainNav ul li 
+{
+	display:block;
+	background: #5d6f34;
+	height:27px;
+	margin-bottom:3px;
+	padding:10px 150px 0 150px;
+}
+
 /**/
 /*HOME SECTION RULES*/
 /**/
@@ -207,8 +221,8 @@ button:active, .fundraiser a:active, .submit:active
 /*Positions and styles hero text*/
 #heroText
 {
-	width: 100%;
-	padding-top: 15px;
+	max-width: 100%;
+	margin: 20px 10px 20px 10px;
 	
 }
 
@@ -724,6 +738,11 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 /*Adds space between list items*/
+#scrollBox li
+{
+	margin-bottom:10px;
+}
+
 #scrollBox ul li,
 {
 	margin-bottom: 20px;
@@ -757,7 +776,7 @@ button:active, .fundraiser a:active, .submit:active
 	display: flex;
 	flex-direction: row;
 	margin-left:60px;
-	margin-top: -20px;
+	margin-top: -30px;
 }
 
 /*Adds space between newsletter links*/
@@ -792,7 +811,6 @@ button:active, .fundraiser a:active, .submit:active
 /*Displays fundraisers side by side and aligns them center*/
 #allFundraisers
 {
-	max-width: 320px;
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
@@ -939,11 +957,11 @@ button:active, .fundraiser a:active, .submit:active
 #mapArea
 {
 	background-color: #5d6f34;
-	height: 550px;
 	color: #FFF;
 	margin-top:10px;
 	font-size: 14px;
 	line-height: 25px;
+	padding-left:10px;
 }
 
 /*Styles map area header*/
@@ -1040,16 +1058,13 @@ button:active, .fundraiser a:active, .submit:active
 .fundraisingMain
 {
 	margin-top:60px;
-	max-width: 960px;
 }
 
 /*Formats the content on the fundraising pages*/
 .fundraisingCon
 {
-	padding: 10px 10px 0 10px;
-	margin-top:15px;
+	padding: 15px 15px 15px 15px;
 	margin: 0 auto;
-	margin-bottom: 30px;
 	min-height: 500px;
 }
 
@@ -1105,7 +1120,7 @@ button:active, .fundraiser a:active, .submit:active
 #troutDesc
 {
 	text-align: center;
-	margin: 15px 5px 10px 5px;
+	margin: 15px 15px 15px 15px;
 }
 
 #troutDesc p
@@ -1119,6 +1134,7 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 
+/*EVENT SLIDESHOW BREAKPOINTS*/
 @media screen and (min-width: 500px) {
 	/**/
 	/* EVENT SLIDESHOW SECTION RULES */
@@ -1129,6 +1145,17 @@ button:active, .fundraiser a:active, .submit:active
 	}
 }
 
+/*FUNDRAISING SECTION BREAK POINTS*/
+@media screen and (min-width: 400px)
+{
+
+}
+
+/*MEMBERSHIP BAR BREAK POINTS*/
+@media screen and (min-width: 400px)
+{
+
+}
 
 /*TABLET MEDIA QUERY*/
 @media screen and (min-width: 600px) {
@@ -1191,7 +1218,11 @@ button:active, .fundraiser a:active, .submit:active
 	#big_logo
 	{
 		display:block;
-		padding:10px;
+	}
+
+	#headerImage
+	{
+		display:block;
 	}
 
 	#headerTextCon
@@ -1204,7 +1235,7 @@ button:active, .fundraiser a:active, .submit:active
 	#mainNav
 	{
 		display: block;
-		width: 100%;
+		max-width: 100%;
 		height: 40px;
 		background: #5d6f34; /* Old browsers */
 		background: -webkit-linear-gradient(#9bbd4f 0%, #5d6f34 100%);
@@ -1367,39 +1398,7 @@ button:active, .fundraiser a:active, .submit:active
 		height: 30px;
 	}
 
-	/**/
-	/*FUNDRAISING RULES*/
-	/*Sets size, position, and style of fundraisers section*/
-	#fundraisingWithBG
-	{
-		display: flex;
-		flex-direction: column;
-	}
 	
-	#allFundraisers
-	{
-		max-width: 100%;
-		display:flex;
-		flex-direction:row;
-		margin: 0 auto;
-	}
-	
-	/*Vertically centers text in fundraiser buttons*/
-	.fundraiserButtonText
-	{
-		display: block;
-		padding-top: 4px;
-	}
-
-	/*Adds space between button and picture and adds padding*/
-	.fundraiser a
-	{
-		display: inline-block;
-		color: #FFF;
-		margin-top: 10px;
-		padding: 0 10px 0 10px;
-		font-size:18px;
-	}
 
 	/**/
 	/*MERCHANDISE RULES*/
@@ -1503,7 +1502,40 @@ button:active, .fundraiser a:active, .submit:active
 		padding-left:5px;
 		padding-right:5px;
 	}
+
+
+
+
+
+	/*EXTRA FUNDRAISING PAGE RULES*/
+	.fundraisingCon ul
+	{
+		width:90%;
+		margin:0 auto;
+	}
+
+	/*Sets size and border of double image*/
+	.doubleImg
+	{
+		width:45%;
+		height:350px;
+		border: 1px solid #666;
+	}
+
+	/*Sets size and border of single image*/
+	.singleImg
+	{
+		width:100%;
+		height:550px;
+		border: 1px solid #666;
+		margin: 0 auto;
+	}
+
+
+	/*EXTRA EVENTS PAGE RULES*/
+
 } /*END TABLET MEDIA QUERY*/
+
 
 /*DESKTOP MEDIA QUERY*/
 @media screen and (min-width: 920px){
@@ -1563,15 +1595,20 @@ button:active, .fundraiser a:active, .submit:active
 	
 
 	/*FUNDRAISER RULES*/
-	/*Adds space between button and picture and adds padding*/
-	.fundraiser a
+	/**/
+	#fundraisingText
 	{
-		display: inline-block;
-		color: #FFF;
-		margin-top: 10px;
-		padding: 0 10px 0 10px;
-		font-size:20px;
+	font-size: 20px;
+	line-height: 28px;
 	}
+
+	#allFundraisers
+	{
+		display:flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
 	/**/
 	/*MEMBERSHIP RULES*/
 
