@@ -58,29 +58,32 @@ body
 /*Styles all of the H2s*/
 h2
 {
-	max-width: 100%;
-	height: 25px;
+	max-width: 910px;
+	height: 15px;
 	background-color: #9bbd4f;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 18px;
+	font-size: 22px;
+	margin: 0 auto;
 	margin-bottom: 15px;
-	padding: 5px 0px 0px 10px;
+	padding: 7px 10px 13px 10px;
 }
 
 /*Styles all of the H4s*/
 h4
 {
-	max-width: 100%;
-	height: 22px;
+	max-width: 910px;
+	height: 12px;
 	background-color: #d8ae58;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 16px;
-	padding-top:3px;
-	padding-left:10px;
-	margin-bottom:10px;
+	font-size: 18px;
+	margin:0 auto;
+	margin-bottom: 15px;
+	padding: 7px 10px 13px 10px;
 }
+
+
 
 /*Styles all of the links dark green and medium font weight*/
 a
@@ -120,7 +123,6 @@ button:active, .fundraiser a:active, .submit:active
 	margin: 0 auto;
 	background-color: #FFF;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-	display: relative;
 }
 
 /*MOBILE RULES*/
@@ -811,7 +813,7 @@ button:active, .fundraiser a:active, .submit:active
 	margin-bottom:10px;
 }
 
-#scrollBox ul li,
+#scrollBox ul li
 {
 	margin-bottom: 20px;
 }
@@ -933,6 +935,12 @@ button:active, .fundraiser a:active, .submit:active
 	line-height: 25px;
 	margin-bottom:5px;
 	text-align: center;
+}
+
+.price
+{
+	margin-top: 10px;
+	margin-bottom: 0;
 }
 
 /*Positions and sizes merch buy*/
@@ -1287,27 +1295,19 @@ button:active, .fundraiser a:active, .submit:active
 	/*Styles all of the H2s*/
 	h2
 	{
-		max-width: 100%;
-		height: 35px;
-		background-color: #9bbd4f;
-		font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-		color: #FFF;
-		font-size: 20px;
-		margin-bottom: 15px;
-		padding: 15px 0px 0px 10px;
+		max-width: 910px;
+		height: 30px;
+		font-size: 30px;
+		padding: 13px 10px 7px 10px;
 	}
 
 	/*Styles all of the H4s*/
 	h4
 	{
-		max-width: 100%;
-		height: 35px;
-		background-color: #d8ae58;
-		font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-		color: #FFF;
-		font-size: 18px;
-		padding-top:15px;
-		padding-left:10px;
+		max-width: 910px;
+		height: 20px;
+		font-size: 25px;
+		padding: 10px;
 	}
 
 	/*sets the page width - this changes by screen*/
@@ -1523,7 +1523,7 @@ button:active, .fundraiser a:active, .submit:active
 		font-size: 48px;
 		line-height: 55px;
 		margin-right: 15px;
-		margin-left:10;
+		margin-left:10px;
 		padding-top:15px;
 		display: flex;
 		flex-direction: column;
@@ -1584,7 +1584,6 @@ button:active, .fundraiser a:active, .submit:active
 	.merchBuy
 	{
 		max-width:100%;
-		margin-top: 15px;
 	}
 
 	/*Styles and positions buy merch buttons*/
@@ -1593,7 +1592,7 @@ button:active, .fundraiser a:active, .submit:active
 		width:130px;
 		display:block;
 		margin: 0 auto;
-		margin-top:20px;
+		margin-top:10px;
 	}
 
 	/**/
