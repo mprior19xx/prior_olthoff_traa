@@ -1106,20 +1106,27 @@ button:active, .fundraiser a:active, .submit:active
 	margin: 0 auto;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-evenly;
+	justify-content: space-between;
+	padding: 0 10px 0 10px;
+}
+
+.bigDblImg
+{
+	display:none;
+}
+
+.bigSingleImg
+{
+	display:none;
 }
 
 /*Sets size and border of double image*/
-.doubleImg{
-	width:45%;
-	height:150px;
+.smDoubleImg{
 	border: 1px solid #666;
 }
 
 /*Sets size and border of single image*/
-.singleImg{
-	width:100%;
-	height:350px;
+.smSingleImg{
 	border: 1px solid #666;
 	margin: 0 auto;
 }
@@ -1215,6 +1222,42 @@ button:active, .fundraiser a:active, .submit:active
 		padding-top:20px;
 	}
 }
+
+/**/
+/*FUNDRAISING PAGES BREAKPOINTS*/
+@media screen and (min-width:790px){
+	/*EXTRA FUNDRAISING PAGE RULES*/
+	.fundraisingCon ul
+	{
+		width:90%;
+		margin:0 auto;
+	}
+
+	/*hides double image*/
+	.smDoubleImg
+	{
+		display:none;
+	}
+
+	/*hides single image*/
+	.smSingleImg
+	{
+		display:none;
+	}
+
+	/*Shows large images*/
+	.bigDblImg
+	{
+		display:block;
+	}
+	
+	.bigSingleImg
+	{
+		display:block;
+		margin:0 auto;
+	}
+}
+
 
 /*TABLET MEDIA QUERY*/
 @media screen and (min-width: 600px) {
@@ -1573,31 +1616,6 @@ button:active, .fundraiser a:active, .submit:active
 		padding-left:5px;
 		padding-right:5px;
 	}
-
-	/*EXTRA FUNDRAISING PAGE RULES*/
-	.fundraisingCon ul
-	{
-		width:90%;
-		margin:0 auto;
-	}
-
-	/*Sets size and border of double image*/
-	.doubleImg
-	{
-		width:45%;
-		height:350px;
-		border: 1px solid #666;
-	}
-
-	/*Sets size and border of single image*/
-	.singleImg
-	{
-		width:100%;
-		height:550px;
-		border: 1px solid #666;
-		margin: 0 auto;
-	}
-
 
 	/*EXTRA EVENTS PAGE RULES*/
 
