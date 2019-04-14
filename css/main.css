@@ -808,9 +808,8 @@ button:active, .fundraiser a:active, .submit:active
 	margin: 0 auto;
 }
 
-.fundraiser
-{
-	max-width:100%;
+.fundraiser{
+	display:block;
 }
 
 /*Displays fundraisers side by side and aligns them center*/
@@ -1073,6 +1072,19 @@ button:active, .fundraiser a:active, .submit:active
 	min-height: 500px;
 }
 
+.donateBtnCon
+{
+	display:flex;
+	margin: 0 auto;
+	justify-content: center;
+	margin-bottom: 20px;
+}
+
+.donateNow
+{
+
+}
+
 /*Adds space between list items*/
 .fundraisingCon ul li
 {
@@ -1161,41 +1173,69 @@ button:active, .fundraiser a:active, .submit:active
 
 
 /*MEMBERSHIP BAR BREAK POINTS*/
-	@media screen and (min-width: 450px)
+@media screen and (min-width: 840px)
 	{
+		/**/
+		/*MEMBERSHIP RULES*/
+		/*Styles and spaces out membership*/
+		#membership
+		{
+			background-color: #5d6f34;
+			margin-bottom: 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: #FFF;
+		}
+
+		/*Vertically centers membership content*/
+		#membershipCon
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			padding:10px;
+		}
+
+		/*Styles and positions membership title*/
 		#membershipLeft
 		{
-			font-size: 36px;
-		}
-	}
-	
-	@media screen and (min-width: 705px)
-	{
-		#membershipRight
-		{
-			margin-bottom:20px;
+			font-family: 'libre_franklin-bold', Helvetica, sans-serif;
+			font-size: 48px;
+			line-height: 55px;
+			margin-right: 15px;
+			padding-top:15px;
+			display: flex;
+			flex-direction: column;
 		}
 
 		#makeGreen
 		{
-			margin-bottom: 20px;
+			padding-top:0px;
+			margin-bottom: 30px;
 		}
-	}
 
-	@media screen and (min-width: 705px)
-	{
 		#membershipRight
 		{
-			padding-right:50px;
+			margin-right:10px;
+		}	
+
+		/*Sizes and positions member join button*/
+		#memberJoin
+		{
+			height:50px;
+			margin-top: 15px;
 		}
 	}
 
-	@media screen and (min-width: 705px)
+	@media screen and (min-width:931px)
 	{
-		#makeGreen
-		{
-			padding-top:20px;
-		}
+		#memberJoin{margin-top: 5px;}
+	}
+
+	@media screen and (min-width:935px)
+	{
+		#memberJoin{margin-top:35px;}
 	}
 
 /*TABLET MEDIA QUERY*/
@@ -1219,7 +1259,7 @@ button:active, .fundraiser a:active, .submit:active
 			background-color: #9bbd4f;
 			font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 			color: #FFF;
-			font-size: 20px;
+			font-size: 32px;
 			margin-bottom: 15px;
 			padding: 15px 0px 0px 10px;
 		}
@@ -1232,7 +1272,7 @@ button:active, .fundraiser a:active, .submit:active
 			background-color: #d8ae58;
 			font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 			color: #FFF;
-			font-size: 18px;
+			font-size: 30px;
 			padding-top:15px;
 			padding-left:10px;
 		}
@@ -1370,6 +1410,7 @@ button:active, .fundraiser a:active, .submit:active
 		#heroHeader
 		{
 			font-size: 30px;
+			margin-bottom:20px;
 		}
 
 		/*Styles hero text*/
@@ -1382,59 +1423,6 @@ button:active, .fundraiser a:active, .submit:active
 			margin-bottom: 30px;
 		}
 
-		/**/
-		/*MEMBERSHIP RULES*/
-		/*Styles and spaces out membership*/
-		#membership
-		{
-			background-color: #5d6f34;
-			margin-bottom: 40px;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
-			color: #FFF;
-		}
-
-		/*Vertically centers membership content*/
-		#membershipCon
-		{
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			padding:10px;
-		}
-
-		/*Styles and positions membership title*/
-		#membershipLeft
-		{
-			font-family: 'libre_franklin-bold', Helvetica, sans-serif;
-			font-size: 48px;
-			line-height: 55px;
-			margin-right: 15px;
-			margin-left:10;
-			padding-top:15px;
-			display: flex;
-			flex-direction: column;
-		}
-
-		#makeGreen
-		{
-			margin-bottom: 50px;
-		}
-
-		#membershipRight
-		{
-			width:50%;
-			margin-right:10px;
-		}	
-
-		/*Sizes and positions member join button*/
-		#memberJoin
-		{
-			height:50px;
-			margin-top: 15px;
-		}
-
 		/* EVENT SLIDESHOW SECTION RULES */
 		/*Sizes the arrows*/
 		.prevSlide, .nextSlide
@@ -1442,8 +1430,6 @@ button:active, .fundraiser a:active, .submit:active
 			width: 30px;
 			height: 30px;
 		}
-
-		
 
 		/**/
 		/*MERCHANDISE RULES*/
@@ -1548,10 +1534,6 @@ button:active, .fundraiser a:active, .submit:active
 			padding-right:5px;
 		}
 
-
-
-
-
 		/*EXTRA FUNDRAISING PAGE RULES*/
 		.fundraisingCon ul
 		{
@@ -1575,8 +1557,6 @@ button:active, .fundraiser a:active, .submit:active
 			border: 1px solid #666;
 			margin: 0 auto;
 		}
-
-
 		/*EXTRA EVENTS PAGE RULES*/
 
 	} /*END TABLET MEDIA QUERY*/
@@ -1596,11 +1576,45 @@ button:active, .fundraiser a:active, .submit:active
 				color: #9bbd4f;
 			}
 
+			h2
+			{
+				font-size:;
+				margin-right:7.5px;
+				margin-left:7.5px;
+			}
+
+			h4
+			{
+				
+				margin-right:7.5px;
+				margin-left:7.5px;
+			}
+
 			/*Changes size of the container*/
 			#container
 			{
 				max-width:960px;
 			}
+
+			
+			
+			/*Styles hero header*/
+			#heroHeader
+			{
+				font-size: 36px;
+				margin-bottom:20px;
+			}
+
+			/*Styles hero text*/
+			#heroText p
+			{
+				width:90%;
+				display:flex;
+				margin: 0 auto;
+				font-size: 24px;
+				margin-bottom: 30px;
+			}
+
 			/**/
 			/*ABOUT US RULES*/
 
@@ -1613,7 +1627,7 @@ button:active, .fundraiser a:active, .submit:active
 
 			#aboutImgBig
 			{
-				display:block;
+				display:flex;
 			}
 
 			#aboutInfo
@@ -1626,15 +1640,23 @@ button:active, .fundraiser a:active, .submit:active
 			{
 				display: flex;
 				flex-direction: row;
-				justify-content: space-between;
 			}
 			
+			.makeMedium
+			{
+				margin-bottom:5px;
+			}
+
+			#aboutCopy1
+			{
+				margin-right:15px;
+			}
 
 			/*Spaces out the list items*/
 			#aboutCopy1 ul li
 			{
 				line-height: 22px;
-				margin-bottom: 4px;
+				margin-bottom: 2px;
 			}
 
 			/*Removes margin-bottom from last list item*/
@@ -1657,7 +1679,11 @@ button:active, .fundraiser a:active, .submit:active
 				height:300px;
 			}
 			
-			/**/
+			/*MEMBERSHIPS RULES*/
+			#membershipLeft h3
+			{
+				max-height:140px;
+			}
 			/*EVENTS RULES*/
 			/* EVENT SLIDESHOW SECTION RULES */
 			/*Changes opacity of slideshow arrows on hover*/
@@ -1675,24 +1701,13 @@ button:active, .fundraiser a:active, .submit:active
 				line-height: 28px;
 			}
 
-			.fundraiser
-			{
-				display:block;
-			}
-
 			#allFundraisers
 			{
+				max-width:100%;
 				display:flex;
-				flex-direction: row;
+				flex-direction:row;
+				padding: 0 10px 0 10px;
 			}
-
-			/**/
-			/*MEMBERSHIP RULES*/
-			#makeGreen
-			{
-				margin-bottom: 15px;
-			}
-
 			/**/
 			/*CONTACT RULES*/
 			#contactForm
