@@ -869,7 +869,6 @@ button:active, .fundraiser a:active, .submit:active
 /*Styles the fundraising text*/
 #fundraisingText
 {
-	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 24px;
 	max-width: 100%;
@@ -924,8 +923,6 @@ button:active, .fundraiser a:active, .submit:active
 /*Sets width of merchandise text*/
 #merchandiseText
 {
-	max-width:100%;
-	margin:0 auto;
 	padding: 0 10px 0 10px;
 }
 
@@ -934,18 +931,19 @@ button:active, .fundraiser a:active, .submit:active
 {
 	font-size: 14px;
 	line-height: 24px;
-	margin-bottom:5px;
+	margin-bottom:10px;
 }
 
+/*Sets size of merch price*/
 .price
 {
 	margin-top: 10px;
-	margin-bottom: 0;
 	font-size: 18px;
 }
 
 /*Positions and sizes merch buy*/
-.merchBuy{
+.merchBuy
+{
 	max-width: 320px;
 	display:flex;
 	flex-direction: column;
@@ -1085,7 +1083,7 @@ button:active, .fundraiser a:active, .submit:active
     overflow: hidden;
 	margin: 0 auto;
 	margin-top: 20px;
-	max-width: 90%;
+	max-width: 95%;
 	position: relative;
 }
 
@@ -1574,18 +1572,27 @@ button:active, .fundraiser a:active, .submit:active
 	}
 
 	/**/
+	/*FUNDRAISING SECTION RULES*/
+	/*Sets size, position, and style of fundraisers section*/
+	/*Styles the fundraising text*/
+	#fundraisingText
+	{
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	/**/
 	/*MERCHANDISE RULES*/
 	/*Sets size of merchandise text and spaces it out*/
 	#merchandiseText
 	{
-		margin: 0 0 0 10px;
+		padding: 0 10px 0 10px;
 	}
 
 	/*Formats merchandise text*/
 	#merchandiseText p
 	{
 		font-size: 16px;
-		text-align:left;
 		padding-right:5px;
 	}
 	
@@ -1655,6 +1662,7 @@ button:active, .fundraiser a:active, .submit:active
 		width:50%;
 		font-size: 18px;
 		line-height: 25px;
+		text-align: left;
 	}
 
 	/*Styles map area header*/
