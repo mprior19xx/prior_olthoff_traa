@@ -58,29 +58,32 @@ body
 /*Styles all of the H2s*/
 h2
 {
-	max-width: 100%;
-	height: 25px;
+	max-width: 910px;
+	height: 15px;
 	background-color: #9bbd4f;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 18px;
+	font-size: 22px;
+	margin: 0 auto;
 	margin-bottom: 15px;
-	padding: 5px 0px 0px 10px;
+	padding: 7px 10px 13px 10px;
 }
 
 /*Styles all of the H4s*/
 h4
 {
-	max-width: 100%;
-	height: 22px;
+	max-width: 910px;
+	height: 12px;
 	background-color: #d8ae58;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 16px;
-	padding-top:3px;
-	padding-left:10px;
-	margin-bottom:10px;
+	font-size: 18px;
+	margin:0 auto;
+	margin-bottom: 15px;
+	padding: 7px 10px 13px 10px;
 }
+
+
 
 /*Styles all of the links dark green and medium font weight*/
 a
@@ -120,7 +123,6 @@ button:active, .fundraiser a:active, .submit:active
 	margin: 0 auto;
 	background-color: #FFF;
 	box-shadow: 0px 0px 10px rgba(0,0,0,0.5);
-	display: relative;
 }
 
 /*MOBILE RULES*/
@@ -316,12 +318,13 @@ button:active, .fundraiser a:active, .submit:active
 /*Adds space above about us*/
 #aboutUsSection
 {
-	margin-top: 30px;
+	margin-top: 40px;
 }
 
 #aboutInfo
 {
-	width:90%;
+	max-width:100%;
+	padding: 0 10px 0 10px;
 	margin: 0 auto;
 }
 
@@ -375,7 +378,6 @@ button:active, .fundraiser a:active, .submit:active
 /*Adds space after paragraphs in copy2*/
 #aboutCopy2 p
 {
-	padding-left: 10px;
 	padding-right:5px;
 	margin-top:15px;
 	margin-bottom: 22px;
@@ -469,7 +471,7 @@ button:active, .fundraiser a:active, .submit:active
 {
 	margin-top:10px;
 	margin-bottom: 10px;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 }
 
@@ -533,6 +535,7 @@ button:active, .fundraiser a:active, .submit:active
 	width: 80%;
 	margin-top:10px;
 	margin-bottom:20px;
+	font-size: 18px;
 }
 
 /*Creates popup background*/
@@ -795,14 +798,13 @@ button:active, .fundraiser a:active, .submit:active
 /*Formats the scroll box*/
 #scrollBox
 {
-	max-width:100%;
+	max-width:910px;
 	height: 400px;
 	overflow: auto;
 	border: solid 1px #333;
 	padding: 10px 10px 0px 10px;
 	margin: 0 auto;
 	margin-bottom: 40px;
-/*	margin-top: 40px;*/
 }
 
 /*Adds space between list items*/
@@ -811,7 +813,7 @@ button:active, .fundraiser a:active, .submit:active
 	margin-bottom:10px;
 }
 
-#scrollBox ul li,
+#scrollBox ul li
 {
 	margin-bottom: 20px;
 }
@@ -867,9 +869,8 @@ button:active, .fundraiser a:active, .submit:active
 /*Styles the fundraising text*/
 #fundraisingText
 {
-	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 14px;
-	line-height: 28px;
+	line-height: 24px;
 	max-width: 100%;
 	padding: 0 10px 0 10px;
 	margin: 0 auto;
@@ -907,7 +908,8 @@ button:active, .fundraiser a:active, .submit:active
 .fundraiserButtonText
 {
 	display: block;
-	padding-top: 4px;
+	padding-top: 5px;
+	font-size: 18px;
 }
 
 /*Spaces out merchandise content*/
@@ -921,22 +923,27 @@ button:active, .fundraiser a:active, .submit:active
 /*Sets width of merchandise text*/
 #merchandiseText
 {
-	max-width:100%;
-	margin:0 auto;
-
+	padding: 0 10px 0 10px;
 }
 
 /*Sets size of merchandise text and spaces it out*/
 #merchandiseText p
 {
 	font-size: 14px;
-	line-height: 25px;
-	margin-bottom:5px;
-	text-align: center;
+	line-height: 24px;
+	margin-bottom:10px;
+}
+
+/*Sets size of merch price*/
+.price
+{
+	margin-top: 10px;
+	font-size: 18px;
 }
 
 /*Positions and sizes merch buy*/
-.merchBuy{
+.merchBuy
+{
 	max-width: 320px;
 	display:flex;
 	flex-direction: column;
@@ -957,6 +964,7 @@ button:active, .fundraiser a:active, .submit:active
 	color: #FFF;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	font-size: 18px;
 }
 
 /*Styles buy merch button*/
@@ -977,12 +985,14 @@ button:active, .fundraiser a:active, .submit:active
 #contactCon
 {
 	display: block;
+
 }
 
 /*Formats contact form*/
 #contactForm
 {
-	width: 100%;
+	max-width: 100%;
+	padding: 0 10px 0 10px;
 }
 
 /*Styles the contact form labels*/
@@ -1005,7 +1015,7 @@ button:active, .fundraiser a:active, .submit:active
 	display: block;
 	margin-top: 5px;
 	margin: 0 auto;
-	width: 100%;
+	width: 99%;
 	height: 20px;
 	font-size: 16px;
 }
@@ -1020,10 +1030,11 @@ button:active, .fundraiser a:active, .submit:active
 .submit
 {
 	display: block;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom:20px;
+	font-size: 18px;
 }
 
 /*Styles map area*/
@@ -1032,16 +1043,17 @@ button:active, .fundraiser a:active, .submit:active
 	background-color: #5d6f34;
 	color: #FFF;
 	margin-top:10px;
-	font-size: 14px;
-	line-height: 25px;
-	padding-left:10px;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	padding-bottom: 20px;
 }
 
 /*Styles map area header*/
 #mapArea h3
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-	font-size: 18px;
+	font-size: 22px;
 	padding-top: 10px;
 	margin-bottom: 5px;
 	margin-left:10px;
@@ -1063,17 +1075,26 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 /*Sets position of map*/
-#map{
+#map
+{
 	display: flex;
+	height: 0;
+    padding-bottom: 60%;
+    overflow: hidden;
 	margin: 0 auto;
-	margin-top:40px;
+	margin-top: 20px;
+	max-width: 95%;
+	position: relative;
 }
 
 /*Adds space above the map*/
-#mapArea iframe
+#map iframe
 {
-	display: flex;
-	margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
 }
 
 /*FOOTER SECTION RULES*/
@@ -1095,7 +1116,7 @@ button:active, .fundraiser a:active, .submit:active
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 14px;
+	font-size: 15px;
 }
 
 /*Styles and positions back to top*/
@@ -1105,6 +1126,7 @@ button:active, .fundraiser a:active, .submit:active
 	justify-content: center;
 	margin-bottom:5px;
 	padding-top:10px;
+	font-size: 18px;
 }
 
 /*Changes cursor on hover of back to top (for when it appears on desktop)*/
@@ -1330,27 +1352,19 @@ button:active, .fundraiser a:active, .submit:active
 	/*Styles all of the H2s*/
 	h2
 	{
-		max-width: 100%;
-		height: 35px;
-		background-color: #9bbd4f;
-		font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-		color: #FFF;
-		font-size: 20px;
-		margin-bottom: 15px;
-		padding: 15px 0px 0px 10px;
+		max-width: 910px;
+		height: 30px;
+		font-size: 30px;
+		padding: 13px 10px 7px 10px;
 	}
 
 	/*Styles all of the H4s*/
 	h4
 	{
-		max-width: 100%;
-		height: 35px;
-		background-color: #d8ae58;
-		font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-		color: #FFF;
-		font-size: 18px;
-		padding-top:15px;
-		padding-left:10px;
+		max-width: 910px;
+		height: 20px;
+		font-size: 25px;
+		padding: 10px;
 	}
 
 	/*sets the page width - this changes by screen*/
@@ -1566,7 +1580,7 @@ button:active, .fundraiser a:active, .submit:active
 		font-size: 48px;
 		line-height: 55px;
 		margin-right: 15px;
-		margin-left:10;
+		margin-left:10px;
 		padding-top:15px;
 		display: flex;
 		flex-direction: column;
@@ -1601,18 +1615,27 @@ button:active, .fundraiser a:active, .submit:active
 	}
 
 	/**/
+	/*FUNDRAISING SECTION RULES*/
+	/*Sets size, position, and style of fundraisers section*/
+	/*Styles the fundraising text*/
+	#fundraisingText
+	{
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	/**/
 	/*MERCHANDISE RULES*/
 	/*Sets size of merchandise text and spaces it out*/
 	#merchandiseText
 	{
-		margin: 0 0 0 10px;
+		padding: 0 10px 0 10px;
 	}
 
 	/*Formats merchandise text*/
 	#merchandiseText p
 	{
 		font-size: 16px;
-		text-align:left;
 		padding-right:5px;
 	}
 	
@@ -1627,7 +1650,6 @@ button:active, .fundraiser a:active, .submit:active
 	.merchBuy
 	{
 		max-width:100%;
-		margin-top: 15px;
 	}
 
 	/*Styles and positions buy merch buttons*/
@@ -1636,7 +1658,7 @@ button:active, .fundraiser a:active, .submit:active
 		width:130px;
 		display:block;
 		margin: 0 auto;
-		margin-top:20px;
+		margin-top:10px;
 	}
 
 	/**/
@@ -1683,6 +1705,7 @@ button:active, .fundraiser a:active, .submit:active
 		width:50%;
 		font-size: 18px;
 		line-height: 25px;
+		text-align: left;
 	}
 
 	/*Styles map area header*/
