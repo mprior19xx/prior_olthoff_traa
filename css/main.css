@@ -318,12 +318,13 @@ button:active, .fundraiser a:active, .submit:active
 /*Adds space above about us*/
 #aboutUsSection
 {
-	margin-top: 30px;
+	margin-top: 40px;
 }
 
 #aboutInfo
 {
-	width:90%;
+	max-width:100%;
+	padding: 0 10px 0 10px;
 	margin: 0 auto;
 }
 
@@ -377,7 +378,6 @@ button:active, .fundraiser a:active, .submit:active
 /*Adds space after paragraphs in copy2*/
 #aboutCopy2 p
 {
-	padding-left: 10px;
 	padding-right:5px;
 	margin-top:15px;
 	margin-bottom: 22px;
@@ -471,7 +471,7 @@ button:active, .fundraiser a:active, .submit:active
 {
 	margin-top:10px;
 	margin-bottom: 10px;
-	font-size: 16px;
+	font-size: 18px;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 }
 
@@ -535,6 +535,7 @@ button:active, .fundraiser a:active, .submit:active
 	width: 80%;
 	margin-top:10px;
 	margin-bottom:20px;
+	font-size: 18px;
 }
 
 /*Creates popup background*/
@@ -797,14 +798,13 @@ button:active, .fundraiser a:active, .submit:active
 /*Formats the scroll box*/
 #scrollBox
 {
-	max-width:100%;
+	max-width:910px;
 	height: 400px;
 	overflow: auto;
 	border: solid 1px #333;
 	padding: 10px 10px 0px 10px;
 	margin: 0 auto;
 	margin-bottom: 40px;
-/*	margin-top: 40px;*/
 }
 
 /*Adds space between list items*/
@@ -871,7 +871,7 @@ button:active, .fundraiser a:active, .submit:active
 {
 	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 14px;
-	line-height: 28px;
+	line-height: 24px;
 	max-width: 100%;
 	padding: 0 10px 0 10px;
 	margin: 0 auto;
@@ -909,7 +909,8 @@ button:active, .fundraiser a:active, .submit:active
 .fundraiserButtonText
 {
 	display: block;
-	padding-top: 4px;
+	padding-top: 5px;
+	font-size: 18px;
 }
 
 /*Spaces out merchandise content*/
@@ -924,23 +925,24 @@ button:active, .fundraiser a:active, .submit:active
 #merchandiseText
 {
 	max-width:100%;
+	padding: ;
 	margin:0 auto;
-
+	padding: 0 10px 0 10px;
 }
 
 /*Sets size of merchandise text and spaces it out*/
 #merchandiseText p
 {
 	font-size: 14px;
-	line-height: 25px;
+	line-height: 24px;
 	margin-bottom:5px;
-	text-align: center;
 }
 
 .price
 {
 	margin-top: 10px;
 	margin-bottom: 0;
+	font-size: 18px;
 }
 
 /*Positions and sizes merch buy*/
@@ -965,6 +967,7 @@ button:active, .fundraiser a:active, .submit:active
 	color: #FFF;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	font-size: 18px;
 }
 
 /*Styles buy merch button*/
@@ -985,12 +988,14 @@ button:active, .fundraiser a:active, .submit:active
 #contactCon
 {
 	display: block;
+
 }
 
 /*Formats contact form*/
 #contactForm
 {
-	width: 100%;
+	max-width: 100%;
+	padding: 0 10px 0 10px;
 }
 
 /*Styles the contact form labels*/
@@ -1013,7 +1018,7 @@ button:active, .fundraiser a:active, .submit:active
 	display: block;
 	margin-top: 5px;
 	margin: 0 auto;
-	width: 100%;
+	width: 99%;
 	height: 20px;
 	font-size: 16px;
 }
@@ -1028,10 +1033,11 @@ button:active, .fundraiser a:active, .submit:active
 .submit
 {
 	display: block;
-	width: 90%;
+	width: 100%;
 	margin: 0 auto;
 	margin-top: 20px;
 	margin-bottom:20px;
+	font-size: 18px;
 }
 
 /*Styles map area*/
@@ -1040,16 +1046,16 @@ button:active, .fundraiser a:active, .submit:active
 	background-color: #5d6f34;
 	color: #FFF;
 	margin-top:10px;
-	font-size: 14px;
-	line-height: 25px;
-	padding-left:10px;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
 }
 
 /*Styles map area header*/
 #mapArea h3
 {
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-	font-size: 18px;
+	font-size: 22px;
 	padding-top: 10px;
 	margin-bottom: 5px;
 	margin-left:10px;
@@ -1071,10 +1077,12 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 /*Sets position of map*/
-#map{
+#map
+{
 	display: flex;
 	margin: 0 auto;
-	margin-top:40px;
+	margin-top: 20px;
+	padding-bottom: 10px;
 }
 
 /*Adds space above the map*/
