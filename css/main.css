@@ -1144,6 +1144,19 @@ button:active, .fundraiser a:active, .submit:active
 			top: 45%;
 		}
 	}
+}
+
+/*FUNDRAISING SECTION BREAK POINTS*/
+@media screen and (min-width: 400px)
+{
+
+}
+
+/*MEMBERSHIP BAR BREAK POINTS*/
+@media screen and (min-width: 400px)
+{
+
+}
 
 /*FUNDRAISING SECTION BREAK POINTS*/
 	@media screen and (min-width: 460px)
@@ -1575,7 +1588,6 @@ button:active, .fundraiser a:active, .submit:active
 		/*EXTRA EVENTS PAGE RULES*/
 
 	} /*END TABLET MEDIA QUERY*/
-
 
 /*DESKTOP MEDIA QUERY*/
 		@media screen and (min-width: 920px){
