@@ -289,14 +289,15 @@ button:active, .fundraiser a:active, .submit:active
 }
 
 /*hides Large about image*/
-#aboutImg
+#aboutImgBig
 {
 	display:none;
 }
 
-#aboutImage
+#aboutImgMobile
 {
 	display: flex;
+	margin: 0 auto;
 	justify-content: center;
 	margin-top: 10px;
 }
@@ -794,7 +795,6 @@ button:active, .fundraiser a:active, .submit:active
 	color: #FFF;
 	padding-top: 20px;
 	margin-bottom: 20px;
-	display:block;
 }
 
 /*Styles the fundraising text*/
@@ -806,6 +806,11 @@ button:active, .fundraiser a:active, .submit:active
 	max-width: 100%;
 	padding: 0 10px 0 10px;
 	margin: 0 auto;
+}
+
+.fundraiser
+{
+	max-width:100%;
 }
 
 /*Displays fundraisers side by side and aligns them center*/
@@ -1144,19 +1149,6 @@ button:active, .fundraiser a:active, .submit:active
 			top: 45%;
 		}
 	}
-}
-
-/*FUNDRAISING SECTION BREAK POINTS*/
-@media screen and (min-width: 400px)
-{
-
-}
-
-/*MEMBERSHIP BAR BREAK POINTS*/
-@media screen and (min-width: 400px)
-{
-
-}
 
 /*FUNDRAISING SECTION BREAK POINTS*/
 	@media screen and (min-width: 460px)
@@ -1589,6 +1581,7 @@ button:active, .fundraiser a:active, .submit:active
 
 	} /*END TABLET MEDIA QUERY*/
 
+
 /*DESKTOP MEDIA QUERY*/
 		@media screen and (min-width: 920px){
 
@@ -1610,9 +1603,22 @@ button:active, .fundraiser a:active, .submit:active
 			}
 			/**/
 			/*ABOUT US RULES*/
+
+			/*Spaces out top portion of information*/
+
 			#aboutImgMobile
 			{
 				display:none;
+			}
+
+			#aboutImgBig
+			{
+				display:block;
+			}
+
+			#aboutInfo
+			{
+				width:95%;
 			}
 
 			/*Spaces out top portion of information*/
@@ -1621,13 +1627,28 @@ button:active, .fundraiser a:active, .submit:active
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
-				margin-bottom: 22px;
+			}
+			
+
+			/*Spaces out the list items*/
+			#aboutCopy1 ul li
+			{
+				line-height: 22px;
+				margin-bottom: 4px;
 			}
 
-			#aboutImg
+			/*Removes margin-bottom from last list item*/
+			#aboutCopy1 ul li:last-child
 			{
-				display:block;
+				margin-bottom: 0;
 			}
+
+			#aboutCopy2
+			{
+				width:100%;
+			}
+
+
 			/**/
 			/*STATISTICS RULES*/
 			#statistics img
@@ -1650,15 +1671,19 @@ button:active, .fundraiser a:active, .submit:active
 			/**/
 			#fundraisingText
 			{
-			font-size: 20px;
-			line-height: 28px;
+				font-size: 20px;
+				line-height: 28px;
+			}
+
+			.fundraiser
+			{
+				display:block;
 			}
 
 			#allFundraisers
 			{
 				display:flex;
 				flex-direction: row;
-				justify-content:center;
 			}
 
 			/**/
