@@ -415,7 +415,6 @@ button:active, .fundraiser a:active, .submit:active
 #membership
 {
 	width: 100%;
-	height: 250px;
 	background-color: #5d6f34;
 	margin-bottom: 40px;
 	display: block;
@@ -465,6 +464,7 @@ button:active, .fundraiser a:active, .submit:active
 {
 	width: 80%;
 	margin-top:10px;
+	margin-bottom:20px;
 }
 
 /*Creates popup background*/
@@ -827,7 +827,7 @@ button:active, .fundraiser a:active, .submit:active
 	color: #FFF;
 	margin-top: 10px;
 	padding: 0 10px 0 10px;
-	margin-bottom: 10px;
+	margin-bottom: 15px;
 }
 
 /*Vertically centers text in fundraiser buttons*/
@@ -1133,15 +1133,16 @@ button:active, .fundraiser a:active, .submit:active
 	text-align: center;
 }
 
-
-/*EVENT SLIDESHOW BREAKPOINTS*/
-@media screen and (min-width: 500px) {
 	/**/
-	/* EVENT SLIDESHOW SECTION RULES */
-	/*Positions arrows section*/
-	#arrows
-	{
-		top: 45%;
+/*EVENT SLIDESHOW BREAKPOINTS*/
+	@media screen and (min-width: 500px) {
+		/**/
+		/* EVENT SLIDESHOW SECTION RULES */
+		/*Positions arrows section*/
+		#arrows
+		{
+			top: 45%;
+		}
 	}
 }
 
@@ -1157,530 +1158,585 @@ button:active, .fundraiser a:active, .submit:active
 
 }
 
+/*FUNDRAISING SECTION BREAK POINTS*/
+	@media screen and (min-width: 460px)
+	{
+		#allFundraisers
+		{
+			max-width:400px;
+		}
+	}
+
+
+/*MEMBERSHIP BAR BREAK POINTS*/
+	@media screen and (min-width: 450px)
+	{
+		#membershipLeft
+		{
+			font-size: 36px;
+		}
+	}
+	
+	@media screen and (min-width: 705px)
+	{
+		#membershipRight
+		{
+			margin-bottom:20px;
+		}
+
+		#makeGreen
+		{
+			margin-bottom: 20px;
+		}
+	}
+
+	@media screen and (min-width: 705px)
+	{
+		#membershipRight
+		{
+			padding-right:50px;
+		}
+	}
+
+	@media screen and (min-width: 705px)
+	{
+		#makeGreen
+		{
+			padding-top:20px;
+		}
+	}
+
 /*TABLET MEDIA QUERY*/
-@media screen and (min-width: 600px) {
-	/*PAGE Rules*/
-	/*Sets default font settings*/
-	body
-	{
-		font-family: 'libre_franklin-regular', Helvetica, sans-serif;
-		font-size: 16px;
-		color: #666;
-		line-height: 20px;
-		background-color: blue;
-	}
+	@media screen and (min-width: 600px) {
+		/*PAGE Rules*/
+		/*Sets default font settings*/
+		body
+		{
+			font-family: 'libre_franklin-regular', Helvetica, sans-serif;
+			font-size: 16px;
+			color: #666;
+			line-height: 20px;
+			background-color: blue;
+		}
 
-	/*Styles all of the H2s*/
-	h2
-	{
-		max-width: 100%;
-		height: 35px;
-		background-color: #9bbd4f;
-		font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-		color: #FFF;
-		font-size: 20px;
-		margin-bottom: 15px;
-		padding: 15px 0px 0px 10px;
-	}
+		/*Styles all of the H2s*/
+		h2
+		{
+			max-width: 100%;
+			height: 35px;
+			background-color: #9bbd4f;
+			font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
+			color: #FFF;
+			font-size: 20px;
+			margin-bottom: 15px;
+			padding: 15px 0px 0px 10px;
+		}
 
-	/*Styles all of the H4s*/
-	h4
-	{
-		max-width: 100%;
-		height: 35px;
-		background-color: #d8ae58;
-		font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
-		color: #FFF;
-		font-size: 18px;
-		padding-top:15px;
-		padding-left:10px;
-	}
+		/*Styles all of the H4s*/
+		h4
+		{
+			max-width: 100%;
+			height: 35px;
+			background-color: #d8ae58;
+			font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
+			color: #FFF;
+			font-size: 18px;
+			padding-top:15px;
+			padding-left:10px;
+		}
 
-	/*sets the page width - this changes by screen*/
-	#container
-	{
-		max-width:920px;
-	}
-	/**/
-	/*Header rules*/
-	/*Makes header position relative so logo can sit on top of header image and nav*/
-	#mainHeader
-	{
-		position: relative;
-	}
+		/*sets the page width - this changes by screen*/
+		#container
+		{
+			max-width:920px;
+		}
+		/**/
+		/*Header rules*/
+		/*Makes header position relative so logo can sit on top of header image and nav*/
+		#mainHeader
+		{
+			position: relative;
+		}
 
-	/*Hides mobile logo*/
-	#traa_logo
-	{
-		display:none;
-	}
+		/*Hides mobile logo*/
+		#traa_logo
+		{
+			display:none;
+		}
 
-	#big_logo
-	{
-		display:block;
-	}
+		#big_logo
+		{
+			display:block;
+		}
 
-	#headerImage
-	{
-		display:block;
-	}
+		#headerImage
+		{
+			display:block;
+		}
 
-	#headerTextCon
-	{
-		display:none;
-	}
-	/**/
-	/*NAVIGATION RULES AND TRANSITIONS*/
-		/*Styles and positions nav bar*/
-	#mainNav
-	{
-		display: block;
-		max-width: 100%;
-		height: 40px;
-		background: #5d6f34; /* Old browsers */
-		background: -webkit-linear-gradient(#9bbd4f 0%, #5d6f34 100%);
-		background: -o-linear-gradient(#9bbd4f 0%, #5d6f34 100%);
-		background: linear-gradient(#9bbd4f 0%, #5d6f34 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bbd4f', endColorstr='#5d6f34',GradientType=0 ); /* IE6-9 */
-	}
+		#headerTextCon
+		{
+			display:none;
+		}
+		/**/
+		/*NAVIGATION RULES AND TRANSITIONS*/
+			/*Styles and positions nav bar*/
+		#mainNav
+		{
+			display: block;
+			max-width: 100%;
+			height: 40px;
+			background: #5d6f34; /* Old browsers */
+			background: -webkit-linear-gradient(#9bbd4f 0%, #5d6f34 100%);
+			background: -o-linear-gradient(#9bbd4f 0%, #5d6f34 100%);
+			background: linear-gradient(#9bbd4f 0%, #5d6f34 100%); /* FF3.6-15 */ /* Chrome10-25,Safari5.1-6 */ /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#9bbd4f', endColorstr='#5d6f34',GradientType=0 ); /* IE6-9 */
+		}
 
-	/*Displays nav links in a row and pushes them to the right so they aren't beneath the logo*/
-	#mainNav ul
-	{
-		display: flex;
-		flex-direction: row;
-		margin-left:35px;
-	}
+		/*Displays nav links in a row and pushes them to the right so they aren't beneath the logo*/
+		#mainNav ul
+		{
+			display: flex;
+			flex-direction: row;
+			margin-left:35px;
+		}
 
-	/*Spaces the nav links*/
-	#mainNav ul li
-	{
-		margin-top: 9px;
-		padding-right: 15px;
-		height: 40px;
-	}
+		/*Spaces the nav links*/
+		#mainNav ul li
+		{
+			margin-top: 9px;
+			padding-right: 15px;
+			height: 40px;
+		}
 
-	/*Styles the nav links*/
-	#mainNav ul li a
-	{
-		color: #FFF;
-		font-size: 20px;
-		font-family: 'libre_franklin-medium', Helvetica, sans-serif;
-	}
+		/*Styles the nav links*/
+		#mainNav ul li a
+		{
+			color: #FFF;
+			font-size: 20px;
+			font-family: 'libre_franklin-medium', Helvetica, sans-serif;
+		}
 
-	/*Creates fade in animation for main nav bottom border*/
-	@-webkit-keyframes navFadeIn 
-	{
-	  from {
-	    border-bottom: solid 8px rgba(216,174, 88, 0)
-	  }
+		/*Creates fade in animation for main nav bottom border*/
+		@-webkit-keyframes navFadeIn 
+		{
+		  from {
+		    border-bottom: solid 8px rgba(216,174, 88, 0)
+		  }
 
-	  to {
-	    border-bottom: solid 8px rgba(216,174, 88, 1)
-	  }
-	}
+		  to {
+		    border-bottom: solid 8px rgba(216,174, 88, 1)
+		  }
+		}
 
-	@keyframes navFadeIn 
-	{
-	  from {
-	    border-bottom: solid 8px rgba(216,174, 88, 0)
-	  }
+		@keyframes navFadeIn 
+		{
+		  from {
+		    border-bottom: solid 8px rgba(216,174, 88, 0)
+		  }
 
-	  to {
-	    border-bottom: solid 8px rgba(216,174, 88, 1)
-	  }
-	}
+		  to {
+		    border-bottom: solid 8px rgba(216,174, 88, 1)
+		  }
+		}
 
-	/*Styles main nav links on hover*/
-	#mainNav ul li a:hover
-	{
-		border-bottom: solid 8px #d8ae58;
-		padding-bottom: .5px;
-		-webkit-animation-duration: .35s;
-		-webkit-animation-name: navFadeIn; 
-		animation-duration: .35s;
-		animation-name: navFadeIn; 
-	}
+		/*Styles main nav links on hover*/
+		#mainNav ul li a:hover
+		{
+			border-bottom: solid 8px #d8ae58;
+			padding-bottom: .5px;
+			-webkit-animation-duration: .35s;
+			-webkit-animation-name: navFadeIn; 
+			animation-duration: .35s;
+			animation-name: navFadeIn; 
+		}
 
-	/*Styles main nav links on click*/
-	#mainNav ul li a:active
-	{
-		color: #CCC;
-	}
-	/**/
-	/*HOME RULES*/
-	/*Styles meetings background*/
-	#nextMeeting
-	{
-		padding-top:17px;
-		height: 50px;
-		background-color: #5d6f34;
+		/*Styles main nav links on click*/
+		#mainNav ul li a:active
+		{
+			color: #CCC;
+		}
+		/**/
+		/*HOME RULES*/
+		/*Styles meetings background*/
+		#nextMeeting
+		{
+			padding-top:17px;
+			height: 50px;
+			background-color: #5d6f34;
+			
+			margin-bottom:30px;
+		}
+
+		/*Styles and positions meeting text*/
+		#meetingHeader
+		{
+			font-size: 20px;
+		}
+
+		/*Styles hero header*/
+		#heroHeader
+		{
+			font-size: 30px;
+		}
+
+		/*Styles hero text*/
+		#heroText p
+		{
+			width:90%;
+			display:flex;
+			margin: 0 auto;
+			font-size: 24px;
+			margin-bottom: 30px;
+		}
+
+		/**/
+		/*MEMBERSHIP RULES*/
+		/*Styles and spaces out membership*/
+		#membership
+		{
+			background-color: #5d6f34;
+			margin-bottom: 40px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			color: #FFF;
+		}
+
+		/*Vertically centers membership content*/
+		#membershipCon
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			padding:10px;
+		}
+
+		/*Styles and positions membership title*/
+		#membershipLeft
+		{
+			font-family: 'libre_franklin-bold', Helvetica, sans-serif;
+			font-size: 48px;
+			line-height: 55px;
+			margin-right: 15px;
+			margin-left:10;
+			padding-top:15px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		#makeGreen
+		{
+			margin-bottom: 50px;
+		}
+
+		#membershipRight
+		{
+			width:50%;
+			margin-right:10px;
+		}	
+
+		/*Sizes and positions member join button*/
+		#memberJoin
+		{
+			height:50px;
+			margin-top: 15px;
+		}
+
+		/* EVENT SLIDESHOW SECTION RULES */
+		/*Sizes the arrows*/
+		.prevSlide, .nextSlide
+		{
+			width: 30px;
+			height: 30px;
+		}
+
 		
-		margin-bottom:30px;
-	}
 
-	/*Styles and positions meeting text*/
-	#meetingHeader
-	{
-		font-size: 20px;
-	}
+		/**/
+		/*MERCHANDISE RULES*/
+		/*Sets size of merchandise text and spaces it out*/
+		#merchandiseText
+		{
+			margin: 0 0 0 10px;
+		}
 
-	/*Styles hero header*/
-	#heroHeader
-	{
-		font-size: 30px;
-	}
+		#merchandiseText p
+		{
+			font-size: 16px;
+			text-align:left;
+			padding-right:5px;
+		}
+		
+		#merchBuyCon
+		{
+			display:flex;
+			flex-direction: row;
+		}
 
-	/*Styles hero text*/
-	#heroText p
-	{
-		width:90%;
-		display:flex;
-		margin: 0 auto;
-		font-size: 24px;
-		margin-bottom: 30px;
-	}
+		.merchBuy
+		{
+			max-width:100%;
+			margin-top: 15px;
+		}
 
-	/**/
-	/*MEMBERSHIP RULES*/
-	/*Styles and spaces out membership*/
-	#membership
-	{
-		background-color: #5d6f34;
-		margin-bottom: 40px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		color: #FFF;
-	}
+		.merchBuy a
+		{
+			width:130px;
+			display:block;
+			margin: 0 auto;
+			margin-top:20px;
+		}
 
-	/*Vertically centers membership content*/
-	#membershipCon
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-	}
+		/**/
+		/*CONTACT RULES*/
+		/*Displays content side by side and adds spacing*/
+		#contactCon
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			padding:10px;
+		}
 
-	/*Styles and positions membership title*/
-	#membershipLeft
-	{
-		font-family: 'libre_franklin-bold', Helvetica, sans-serif;
-		font-size: 48px;
-		line-height: 55px;
-		margin-right: 25px;
-		display: flex;
-		flex-direction: column;
-	}
+		/*Formats contact form*/
+		#contactForm
+		{
+			width:50%;
+			padding-right:15px;
+		}
 
-	#makeGreen
-	{
-		margin-bottom: 25px;
-	}
+		/*Styles the contact form labels*/
+		#contactForm label
+		{
+			font-size: 16px;
+			margin-top: 20px;
+			margin-bottom:10px;
+			display: block;
+		}
 
-	#membershipRight
-	{
-		margin-right:30px;
-	}	
+		#firstName, #lastName, #email, #message
+		{
+			margin-bottom:20px;
+		}
 
-	/*Sizes and positions member join button*/
-	#memberJoin
-	{
-		height:50px;
-		margin-top: 15px;
-	}
+		/*Makes the message input field larger*/
+		#message
+		{
+			height: 250px;
+		}
 
-	/* EVENT SLIDESHOW SECTION RULES */
-	/*Sizes the arrows*/
-	.prevSlide, .nextSlide
-	{
-		width: 30px;
-		height: 30px;
-	}
+		/*Styles map area*/
+		#mapArea
+		{
+			width:50%;
+			font-size: 18px;
+			line-height: 25px;
+		}
 
-	
+		/*Styles map area header*/
+		#mapArea h3
+		{
+			font-size: 25px;
+			margin-bottom: 5px;
+		}
 
-	/**/
-	/*MERCHANDISE RULES*/
-	/*Sets size of merchandise text and spaces it out*/
-	#merchandiseText
-	{
-		margin: 0 0 0 10px;
-	}
+		/*Styles map area subtitles*/
+		#mapArea p
+		{
+			color: #d8ae58;
+			line-height: 30px;
+		}
 
-	#merchandiseText p
-	{
-		font-size: 16px;
-		text-align:left;
-		padding-right:5px;
-	}
-	
-	#merchBuyCon
-	{
-		display:flex;
-		flex-direction: row;
-	}
-
-	.merchBuy
-	{
-		max-width:100%;
-		margin-top: 15px;
-	}
-
-	.merchBuy a
-	{
-		width:130px;
-		display:block;
-		margin: 0 auto;
-		margin-top:20px;
-	}
-
-	/**/
-	/*CONTACT RULES*/
-	/*Displays content side by side and adds spacing*/
-	#contactCon
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		padding:10px;
-	}
-
-	/*Formats contact form*/
-	#contactForm
-	{
-		width:50%;
-		padding-right:15px;
-	}
-
-	/*Styles the contact form labels*/
-	#contactForm label
-	{
-		font-size: 16px;
-		margin-top: 20px;
-		margin-bottom:10px;
-		display: block;
-	}
-
-	#firstName, #lastName, #email, #message
-	{
-		margin-bottom:20px;
-	}
-
-	/*Makes the message input field larger*/
-	#message
-	{
-		height: 250px;
-	}
-
-	/*Styles map area*/
-	#mapArea
-	{
-		width:50%;
-		font-size: 18px;
-		line-height: 25px;
-	}
-
-	/*Styles map area header*/
-	#mapArea h3
-	{
-		font-size: 25px;
-		margin-bottom: 5px;
-	}
-
-	/*Styles map area subtitles*/
-	#mapArea p
-	{
-		color: #d8ae58;
-		line-height: 30px;
-	}
-
-	/*Adds space above the map*/
-	#mapArea iframe
-	{
-		margin-top: 0px;
-		padding-left:5px;
-		padding-right:5px;
-	}
+		/*Adds space above the map*/
+		#mapArea iframe
+		{
+			margin-top: 0px;
+			padding-left:5px;
+			padding-right:5px;
+		}
 
 
 
 
 
-	/*EXTRA FUNDRAISING PAGE RULES*/
-	.fundraisingCon ul
-	{
-		width:90%;
-		margin:0 auto;
-	}
+		/*EXTRA FUNDRAISING PAGE RULES*/
+		.fundraisingCon ul
+		{
+			width:90%;
+			margin:0 auto;
+		}
 
-	/*Sets size and border of double image*/
-	.doubleImg
-	{
-		width:45%;
-		height:350px;
-		border: 1px solid #666;
-	}
+		/*Sets size and border of double image*/
+		.doubleImg
+		{
+			width:45%;
+			height:350px;
+			border: 1px solid #666;
+		}
 
-	/*Sets size and border of single image*/
-	.singleImg
-	{
-		width:100%;
-		height:550px;
-		border: 1px solid #666;
-		margin: 0 auto;
-	}
+		/*Sets size and border of single image*/
+		.singleImg
+		{
+			width:100%;
+			height:550px;
+			border: 1px solid #666;
+			margin: 0 auto;
+		}
 
 
-	/*EXTRA EVENTS PAGE RULES*/
+		/*EXTRA EVENTS PAGE RULES*/
 
-} /*END TABLET MEDIA QUERY*/
-
+	} /*END TABLET MEDIA QUERY*/
 
 /*DESKTOP MEDIA QUERY*/
-@media screen and (min-width: 920px){
+		@media screen and (min-width: 920px){
 
-	body
-	{
-		background-color: red;
-	}
+			body
+			{
+				background-color: red;
+			}
 
-	/*Styles all of the links dark green and medium font weight*/
-	a:hover
-	{
-		color: #9bbd4f;
-	}
+			/*Styles all of the links dark green and medium font weight*/
+			a:hover
+			{
+				color: #9bbd4f;
+			}
 
-	/*Changes size of the container*/
-	#container
-	{
-		max-width:960px;
-	}
-	/**/
-	/*ABOUT US RULES*/
-	#aboutImgMobile
-	{
-		display:none;
-	}
+			/*Changes size of the container*/
+			#container
+			{
+				max-width:960px;
+			}
+			/**/
+			/*ABOUT US RULES*/
+			#aboutImgMobile
+			{
+				display:none;
+			}
 
-	/*Spaces out top portion of information*/
-	#aboutInfoTop
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		margin-bottom: 22px;
-	}
+			/*Spaces out top portion of information*/
+			#aboutInfoTop
+			{
+				display: flex;
+				flex-direction: row;
+				justify-content: space-between;
+				margin-bottom: 22px;
+			}
 
-	#aboutImg
-	{
-		display:block;
-	}
-	/**/
-	/*STATISTICS RULES*/
-	#statistics img
-	{
-		width:400px;
-		height:300px;
-	}
-	
-	/**/
-	/*EVENTS RULES*/
-	/* EVENT SLIDESHOW SECTION RULES */
-	/*Changes opacity of slideshow arrows on hover*/
-	#arrows a:hover
-	{
-		opacity: 1;
-	}
-	
+			#aboutImg
+			{
+				display:block;
+			}
+			/**/
+			/*STATISTICS RULES*/
+			#statistics img
+			{
+				width:400px;
+				height:300px;
+			}
+			
+			/**/
+			/*EVENTS RULES*/
+			/* EVENT SLIDESHOW SECTION RULES */
+			/*Changes opacity of slideshow arrows on hover*/
+			#arrows a:hover
+			{
+				opacity: 1;
+			}
+			
 
-	/*FUNDRAISER RULES*/
-	/**/
-	#fundraisingText
-	{
-	font-size: 20px;
-	line-height: 28px;
-	}
+			/*FUNDRAISER RULES*/
+			/**/
+			#fundraisingText
+			{
+			font-size: 20px;
+			line-height: 28px;
+			}
 
-	#allFundraisers
-	{
-		display:flex;
-		flex-direction: row;
-		justify-content: space-between;
-	}
+			#allFundraisers
+			{
+				display:flex;
+				flex-direction: row;
+				justify-content:center;
+			}
 
-	/**/
-	/*MEMBERSHIP RULES*/
+			/**/
+			/*MEMBERSHIP RULES*/
+			#makeGreen
+			{
+				margin-bottom: 15px;
+			}
 
-	/**/
-	/*CONTACT RULES*/
-	#contactForm
-	{
-		border-right: solid 1px #CCC;
-	}
+			/**/
+			/*CONTACT RULES*/
+			#contactForm
+			{
+				border-right: solid 1px #CCC;
+			}
 
-	#mapArea
-	{
-		width:45%;
-	}
-	/**/
-	/*FOOTER RULES*/
-	#backToTop
-	{
-		display:none;
-	}
+			#mapArea
+			{
+				width:45%;
+			}
+			/**/
+			/*FOOTER RULES*/
+			#backToTop
+			{
+				display:none;
+			}
 
-	#mainFooter
-	{
-		height:80px;
-	}
-	
-	#footerNav
-	{
-		display:flex;
-		justify-content: center;
-	}
+			#mainFooter
+			{
+				height:80px;
+			}
+			
+			#footerNav
+			{
+				display:flex;
+				justify-content: center;
+			}
 
-		/*Makes footer nav display in a row and positions it*/
-	#footerNav ul
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		margin-top:15px;
-		margin-bottom: 15px;
-	}
+				/*Makes footer nav display in a row and positions it*/
+			#footerNav ul
+			{
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				margin-top:15px;
+				margin-bottom: 15px;
+			}
 
-	/*Styles footer nav links*/
-	#footerNav ul li a
-	{
-		color: #FFF;
-		padding-left: 35px;
-		padding-right: 35px;
-		border-right: solid 1px #FFF;
-	}
+			/*Styles footer nav links*/
+			#footerNav ul li a
+			{
+				color: #FFF;
+				padding-left: 35px;
+				padding-right: 35px;
+				border-right: solid 1px #FFF;
+			}
 
-	/*Removes border-right from last footer nav link*/
-	#footerNav li:last-child a
-	{
-		border-right: none;
-	}
+			/*Removes border-right from last footer nav link*/
+			#footerNav li:last-child a
+			{
+				border-right: none;
+			}
 
-	/*Lowers footer links' opacity when hovering on the footer*/
-	#mainFooter:hover > #footerNav li a, #mainFooter:hover > #facebook a
-	{
-		color: rgba(255,255,255,0.6);
-	}
+			/*Lowers footer links' opacity when hovering on the footer*/
+			#mainFooter:hover > #footerNav li a, #mainFooter:hover > #facebook a
+			{
+				color: rgba(255,255,255,0.6);
+			}
 
-	/*Increases footer nav link's opacity when hovering over it*/
-	#mainFooter:hover > #footerNav li a:hover, #mainFooter:hover > #facebook a:hover
-	{
-		color: rgba(255,255,255,1);
-	}
+			/*Increases footer nav link's opacity when hovering over it*/
+			#mainFooter:hover > #footerNav li a:hover, #mainFooter:hover > #facebook a:hover
+			{
+				color: rgba(255,255,255,1);
+			}
 
-	/*Increases facebook link's opacity when hovering over it or the icon*/
-	#facebook a:hover ~ #facebookLink
-	{
-		color: rgba(255,255,255,1);
-	}
-} /*END DESKTOP MEDIA QUERY*/
+			/*Increases facebook link's opacity when hovering over it or the icon*/
+			#facebook a:hover ~ #facebookLink
+			{
+				color: rgba(255,255,255,1);
+			}
+		} /*END DESKTOP MEDIA QUERY*/
