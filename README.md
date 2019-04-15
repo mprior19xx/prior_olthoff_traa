@@ -1,5 +1,7 @@
 # Thames River Anglers Association: Site Redesign
 ### Mike Prior and Scott Olthoff
-For this midterm project, the goal is to redesign, code and semantically tagging, a static, 6 page, HTML5 website for the Thames River Anglers Association. The current website and provided materials should be used to decide what assets to use and how to organize them.
+This final project is a continuation of the midterm project. The goal of the midterm was to redesign, code and semantically tag, a static, 6 page, HTML5 website for the Thames River Anglers Association. 
 
-**Due Date:** February 12, 2019 at 12:00PM
+For this part of the project, we must make the site we created for the midterm responsive so it can be used on different devices. We must also implement a video, a slideshow, and one other JavaScript element.
+
+**Due Date:** April, 2019 at 11:30PM
