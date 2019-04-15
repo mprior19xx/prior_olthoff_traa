@@ -1253,115 +1253,12 @@ button:active, .fundraiser a:active, .submit:active
 	}
 }
 
-/*FUNDRAISING SECTION BREAK POINTS*/
+/*460px BREAKPOINT*/
 @media screen and (min-width: 460px)
 {
 	#allFundraisers
 	{
 		max-width:400px;
-	}
-}
-@media screen and (min-width:830px)
-{/**/
-	/*FUNDRAISING SECTION RULES*/
-	/*Sets size, position, and style of fundraisers section*/
-	/*Styles the fundraising text*/
-	#fundraisingText
-	{
-		font-size: 18px;
-		line-height: 26px;
-	}
-
-	
-
-	#allFundraisers
-	{
-		max-width:100%;
-		display: flex;
-		flex-direction: row;
-		margin:0 auto;
-	}
-
-	.fundraiserButtonText
-	{
-		display:block;
-		padding-top:4px;
-	}
-}
-
-
-
-
-/*MEMBERSHIP BAR BREAK POINTS*/
-@media screen and (min-width: 450px)
-{
-	#membershipLeft
-	{
-		font-size: 36px;
-	}
-}
-
-@media screen and (min-width: 705px)
-{
-	#membershipRight
-	{
-		margin-bottom:20px;
-	}
-
-	#makeGreen
-	{
-		margin-bottom: 20px;
-	}
-}
-
-@media screen and (min-width: 705px)
-{
-	#membershipRight
-	{
-		padding-right:50px;
-	}
-}
-
-@media screen and (min-width: 705px)
-{
-	#makeGreen
-	{
-		padding-top:20px;
-	}
-}
-
-/**/
-/*FUNDRAISING PAGES BREAKPOINTS*/
-@media screen and (min-width:790px){
-	/*EXTRA FUNDRAISING PAGE RULES*/
-	.fundraisingCon ul
-	{
-		width:90%;
-		margin:0 auto;
-	}
-
-	/*hides double image*/
-	.smDoubleImg
-	{
-		display:none;
-	}
-
-	/*hides single image*/
-	.smSingleImg
-	{
-		display:none;
-	}
-
-	/*Shows large images*/
-	.bigDblImg
-	{
-		display:block;
-	}
-	
-	.bigSingleImg
-	{
-		display:block;
-		margin:0 auto;
 	}
 }
 
@@ -1580,71 +1477,7 @@ button:active, .fundraiser a:active, .submit:active
 		margin-bottom: -15px;
 	}
 
-	/**/
-	/*MEMBERSHIP RULES*/
-	/*Styles and spaces out membership*/
-	#membership
-	{
-		background-color: #5d6f34;
-		margin-bottom: 40px;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		color: #FFF;
-	}
-
-	/*Vertically centers membership content*/
-	#membershipCon
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: center;
-		padding:10px;
-	}
-
-	/*Styles and positions membership title*/
-	#membershipLeft
-	{
-		font-family: 'libre_franklin-bold', Helvetica, sans-serif;
-		font-size: 48px;
-		line-height: 55px;
-		margin-right: 15px;
-		margin-left:10px;
-		padding-top:15px;
-		display: flex;
-		flex-direction: column;
-	}
-
-	/*Adds space below "Memmbership"*/
-	#makeGreen
-	{
-		margin-bottom: 50px;
-	}
-
-	/*Sets width of membership right*/
-	#membershipRight
-	{
-		width:50%;
-		margin-right:10px;
-	}	
-
-	/*Sizes and positions member join button*/
-	#memberJoin
-	{
-		height:50px;
-		margin-top: 15px;
-	}
-
-	/* EVENT SLIDESHOW SECTION RULES */
-	/*Sizes the arrows*/
-	.prevSlide, .nextSlide
-	{
-		width: 30px;
-		height: 30px;
-	}
-
-
-
+	
 	/**/
 	/*MERCHANDISE RULES*/
 	/*Sets size of merchandise text and spaces it out*/
@@ -1797,6 +1630,41 @@ button:active, .fundraiser a:active, .submit:active
 	}
 }
 
+/**/
+/*790px BREAKPOINTS*/
+@media screen and (min-width:790px){
+	/*EXTRA FUNDRAISING PAGE RULES*/
+	.fundraisingCon ul
+	{
+		width:90%;
+		margin:0 auto;
+	}
+
+	/*hides double image*/
+	.smDoubleImg
+	{
+		display:none;
+	}
+
+	/*hides single image*/
+	.smSingleImg
+	{
+		display:none;
+	}
+
+	/*Shows large images*/
+	.bigDblImg
+	{
+		display:block;
+	}
+	
+	.bigSingleImg
+	{
+		display:block;
+		margin:0 auto;
+	}
+}
+
 /*830PX BREAKPOINT*/
 @media screen and (min-width: 830px) {
 	/**/
@@ -1826,23 +1694,79 @@ button:active, .fundraiser a:active, .submit:active
 		font-size: 18px;
 	}
 
-	/*FUNDRAISER SECTION*/
+	/**/
+	/*FUNDRAISING SECTION RULES*/
+	/*Styles the fundraising text*/
 	#fundraisingText
 	{
-		font-size:20px;
-		line-height:28px;
+		font-size: 18px;
+		line-height: 26px;
 	}
 
-	.fundraiser
-	{
-		display:block;
-	}
-
+	/*Display fundraisers side by side*/
 	#allFundraisers
 	{
-		display:flex;
+		max-width:100%;
+		display: flex;
 		flex-direction: row;
+		padding:10px;
+		margin:0 auto;
 	}
+
+	/*Give padding and position button text*/
+	.fundraiserButtonText
+	{
+		display:block;
+		padding-top:4px;
+	}
+}
+
+/*840px Breakpoint*/
+@media screen and (min-width:840px)
+{
+	/*MEMBERSHIP SECTION RULES*/
+	#membership
+		{
+			margin-bottom: 40px;
+		}
+
+		/*Vertically centers membership content*/
+		#membershipCon
+		{
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			padding:10px;
+		}
+
+		/*Styles and positions membership title*/
+		#membershipLeft
+		{
+			font-size: 48px;
+			line-height: 55px;
+			margin-right: 15px;
+			padding-top:15px;
+			display: flex;
+			flex-direction: column;
+		}
+
+		#makeGreen
+		{
+			padding-top:0px;
+			margin-bottom: 30px;
+		}
+
+		#membershipRight
+		{
+			margin-right:10px;
+		}	
+
+		/*Sizes and positions member join button*/
+		#memberJoin
+		{
+			height:50px;
+			margin-top: 15px;
+		}
 }
 
 /*DESKTOP MEDIA QUERY*/
@@ -2063,3 +1987,15 @@ button:active, .fundraiser a:active, .submit:active
 		right: 20px;
 	}
 } /*END DESKTOP MEDIA QUERY*/
+
+/*931px Breakpoint*/
+@media screen and (min-width:931px)
+{
+	#memberJoin{margin-top:5px;}
+}
+
+/*935 Breakpoint*/
+@media screen and (min-width:934px)
+{
+	#memberJoin{margin-top:15px;}
+}
