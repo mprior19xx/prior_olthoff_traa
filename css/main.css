@@ -548,12 +548,11 @@ button:active, .fundraiser a:active, .submit:active
 #membershipPopup 
 {
   display: none; /* Hidden by default */
-  position: fixed; /* Stays in place */
   z-index: 4; /* Modal is placed on top of the page */
-  padding-top: 100px; /* Creates padding on top of modal */
-  left: 0; /* Starts background in top left corner */
-  top: 0;
+  padding-top: 10px; /* Creates padding on top of modal */
+ 	margin:0 auto;
   width: 100%; /* Background takes up full width */
+  max-width:920px;
   height: 100%; /* Background takes up full height */
   background-color: rgb(0,0,0); /* Fallback color if browser doesn't support alpha */
   background-color: rgba(0,0,0,0.4); /* Creates background with opacity*/
@@ -583,10 +582,10 @@ button:active, .fundraiser a:active, .submit:active
 /*Creates popup content box*/
 #popupCon 
 {
+	max-width:600px;
   background-color: white; /* White background */
   margin: 3% auto; /* 5% from the top and centered */
   padding: 15px; /* Pads text from the border */
-  width: 470px; /* Sets width of the content box */
   color: #666;
 }
 
@@ -609,7 +608,6 @@ button:active, .fundraiser a:active, .submit:active
 /*Styles and positions membership popup title*/
 #popupCon p
 {
-	width: 450px;
 	height: 30px;
 	background-color: #9bbd4f;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
