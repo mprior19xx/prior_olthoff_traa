@@ -864,11 +864,13 @@ button:active, .fundraiser a:active, .submit:active
 	color: #FFF;
 	padding-top: 20px;
 	margin-bottom: 20px;
+	display:block;
 }
 
 /*Styles the fundraising text*/
 #fundraisingText
 {
+	font-family: 'libre_franklin-medium', Helvetica, sans-serif;
 	font-size: 14px;
 	line-height: 24px;
 	max-width: 100%;
@@ -876,11 +878,6 @@ button:active, .fundraiser a:active, .submit:active
 	margin: 0 auto;
 }
 
-/*Makes fundraisers fullwidth*/
-.fundraiser
-{
-	max-width:100%;
-}
 
 /*Displays fundraisers side by side and aligns them center*/
 #allFundraisers
@@ -892,6 +889,12 @@ button:active, .fundraiser a:active, .submit:active
 	margin: 0 auto;
 	margin-top: 15px;
 	margin-bottom: 15px;
+}
+
+/*Makes fundraisers fullwidth*/
+.fundraiser
+{
+	display:block;
 }
 
 /*Adds space between button and picture and adds padding*/
@@ -1258,6 +1261,35 @@ button:active, .fundraiser a:active, .submit:active
 		max-width:400px;
 	}
 }
+@media screen and (min-width:830px)
+{/**/
+	/*FUNDRAISING SECTION RULES*/
+	/*Sets size, position, and style of fundraisers section*/
+	/*Styles the fundraising text*/
+	#fundraisingText
+	{
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	
+
+	#allFundraisers
+	{
+		max-width:100%;
+		display: flex;
+		flex-direction: row;
+		margin:0 auto;
+	}
+
+	.fundraiserButtonText
+	{
+		display:block;
+		padding-top:4px;
+	}
+}
+
+
 
 
 /*MEMBERSHIP BAR BREAK POINTS*/
@@ -1611,15 +1643,7 @@ button:active, .fundraiser a:active, .submit:active
 		height: 30px;
 	}
 
-	/**/
-	/*FUNDRAISING SECTION RULES*/
-	/*Sets size, position, and style of fundraisers section*/
-	/*Styles the fundraising text*/
-	#fundraisingText
-	{
-		font-size: 18px;
-		line-height: 26px;
-	}
+
 
 	/**/
 	/*MERCHANDISE RULES*/
@@ -1801,6 +1825,24 @@ button:active, .fundraiser a:active, .submit:active
 	{
 		font-size: 18px;
 	}
+
+	/*FUNDRAISER SECTION*/
+	#fundraisingText
+	{
+		font-size:20px;
+		line-height:28px;
+	}
+
+	.fundraiser
+	{
+		display:block;
+	}
+
+	#allFundraisers
+	{
+		display:flex;
+		flex-direction: row;
+	}
 }
 
 /*DESKTOP MEDIA QUERY*/
@@ -1916,28 +1958,6 @@ button:active, .fundraiser a:active, .submit:active
 		opacity: 1;
 	}
 	
-
-	/*FUNDRAISER RULES*/
-	/**/
-	/*Formats fundraising text*/
-	#fundraisingText
-	{
-		font-size: 20px;
-		line-height: 28px;
-	}
-	
-	.fundraiser
-	{
-		display:block;
-	}
-
-	/*Positions fundraisers*/
-	#allFundraisers
-	{
-		display:flex;
-		flex-direction: row;
-	}
-
 	/**/
 	/*MEMBERSHIP RULES*/
 	/*Adds space below "Membership"*/
