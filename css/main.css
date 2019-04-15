@@ -1178,6 +1178,16 @@ button:active, .fundraiser a:active, .submit:active
 	min-height: 500px;
 }
 
+/*Styles donate button*/
+.donateNow
+{
+	display: block;
+	margin: 0 auto;
+	margin-bottom: 20px;
+	padding: 20px 50px 50px 50px;
+	font-size: 25px;
+}
+
 /*Adds space between list items*/
 .fundraisingCon ul li
 {
@@ -1840,7 +1850,7 @@ button:active, .fundraiser a:active, .submit:active
 	}
 
 	/*Adds hovers to buttons*/
-	#memberJoin:hover, .fundraiser a:hover, .merchBuy a:hover, .submit:hover
+	button:hover, #memberJoin:hover, .fundraiser a:hover, .merchBuy a:hover, .submit:hover
 	{
 		-webkit-box-shadow:inset 0px 0px 0px 3px #c09233;
 	    -moz-box-shadow:inset 0px 0px 0px 3px #c09233;
