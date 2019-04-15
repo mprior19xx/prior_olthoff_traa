@@ -108,6 +108,12 @@ button, .fundraiser a, .submit, .merchBuy a{
 	transition: all 0.1s linear;
 }
 
+/*Adds transitions to buttons*/
+button:active, .fundraiser a:active, .submit:active
+{
+	transition: all 0.15s linear;
+}
+
 /*Styles buttons on click*/
 button:active, .fundraiser a:active, .submit:active
 {
@@ -597,7 +603,7 @@ button:active, .fundraiser a:active, .submit:active
 /*Adds hover and click effect to x button*/
 #xButton:hover, #xbutton:active
 {
-	color: #FFF;
+	color: #FFF !important;
 }
 
 /*Styles and positions membership popup title*/
@@ -1293,6 +1299,12 @@ button:active, .fundraiser a:active, .submit:active
 		padding: 10px;
 	}
 
+	/*Changes colours of buttons on press*/
+	#memberJoin:active, .fundraiser a:active, .merchBuy a:active, .submit:active
+	{
+		background-color: #c09233;
+	}
+
 	/*sets the page width - this changes by screen*/
 	#containerSection
 	{
@@ -1750,21 +1762,16 @@ button:active, .fundraiser a:active, .submit:active
 			flex-direction: column;
 		}
 
-		#makeGreen
-		{
-			padding-top:0px;
-			margin-bottom: 30px;
-		}
-
 		#membershipRight
 		{
+			margin-top: 20px;
 			margin-right:10px;
 		}	
 
 		/*Sizes and positions member join button*/
 		#memberJoin
 		{
-			height:50px;
+			height:40px;
 			margin-top: 15px;
 		}
 }
@@ -1774,10 +1781,18 @@ button:active, .fundraiser a:active, .submit:active
 
 	/**/
 	/*PAGE RULES*/
-	/*Changes link colour on hover*/
-	a:hover
+	/*Changes green link colour on hover*/
+	#linksSection a:hover, #aboutUsSection a:hover, #merchandiseCon p a:hover
 	{
 		color: #9bbd4f;
+	}
+
+	/*Adds hovers to buttons*/
+	#memberJoin:hover, .fundraiser a:hover, .merchBuy a:hover, .submit:hover
+	{
+		-webkit-box-shadow:inset 0px 0px 0px 3px #c09233;
+	    -moz-box-shadow:inset 0px 0px 0px 3px #c09233;
+	    box-shadow:inset 0px 0px 0px 3px #c09233;
 	}
 
 	/*Changes size of the container*/
@@ -1827,6 +1842,7 @@ button:active, .fundraiser a:active, .submit:active
 	#aboutImgBig
 	{
 		display:block;
+		margin-right: -8px;
 	}
 
 	/*Sets width of about info*/
@@ -1881,20 +1897,35 @@ button:active, .fundraiser a:active, .submit:active
 	{
 		opacity: 1;
 	}
-	
+
 	/**/
-	/*MEMBERSHIP RULES*/
-	/*Adds space below "Membership"*/
-	#makeGreen
+	/*FUNDRAISING RULES*/
+	/*Aligns fundraising content*/
+	#fundraisingWithBG
 	{
-		margin-bottom: 15px;
+		padding: 20px 5px 0px 5px;
+	}
+
+	/**/
+	/*MERCHANDISE RULES*/
+	/*Aligns merchandise content*/
+	#merchandise
+	{
+		padding: 0 5px 0 5px;
 	}
 
 	/**/
 	/*CONTACT RULES*/
+	/*Aligns contact content*/
+	#contactCon
+	{
+		padding: 0 15px 20px 15px;
+	}
+
 	/*Adds border between contact form and contact info*/
 	#contactForm
 	{
+		padding-right: 7%;
 		border-right: solid 1px #CCC;
 	}
 
