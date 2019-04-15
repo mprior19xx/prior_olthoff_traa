@@ -608,14 +608,14 @@ button:active, .fundraiser a:active, .submit:active
 /*Styles and positions membership popup title*/
 #popupCon p
 {
-	height: 30px;
+	height: 35px;
 	background-color: #9bbd4f;
 	font-family: 'libre_franklin-semibold', Helvetica, sans-serif;
 	color: #FFF;
-	font-size: 30px;
+	font-size: 24px;
 	margin: 0 auto;
+	padding: 10px 0 0 10px;
 	margin-bottom: 15px;
-	padding: 13px 10px 7px 10px;
 }
 
 /*Styles the membership form labels*/
@@ -632,8 +632,9 @@ button:active, .fundraiser a:active, .submit:active
 {
 	display: block;
 	margin-top: 5px;
-	padding: 10px;
-	width: 450px;
+	min-width:200px;
+	width:100%;
+	padding: 5px 0 5px 0;
 	height: 20px;
 	border: 1px solid #666;
 	border-radius: 2px;
@@ -648,14 +649,12 @@ button:active, .fundraiser a:active, .submit:active
 	flex-direction: row;
 	justify-content: space-between;
 	height: 50px;
-	margin-top: -10px;
-	margin-bottom: -35px;
 }
 
 /*Reduces space between label and radio button*/
 .paymentLabel
 {
-	margin-left: -25px;
+	max-width:100%;
 }
 
 /**/
